@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Digital Portfolio</title>
+        <!--icon logo-->
+        <link rel="icon" type="image/x-icon" href="Images/logo.ico">
+        <!--css-->
+        <link rel="stylesheet" href="climashade2.css">
+        <!--fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-------navbar-------->
+        <nav>
+            <div class="navleft">
+            <img class="logo" src="images/logo.png">
+            <span class="logotext">climashade</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#experiment">Experiment</a></li>
+                <li><a href="#experiment">Model</a></li>
+                <li><a href="#projects">Pictures</a></li>
+                <li><a href="#designers">Team</a></li>
+                <li><a href="index.html#gallery">Back</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa fa-bars"></i> 
+            </a>
+        </nav>
+        
+        <!-------header-------->
+        <div id="header" class="header">   
+            <img class="headerimg" src="Images/render.png">    
+            
+            <div class="headertext">
+                <div class="headerlogo">
+                    <img class="logo2" src="images/Screenshot 2024-02-29 153413 (1).png">
+                </div>
+                <h3 class="textlink"><a href="https://buckylab.blogspot.com/">Buckylab</a> | 2022-2023</h3> 
+                <p>CUS: Customizable urban sunshades</p>
+                <br>
+                <div class="header-button">
+                    <a href="#about" class="scroll-down-button">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+        <!-----about------>
+        <div id="about">
+            <div id="textab">
+            <div id="text-container">
+                <h1 id="title">What was the project about?</h1>
+                <span id="text">
+                    <br>
+                        This project was a part of the Buckylab course around October 2022 to January 2023 (See the blog <a class="bucky" href="https://buckylab.blogspot.com/">here</a>).
+                        <br><br>
+                        That year the objective of the course was all about creating and designing a Convertible Urban Sunshade. CUS for short. Convertible as in it would be able to adapt itself to different circumstances (night and day for example), Urban as it had to be situated in a city like environment as these areas tend to get quite hot during the summer so a relief of some shade is definitely beneficial. All in all creating a design that will create cooler spots in public spaces.
+                        <br><br>
+                        The course was all about designing and prototyping. Hence why we in one of the last weeks before the final presentations were given the opportunity to make our design reality by creating a first 1:1 prototype. One week we were given the time and resources to make that happen. An array of tools as well as materials at our disposal.
+                </span>
+            </div>
+            </div>
+        </div>
+        <!------concept------->
+        <div id="concept" class="concept">
+            <div class ="conceptcontainer">
+                <h1 class="concept-heading"> The concept</h1>
+                <span id="text2">
+                    Our solution became Climashade. The rapid increase in record temperatures in urban areas, particularly during the summer,
+                    has become a significant concern due to the effects of climate change. In certain cities, the
+                    absence of wind exacerbates this issue. To combat these conditions, we opted with our design to use the concept of a <a class="solarchimney" href="https://en.wikipedia.org/wiki/Solar_chimney">solarchimney</a>. Creating convection at the hand of a pressure difference created by the difference in temperature between in our case the top and bottom of the canopy. Not only providing shade but a cool breeze as well by leading the air through openings in the canopy blades. 
+                    <br><br><br>
+                    <div class="conceptimg">
+                        <img class="conimg" src="Images/rendered cross section-test sample.jpg" alt="Image 1">
+                    </div> 
+                    <br><br>
+                    The top transparent layer would then catch the solar radiation warming the space between the bottom insulating and shading layer and the transparent one creating a high pressure area. This air cavity is open both on top as well as on eye level which allows the air from below to seep through to the top to the higher pressure creating a draft.   
+                    <br><br>
+                    <div class="conceptimg">
+                        <img class="conimg" src="Images/Screenshot 2024-06-12 122140.jpg" alt="Image 2">
+                    </div>
+                    <br>
+                    On top of that four of the 8 blades would be able to rotate to open the canopy at night to let the night air and radiation of the sky cool the area underneath down as much as possible until the sun would rise once more and it would close back up again to provide shade and a cool breeze. 
+                    <div class="conceptimg">
+                        <img class="conimg" src="Images/rotation mechanism.gif" alt="Image 3">
+                    </div>
+                    <br>
+                    Download the entire documentation <a class="doc" href="Group5_FinalReport_Climashade.pdf" download="Group5_FinalReport_Climashade.pdf" class="download-button">here.</a>
+                </span>
+            </div>
+        </div>
+
+        <!---The experiment--->
+        <div class="experiment" id="experiment">
+            <div class="expcontainer">
+                <h1>The experiment</h1>
+                <span id="text3">
+                    To prove the concept of the Climashade, of basically creating a solar chimney on a very small scale, and see if it worked as effectively as we wanted (creating a draft of 0.8 m/s) we tested our concept as seen below.
+                    <br><br>
+                    <div class="expimg">
+                        <img class="exp" id="expmodel" src="Images/Screenshot 2024-06-12 123149.jpg" alt="Image 4">
+                    </div>
+                    <br><br>
+                    The experiment was based on a similar test with a simple paper tube and a heat lamp. We created a similar setup with a scale model of the canopy instead of the paper tube seeing if a draft can be created by the heat difference with our design. Instead of a fan we enclosed our model in a box, filling it with smoke to visually see the change in draft between no 'sun' and 'sun'. To measure the change and temperature difference between top and bottom we used an anemometer.                    <br><br>
+                    <div class="expimg">
+                        <img class="exp" id="expsetup" src="Images/Screenshot 2024-06-12 123258.jpg" alt="Image 5">  
+                    </div>
+                    <br><br>
+                    The result as seen below proved that with our concept we would be able to create a draft of wind and create  a cooler environment under the canopy.
+                    <br><br>
+                    <video class="vid" autoplay loop muted>
+                        <source src="Images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </span>
+            </div>
+        </div>
+       
+        <!---Model-->
+        <div class="model" id="model">
+            <div class="modelcontainer">
+                <h1>The Model</h1>
+                <span id="text4">
+                    The last thing to do was to create more prototypes refining our design for the canopy and figure out by experimenting, drawing and trial and error what works best. Down below is one of our first design ideas. The idea was to create 8 ribs that could pull fabric/ transparent sheeting along to open and close the canopy.                    <br><br><br>
+                    <div class="modimg">
+                        <img class="mod" id="moddraw" src="Images/turn.jpg" alt="Image 4">  
+                    </div>
+                    <br>
+                    This we tested with our scale model. This gave us an insight that instead of having 8 ribs pulling fabric along when opened might be a challenge structurally as they would easily bend by the force of the pulling fabric and hopped over to a design like we ended up with, with 8 blades instead with only 4 moving and making the blades themselves stiff instead of their ribs.                    <br><br>
+                    <div class="modimg">
+                        <img class="mod" id="modmodel" src="Images/model.jpg" alt="Image 4">
+                    </div>
+                    <br>
+                    So eventually we came to the point where we decided to test our design on a 1:1 scale. Mainly to see if the rotating mechanism based on basically one big ball bearing would with the weight of the canopy still run as smoothly as intended. We were given a week, and an array of tools and materials to build the model. One tool we excessively used throughout the week was the milling machine to create the round bearing from wooden plates. The result, a 1:1 prototype demonstrating both the rotating mechanism as well as the double layered blades of the canopy.                    <br><br>
+                    <div class="modimg">
+                        <img class="mod" id="modbuild" src="Images/building week.jpg" alt="Image 4">
+                    </div>
+                    <br><br>
+                    <div class="modimg">
+                        <img class="mod" id="modmodel2" src="Images/modelclima.jpg" alt="Image 4">
+                    </div>
+                </span>
+            </div>
+        </div>
+ 
+        <!---Project drawings---->
+        <div id="projects" class="projects">
+            <div class="projectscontainer">
+                <h1 class="subtitle">Pictures</h1>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="Images/render.png" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/_MG_8257.JPG" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/_MG_8288.JPG" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/_MG_8243.JPG" alt="Image 4">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/buisy.jpg" alt="Image 7">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Screenshot 2024-06-12 122718.jpg" alt="Image 5">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Screenshot 2024-06-12 122823.jpg" alt="Image 6">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Screenshot 2024-06-12 122636.jpg" alt="Image 7">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div class="dots">
+                    <br>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-------designers-------->
+        <div id="designers" class="designers">
+            <h1 class="titledesigners">The team</h1>
+            <div class="designer-grid"> 
+    
+                <!--designer 1-->
+                <div class="designer-item">
+                    <img src="images\_MG_8301.JPG" alt="Feras">
+                    <div class="subtitledesigner">Feras Alsaggaf</div>
+                    <div class="discriptiondesigner">The most experienced on the team. The Rhino and Grasshopper expert as well as always able to provide positive vibes within the team. Always having his music and or snacks at the ready.</div>
+                    <p><a href="mailto:f.y.j.alsaggaf@student.tudelft.nl?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i>  f.y.j.alsaggaf@student.tudelft.nl</a></p>
+                    <p><a href="mailto:ferrasasgaf@gmail.com?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i>  ferrasasgaf@gmail.com</a></p>
+                </div>
+    
+                <!--designer 2-->
+                <div class="designer-item">
+                    <img src="images\_MG_8309.JPG" alt="Mohammed">
+                    <div class="subtitledesigner">Mohammed Ibrahim</div>
+                    <div class="discriptiondesigner">He was the one that drove us to experiment as much as possible to prove our concept. As well as his technical drawing skills and knowledge helped us make sense of a complicated mechanism.</div>
+                    <p><a href="mailto:mohammed@student.tudelft.nl?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i>  mohammed@student.tudelft.nl</a></p>
+                    <p><a href="mailto:mohammed@gmail.com?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i>  mohammed@gmail.com</a></p>
+                </div>
+    
+                <!--designer 3-->
+                <div class="designer-item">
+                    <img src="images\_MG_8314.JPG" alt="Kimmy">
+                    <div class="subtitledesigner">Kimmy On</div>
+                    <div class="discriptiondesigner">The organizer of the group. Always keeping everyone on track, carefully listening, gathering everything and creating an overview of the process.</div>
+                    <p><a href="mailto:k.m.on@student.tudelft.nl?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i> k.m.on@student.tudelft.nl</a></p>
+                    <p><a href="mailto:kimmyon@gmail.com?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i>  kimmyon@gmail.com</a></p>
+                </div>
+
+                <!--designer 4-->
+                <div class="designer-item">
+                    <img src="images\_MG_8302.JPG" alt="Elisa">
+                    <div class="subtitledesigner">Elisa van Klink</div>
+                    <div class="discriptiondesigner">With a keen sight for creative solutions, and quick thinking I helped the team when stuck and or came up with maybe a bit out of the box ideas to help the process along.</div>
+                    <p><a href="mailto:e.v.m.vanklink@student.tudelft.nl?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i> e.v.m.vanklink@student.tudelft.nl</a></p>
+                    <p><a href="mailto:elisavanklink@gmail.com?subject=Your%20Subject&body=Your%20message%20here"><i class="fa-solid fa-envelope"></i> elisavanklink@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>Digital Portfolio</h2>
+                    <p>Elisa van Klink</p>
+                </div>
+                <div class="footer-section social">
+                    <h2>Follow Me</h2>
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i> Twitter</a>
+                    <a href="https://www.instagram.com/xelisa_6666?igsh=MWpuMGU4eWltb3Q3aQ=="><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/in/elisa-van-klink-4ba785219/"><i class="fa-brands fa-linkedin"></i> Linked in</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Digital portfolio. All rights reserved.
+            </div>
+        </div>
+
+        <!-------icons---------->
+        <script src="https://kit.fontawesome.com/1a86ac6ad5.js" crossorigin="anonymous"></script>
+        <!---Java script-->
+        <script src="scriptclima.js"></script>
+    </body>
+</html>

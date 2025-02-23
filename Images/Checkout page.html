@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head >
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout page</title>
+
+    <style>
+        				@font-face {
+					font-family: HEMA;
+					src: url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/FuturaHEMAProOT-Book.otf");
+				}
+
+				/* DP-86 - new HEMA font used when text weight is normal */
+				@font-face {
+					font-family: HurmeHEMA;
+					src: url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Regular.woff2") format('woff2'),
+						 url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Regular.woff") format('woff'),
+						 url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Regular.otf") format('opentype');
+					font-weight: normal;
+				}
+
+				/* DP-86 - new HEMA font used when text weight is bold */
+				@font-face {
+					font-family: HurmeHEMA;
+					src: url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Bold.woff2") format('woff2'),
+						 url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Bold.woff") format('woff'),
+						 url("https://shops.photoprintme.com/HEMA-onlinekiosk/wp-content/themes/imaxel-printspot/fonts/HurmeHEMA-Bold.otf") format('opentype');
+					font-weight: bold;
+				} 
+        body .site-header, #secondary-menu-close {
+			background-color: #ebeaea !important;
+		}
+
+		body .kiosk_mode_menu ,.cart-contents, #language_selector_block, .secondary-menu-burger, #secondary-menu-close {
+			color: #525252 !important;
+		}
+
+		/* START - DP-48 - Landing page selector pickpoints section */
+		#svg-selector-pickpoints {
+			fill: #525252 !important;
+		}
+
+		.pickpoint-hours svg path {
+			fill: #ebeaea !important;
+		}
+
+		.pickpoint-title {
+			color: #ebeaea !important;
+		}
+
+		#search_bar button, #location_bar button,
+		.pickpoint-redirection button {
+			background-color: #ebeaea !important;
+		}
+
+		.pickpoint-maps-mobile a {
+			text-decoration-color: #ebeaea !important;
+			color: #ebeaea !important;
+		}
+
+		.pickpoint-maps a {
+			text-decoration-color: #ebeaea !important;
+			color: #ebeaea !important;
+		}
+
+		.loader {
+			border: 5px solid #ebeaea !important;
+			border-bottom-color: transparent !important;
+        	border-radius: 50% !important;
+		}
+
+		/* END - DP-48 - Landing page selector pickpoints section */
+
+		.secondary-menu-separator {
+			border-color: #ebeaea !important;
+		}
+
+		body #language_selector {
+			color: #525252 !important;
+			background-color: #ebeaea !important;
+		}
+
+        body .site-container, article, input[type!="file"], select, label {
+			background-color: #f2f2f2 !important;
+		}
+
+		.woocommerce span {
+			background-color: #f2f2f2 !important;
+		}
+
+		body {
+			background-color: #f2f2f2 !important;
+		}
+
+        body h2.catalogue_product_name:not(.under_thumbnail) {
+			background-color: #5dc4e3 !important;
+		}
+
+		body h2.catalogue_category_name:not(.under_thumbnail) {
+			background-color: #5dc4e3 !important;
+		}
+
+        #payment, .payment_box,.woocommerce-MyAccount-navigation {
+			background-color: #f2f2f2 !important;
+		}
+
+		.printspot_ticket {
+			background-color: white !important;
+		}
+
+		button, input[type="button"], input[type="reset"], input[type="submit"], .button {
+			background-color: #5dc4e3;
+		}
+
+		.customization_button.active, .payment-method-subtitle {
+			border-bottom: 2px solid #5dc4e3;
+			color: #5dc4e3    	}
+
+						*:not(i) {
+					font-family: HurmeHEMA, sans-serif !important;
+				} 
+		/* is HEMA site: apply HEMA font and lower case */
+        					*:not(i) {
+						font-family: HurmeHEMA, sans-serif !important;
+					} 		
+		#secondary-menu-container {
+			display: none;
+		}
+
+        .active-email-template, .active-send-email-status {
+            border-color: #5dc4e3;
+        }
+	</style> <meta name='robots' content='noindex,follow' />
+<meta name='printspot_version' content='2.28.285'><link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="https://shops.photoprintme.com/HEMA-onlinekiosk/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="https://shops.photoprintme.com/HEMA-onlinekiosk/comments/feed/" />
+<script>
+	var dataLayer = window.dataLayer = window.dataLayer || [];
+	dataLayer.push
+	({
+		'country': 'nl-NL',
+		'shop': 'photo',
+		'pageType': 'thankyou',
+		'environment': 'production',
+		'cookieConsentStatus': '1'
+	});
+</script><link rel="canonical" href="https://shops.photoprintme.com/HEMA-onlinekiosk/checkout-page/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/wp-includes\/js\/wp-emoji-release.min.js?ver=1562232014"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='imaxel-printspot-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/style.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/css/dist/block-library/style.min.css?ver=1562232014' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='snackbar_css-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/imaxel-printspot-management/assets/css/snackbar.min.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/css/select2.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=1723036878' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=1723036878' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='load-fa-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.2.9' type='text/css' media='all' />
+<link rel='stylesheet' id='buttons-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/css/buttons.min.css?ver=1567660743' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/css/dashicons.min.css?ver=1562232014' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=1544008690' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=1548245411' type='text/css' media='all' />
+<link rel='stylesheet' id='media-views-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/css/media-views.min.css?ver=1567660743' type='text/css' media='all' />
+<link rel='stylesheet' id='imgareaselect-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/imgareaselect/imgareaselect.css?ver=1544008686' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://use.fontawesome.com/releases/v5.6.0/css/all.css?ver=5.2.9' type='text/css' media='all' />
+<link rel='stylesheet' id='genesis-sample-fonts-css'  href='//fonts.googleapis.com/css?family=Nunito%7CMontserrat%7COpen+Sans%7CHurmeHEMA&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='printspot-woocommerce-styles-css'  href='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/woocommerce_style.css?ver=1723036878' type='text/css' media='all' />
+<link rel='stylesheet' id='select2_css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css?ver=5.2.9' type='text/css' media='all' />
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/jquery.js?ver=1562232014'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1544008687'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/imaxel-printspot-management/assets/js/ajax-calls.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var globals = {"snackBackgroundColor":"#5dc4e3","snackBackgroundErrorColor":"#FF6961","snackText":"Ga verder","snackActionText":"Bijgewerkt!","btnPrimaryColor":"#5dc4e3","btnSecondaryColor":"#FF6961","successTitleModal":"Save\/Update successfully","btnConfirmText":"Ga verder","btnCancelText":"Annuleren","confirmModalTitle":"Are you sure?","confirmDeleteModalText":"This element will be removed from system permanently","confirmDeleteAllRulesText":"You are going to delete all the configured rules"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/imaxel-printspot-management/assets/js/functions.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/imaxel-printspot-management/assets/js/snackbar.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _zxcvbnSettings = {"src":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/wp-includes\/js\/zxcvbn.min.js"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/zxcvbn-async.min.js?ver=1544008669'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/lib/imaxel-interop.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/js/stripe-request-payment-button.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userSettings = {"url":"\/","uid":"0","time":"1724155813","secure":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/utils.min.js?ver=1562232014'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/plupload/moxie.min.js?ver=1544008691'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/plupload/plupload.min.js?ver=1544008692'></script>
+<!--[if lt IE 8]>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/json2.min.js?ver=1544008667'></script>
+<![endif]-->
+<script type='text/javascript'>
+var mejsL10n = {"language":"nl","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=1544008689'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=1544008689'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/HEMA-onlinekiosk\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/wp-frontend-media-master/js/frontend.js?ver=1723036878'></script>
+<link rel='https://api.w.org/' href='https://shops.photoprintme.com/HEMA-onlinekiosk/api/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://shops.photoprintme.com/HEMA-onlinekiosk/xmlrpc.php?rsd" />
+<link rel="alternate" type="application/json+oembed" href="https://shops.photoprintme.com/HEMA-onlinekiosk/api/oembed/1.0/embed?url=https%3A%2F%2Fshops.photoprintme.com%2FHEMA-onlinekiosk%2Fcheckout-page%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://shops.photoprintme.com/HEMA-onlinekiosk/api/oembed/1.0/embed?url=https%3A%2F%2Fshops.photoprintme.com%2FHEMA-onlinekiosk%2Fcheckout-page%2F&#038;format=xml" />
+<link rel="pingback" href="https://shops.photoprintme.com/HEMA-onlinekiosk/xmlrpc.php" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+			<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<!-- Google Tag Manager -->
+<script>
+	(function(w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+		"gtm.start":
+			new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+			"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,"script","dataLayer","GTM-NVF9GF");
+</script>
+<!-- End Google Tag Manager --><link rel="icon" href="https://d1uqogra2sd8vg.cloudfront.net/wp-content/uploads/sites/111/2019/01/cropped-isotipo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://d1uqogra2sd8vg.cloudfront.net/wp-content/uploads/sites/111/2019/01/cropped-isotipo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://d1uqogra2sd8vg.cloudfront.net/wp-content/uploads/sites/111/2019/01/cropped-isotipo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://d1uqogra2sd8vg.cloudfront.net/wp-content/uploads/sites/111/2019/01/cropped-isotipo-270x270.png" />
+</head>
+<body class="page-template-default page page-id-7 theme-genesis woocommerce-checkout woocommerce-page woocommerce-order-received woocommerce-no-js full-width-content" itemscope itemtype="https://schema.org/WebPage"><style>
+	.button,
+	.woocommerce button.button.alt,
+	.wizzard-button,
+	.wizzard-button-long,
+	.woocommerce button.button.alt, .spinner > div,
+	.small_button,
+	.admin_button,
+	input[type="submit"],
+	.icp-button,
+	.lds-ellipsis div,
+	.icp-box .button,
+	.design_block_box,
+	.lds-spinner div:after,
+	.lds-ellipsis div,
+	.icp_flow_navigator_item_active,
+	.design_block_container_option_active {
+		background-color: #5dc4e3 !important
+	}
+
+	.cat_products_list li h2 {
+		background-color: #5dc4e3;
+	}
+
+	mark.count {
+		border-color: transparent transparent transparent#5dc4e3;
+	}
+
+	a,
+	.product_thumbnail_edit_icon,
+	.new_profile_button i,
+	.kiosk-player .color i,
+	.modal_popup_content label i,
+	.highlighted,
+	.import_product_circle_button,
+	.add_icp_to_catalogue,
+	.asign_site_tag_circle_button,
+	.new_printer_button,
+	.new_tag_button,
+	.new_shipping_method_button i,
+	#clean-attributes-button,
+	.design_block_container i,
+	.icp_projects_list i,
+	.icp_flow_box_header i,
+	.shipping_options_headers i,
+	.woocommerce-MyAccount-navigation a,
+	.woocommerce-MyAccount-content a,
+	.printspot_highlight h3,
+	.kiosk_mode_breadcrumbs p,
+	.kiosk_mode_breadcrumbs a,
+	.woocommerce-MyAccount-navigation ul li.is-active > a,
+	.selectFormBox label,
+	.qty_button label,
+	.production_time_button label,
+	.category_container .mark_container span,
+	.icp-box h4,
+	.icp-box h1,
+	.variation_price_box p {
+		color: #5dc4e3;
+	}
+
+	.shop-page-content-right {
+		border-left: 1px solid#5dc4e3;
+	}
+
+	.landing_separator,
+	.printspot_page_title,
+	#genesis-nav-primary .wrap,
+	.printspot_page_titles,
+	#customer_login h2,
+	.block_title,
+	.icp_flow_navigator_box,
+	.separator,
+	.design_block_container_option,
+	.design_block_container_option_active {
+		border-color: #5dc4e3 !important;
+	}
+
+	.lds-ring div {
+		border-color: #5dc4e3 transparent transparent transparent !important;
+	}
+
+	.lds-dual-ring:after {
+		border: 5px solid#5dc4e3;
+		border-color: #5dc4e3 transparent #5dc4e3  transparent;
+	}
+
+	.tap-screen-qr-main, .tap-mobile-qr-main {
+		fill: #5dc4e3 !important;
+	}
+
+	.language-change-loading:after {
+		border: 5px solid#5dc4e3;
+		border-color: #5dc4e3 transparent #5dc4e3  transparent;
+	}
+
+	.entry {
+		background-color: #f2f2f2 !important
+	}
+
+	.customization_button.active, .payment-method-subtitle {
+		border-bottom: 2px solid #5dc4e3;
+		color: #5dc4e3	}
+
+    .active-email-template, .active-send-email-status {
+        border-color: #5dc4e3;
+    }
+
+    .active-custom-email, .active-email-template .delete-custom-element, .active-send-email-status, .active-status-email {
+        color: #5dc4e3    } 
+
+	.imx-title-page{
+		border-color: #5dc4e3	}
+
+	.module-subtitle{
+		border-color: #5dc4e3 !important
+	}
+
+</style>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVF9GF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to content</a></li></ul><header class="site-header" itemscope itemtype="https://schema.org/WPHeader"><div class="wrap"><div class="title-area"><a href="https://shops.photoprintme.com/HEMA-onlinekiosk"><div class="printspot_logo" style="background-image:url(https://d2aa8hnqlg8lnd.cloudfront.net/u/ps/d1uqogra2sd8vg.cloudfront.net/wp-content/uploads/sites/111/2022/11/600x600bf-300x300.png?size=150);background-size:contain;background-position:left center;background-repeat:no-repeat;"></div></a></div><div class="widget-area header-widget-area"><div id="language_selector_container">
+	<div id="language_selector_block">
+		<i class="fas fa-flag" style="padding: 8px 0px 0px 0px;"></i>
+		<form name="language_selector">
+			<select id="language_selector">
+										<option selected value="5">
+							DUT						</option>
+										<option  value="8">
+							FRA						</option>
+										<option  value="11">
+							ENG						</option>
+							</select>
+		</form>
+	</div>
+</div>
+<div class="webkioskCart"><a class="cart-contents" href="https://shops.photoprintme.com/HEMA-onlinekiosk/carrito/" title="Winkelwagenpagina"><span class="cart-contents-count">0</span> <span class="cart-contents-count cart-contents-text"> items</span></a></div><div tabindex="0" id="focusedDiv"></div>	<script>
+		if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			(function() {
+				var counter = 1;
+				window.addEventListener('touchstart', function() {
+					if (counter === 1) {
+						$(":input:first").focus();
+						counter++;
+					}
+				});
+			})();
+		}
+	</script>
+</div></div></header><div class="site-inner"><div class="content-sidebar-wrap"><main class="content" id="genesis-content"><article class="post-7 page type-page status-publish entry" itemscope itemtype="https://schema.org/CreativeWork"><header class="entry-header"></header><div class="entry-content" itemprop="text"><div class="woocommerce"><div class="kiosk-player-cancel-order-content">
+	<div id="new-order-button" class="button kiosk-player-cancel-order-btn">Nieuwe bestelling</div>
+</div>
+<div class="woocommerce-order">
+
+	
+		
+			
+			<div class="printspot_ticket">
+				<div class="printspot_ticket_inner">
+										<div style="margin-bottom:80px">													<h3 style="text-align:center; color: #5dc4e3">
+							Bon 1113667554						</h3>
+																		<h5 style="text-align:center; margin-bottom: 15px;">
+							<strong>
+								HEMA direct klaar service							</strong>
+						</h5>
+											</div>
+
+					
+					<div class="row">
+						<div class="col col-8">
+							<h4 style="color: #5dc4e3">Datum								:</h4>
+						</div>
+						<div class="col col-4">
+							<p class="pull-right">
+								<strong>20-08-2024 14:09:46</strong>
+							</p>
+						</div>
+					</div>
+					<hr />
+
+					<div class="row">
+						<h4 style="color: #5dc4e3">Bestelde artikelen</h4>
+						
+							<div class="row thankyou_order_items_line">
+								<div class="col col-8">
+									<p style="margin-bottom: auto;">
+										<strong>60 x 50 stuks  10x15 + 10 extra Gratis  .</strong>
+									</p>
+																					<p class="thankyou_order_items_descr" style="margin-bottom: auto;margin-left: 10px!important; font-size:small!important;">
+													-Randen: Geen rand												</p> 								</div>
+								<div class="col col-4">
+									<p class="pull-right">
+										<strong> 17.00</strong>
+									</p>
+								</div>
+
+															</div>
+												<!-- SUBTOTAL -->
+						<div class="row">
+							<div class="col col-offset-8 col-4">
+								<hr>
+							</div>
+
+							<div class="col col-8">
+								<p>
+									<strong>Subtotal</strong>
+																	</p>
+							</div>
+							<div class="col col-4">
+								<p class="pull-right">
+									<strong>  17.00</strong>
+								</p>
+							</div>
+
+							<!-- DISCOUNTS -->
+							<div class="col col-8">
+								<p>
+									<strong>Coupons Discount</strong>
+								</p>
+							</div>
+							<div class="col col-4">
+								<p class="pull-right">
+									<strong>-  0.00</strong>
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<hr>
+
+											<h4 style="color: #5dc4e3">Extra Order Amount</h4>
+						<div class="row">
+							
+								<div class="col col-8">
+									<p style="margin:auto">
+										<strong>verwerkingskosten</strong>
+										
+									</p>
+								</div>
+								<div class="col col-4">
+									<p class="pull-right">
+										<strong> 1.79</strong>
+									</p>
+								</div>
+
+													</div>
+						<hr />
+					
+					<!-- TAXES -->
+										
+					<!-- Total -->
+					<div class="row">
+						<div class="col col-8">
+							<h4 style="color: #5dc4e3; margin-left: -5px">
+								Totaal:							</h4>
+						</div>
+						<div class="col col-4">
+							<p class="pull-right">
+								<strong style="font-size:1.5em">
+									 18.79								</strong>
+							</p>
+						</div>
+
+					</div>
+
+					<hr /></strong><h4 style="color:#5dc4e3">Afhaalpunt: <strong></h4><p>Voorburg HEMA 0049<br>Koningin Julianalaan 231<br>Voorburg - 2273 JG</strong></p>
+							
+							<hr />
+							<h4 style="color: #5dc4e3">Klant:</h4>
+
+							<p><strong>Naam: Nicole</strong><br><strong>Achternaam: Winnubst </strong><br><strong>E-mail: Elisavanklink@gmail.com</strong></p><hr /><p><strong>je kunt je bestelling direct ophalen bij de (klantenservice) kassa<div class="codes_box"><?xml version="1.0"?><svg class="barcode" xmlns="http://www.w3.org/2000/svg" version="1.1" width="133" height="100" viewBox="0 0 133 100"><g><rect x="0" y="0" width="133" height="100" fill="white"/><g transform="translate(10 10)"><g><text x="3" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">2</text></g><g><rect x="9" y="0" width="1" height="80" fill="black"/><rect x="11" y="0" width="1" height="80" fill="black"/></g><g><rect x="14" y="0" width="2" height="75" fill="black"/><rect x="18" y="0" width="1" height="75" fill="black"/><text x="18" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">1</text></g><g><rect x="21" y="0" width="2" height="75" fill="black"/><rect x="25" y="0" width="1" height="75" fill="black"/><text x="24" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">1</text></g><g><rect x="27" y="0" width="1" height="75" fill="black"/><rect x="32" y="0" width="1" height="75" fill="black"/><text x="30" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">3</text></g><g><rect x="34" y="0" width="2" height="75" fill="black"/><rect x="38" y="0" width="2" height="75" fill="black"/><text x="36" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">1</text></g><g><rect x="42" y="0" width="1" height="75" fill="black"/><rect x="45" y="0" width="2" height="75" fill="black"/><text x="42" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">2</text></g><g><rect x="51" y="0" width="1" height="75" fill="black"/><rect x="53" y="0" width="1" height="75" fill="black"/><text x="48" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">6</text></g><g><rect x="55" y="0" width="1" height="80" fill="black"/><rect x="57" y="0" width="1" height="80" fill="black"/></g><g><rect x="59" y="0" width="3" height="75" fill="black"/><rect x="64" y="0" width="1" height="75" fill="black"/><text x="65" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">0</text></g><g><rect x="66" y="0" width="2" height="75" fill="black"/><rect x="70" y="0" width="2" height="75" fill="black"/><text x="71" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">1</text></g><g><rect x="73" y="0" width="1" height="75" fill="black"/><rect x="76" y="0" width="1" height="75" fill="black"/><text x="77" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">8</text></g><g><rect x="80" y="0" width="1" height="75" fill="black"/><rect x="84" y="0" width="1" height="75" fill="black"/><text x="83" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">7</text></g><g><rect x="87" y="0" width="3" height="75" fill="black"/><rect x="91" y="0" width="1" height="75" fill="black"/><text x="89" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">9</text></g><g><rect x="94" y="0" width="1" height="75" fill="black"/><rect x="99" y="0" width="1" height="75" fill="black"/><text x="95" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black">3</text></g><g><rect x="101" y="0" width="1" height="80" fill="black"/><rect x="103" y="0" width="1" height="80" fill="black"/></g><g><text x="110" y="85" text-anchor="middle" font-family="monospace" font-size="10" fill="black"></text></g></g></g></svg></div></strong></p></div></div>
+						
+						<!-- Site data -->
+												<div
+								class="site_data"
+								site-url="https://shops.photoprintme.com/HEMA-onlinekiosk/profile/hema100"
+								new-order-btn-label="Nieuwe bestelling"
+								order-id="3479521"
+								shop-name="Voorburg HEMA 0049"
+								shop-address="Koningin Julianalaan 231"
+								shop-postal-code="2273 JG"
+								shop-city="Voorburg"
+								shop-phone="070-3870205"
+								receipt-number="1113667554"
+								receipt-created-at="20-08-2024 14:09:46"
+								customer-name="Nicole Winnubst"
+								customer-email="Elisavanklink@gmail.com" customer-phone=""
+								products='[{\"name\":\"50 stuks  10x15 + 10 extra Gratis  .\",\"quantity\":60,\"price\":\"16.99998\",\"currencySymbol\":\"&euro;\",\"customOptions\":[{\"code\":\"frames\",\"name\":{\"ca\":\"Marges\",\"cs\":\"Okraje\",\"da\":\"Ramme\",\"en\":\"Frames\",\"es\":\"Marcos\",\"fi\":\"Reunat\",\"fr\":\"Margen\",\"ka\":\"\\u10e9\\u10d0\\u10e0\\u10e9\\u10dd\",\"nb\":\"Ramme\",\"nl\":\"Randen\",\"sv\":\"Ram\",\"default\":\"Frames\"},\"valueCode\":\"noframe\",\"valueName\":{\"ca\":\"Sense marge\",\"cs\":\"Bez mar\\u017ee\",\"da\":\"Ingen ramme\",\"en\":\"No frame\",\"es\":\"Sin marco\",\"fi\":\"Ei reunoja\",\"fr\":\"Non marge\",\"ka\":\"\\u10e9\\u10d0\\u10e0\\u10e9\\u10dd\\u10e1 \\u10d2\\u10d0\\u10e0\\u10d4\\u10e8\\u10d4\",\"nb\":\"Ingen ramme\",\"nl\":\"Geen rand\",\"sv\":\"Ingen ram\",\"default\":\"No frame\"},\"valuePrice\":0,\"valueVolumetricWeight\":0}],\"projectProductName\":{\"en\":\"prints 10x15 - Pack of 60\",\"fr\":\"photos 10x15 (x 60)\",\"nl\":\"50 stuks  10x15 + 10 extra Gratis \",\"default\":\"50 stuks  10x15 + 10 extra Gratis \"},\"projectVariantName\":{\"default\":\".\"}}]'
+								total-price=" 18.79"
+								receipt-qr-code="/9j/4AAQSkZJRgABAQEAYABgAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2ODApLCBxdWFsaXR5ID0gNTAK/9sAQwAQCwwODAoQDg0OEhEQExgoGhgWFhgxIyUdKDozPTw5Mzg3QEhcTkBEV0U3OFBtUVdfYmdoZz5NcXlwZHhcZWdj/9sAQwEREhIYFRgvGhovY0I4QmNjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj/8AAEQgAPAA8AwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8AyfDugaReeHrjVdWurmBIJ/LJiIwBhccbSerVesNB8HajeR2lnqt9JPJnauMZwCTyY8dAaPD1jcaj8OtTtLOPzJ5LsbV3AZx5ZPJ46A0eEvC2s6d4jtLu8s/Lgj37m81DjKMBwDnqRQBpfD+2Sz1XxBaxlikE6xqW6kBpAM/lU2pWlrP4mu49Okkm1C7RYL+JuFitmVQzqSANwGzuep49IfC7Tpqvi5rRFkuFnJiRujPulwDyO/vVPUb7xRbMZJtG0+2uL4i1W5iwJSzDAAYPkdOCeBgUATeF9Nh0jx/qNjbtI0UVp8pkILc+WecAetYvh3QNIvPD1xqurXVzAkE/lkxEYAwuONpPVq3vBmia3Za/cXurxSfvLcp5skyyMx3LgHBJ6D9Kz/D1jcaj8OtTtLOPzJ5LsbV3AZx5ZPJ46A0AFhoPg7UbyO0s9VvpJ5M7VxjOASeTHjoDXI6pbJZ6reWsZYpBO8alupAYgZ/Kuu8JeFtZ07xHaXd5Z+XBHv3N5qHGUYDgHPUiuX8Qf8jDqf8A19y/+hmgDtl8GXOk2rsniqWytwdzEKY0BOBk/OB6CpLXw3f3kZktPGtzOgO0tEzMAfTIk96d4x16zv7CXRdPEl9dXKKyG1xIvD5IODnOFJ6elWPDOn3VqbBtOuII9PEQ+3227dJ9p2fNnIJUg7MrkYx09QCna21n4c07Xf8AioYLm+uIm/5aBJVkUP8A7RJbLfXNUdL1C/1TQ7c3dvclNLLagLyUswuTGxPl5I464zk429Km8QWujf8AEzk/4RzVftX70/avLfyt/Pz53Y2556dO1TeG7x7nwPcabHY3hdbO4Ky+V+7kJLYVT3PzdMdjQBpaJefaG/4SO91P7LZ3iGNLOaX93GwOMhiQCTsJ6Dqax7Pwv9msZJrLxl5Nmr/O8J2xhuByRJjPT9K4+8vdTjsY9HvDJHBbvvWCSMKyE5OTxn+I9fWu21axOlalFplrpd5PoE0fm3MFtG0m+TJx83UcqhwGHT35ALEfhPVZY1kj8X3jo4DKy7iGB6EHzKpyfDZ5ZGkk1pndyWZmt8liepJ31oX76o9rBNoOq2enabbwJFJHdMu6FxxtclWwQCoIJzmufk1fxssjLGbmdASFlhs1ZJB2ZTs5B6g+lAGl4a8FalpGu219cT2jRRbtwjdi3KkcZUetbkOk6pZ6bqyWNzBFeXd69xBIeVVWK8HKnnAPY1xPh3QNIvPD1xqurXVzAkE/lkxEYAwuONpPVqvWGg+DtRvI7Sz1W+knkztXGM4BJ5MeOgNAHQG31238Pa1/bl7Bc7rR/K8oAbfkbdn5R7flXI+E/F8mjkW988slgkbCOKKNCVcsDnJwf73fvW14L02H7R4n0vdJ5G/7PuyN23Mi56Yzj2o0zw7qvh/xWZNLtfO099kTSzyKWEZKlzgEHIIOOPwNAFPSk0zxd42v5p7eR7V7cOiSMUYFdi5O0/XvXVQWviRdBuIZtQtm1RpAYZgo2Kny8EbPZux60WkOkr4yvpobmVtUaACaEj5FTCcg7fZe561g6sPGmr6bLY3GkWixS43GORQ3BB4zIfSgDPsY76Cz1SfWJo7jSIr11v4Ihh5ZcqNynA43FD1HQ8djsW/xA0O2t4reG0vliiQIi7FOABgDl6x9Hkvo9YtdW1WGOCx0dDYzSoc7CqlQCASScuBkDHNOvPiLqKXs62kNnJbrIwido3yyZ4J+YdvagB3h6xuNR+HWp2lnH5k8l2Nq7gM48snk8dAaPCXhbWdO8R2l3eWflwR79zeahxlGA4Bz1IrkbXUr+zjMdpe3MCE7isUrKCfXAPtU39u6x/0Fb7/wIf8AxoA7bw+k8l74zjtCwuGkcRFW2neTLjB7c96x9Jv7vTfELQeJtX1C2FuA+wTtIGfKkK2N2QQTmtT4XyPLJq8kjs7uYmZmOSxO/JJrsp9J025maa40+0mlb7zyQqzHtySKAPNb/wAUGz8YX2q6SYp0njWMGVGwRtTPHB6rXUaZDe2HhO8Hia+vLQ+eD56Tl5ET5AMMN2MnIx7muJ8aQQ23im9ht4o4Yl2bUjUKo+RTwBW18S7u5TV4rVLiVbd7ZWaIOQjHe3JHQ9B+VAG9oegreeHdQs7uSc2t7dmeKbeDJJGdjK5ODycc5GfYVH9t8Fad/oUyWjS237lzJZlmJXg5ITk8dak+G880/h6TzpZJPLuCib2J2qETAGeg9q3pNF0qWRpJNMs3dyWZmgUliepJxQB//9k="
+								receipt-qr-code-value="P1RGVB"
+								receipt-bottom-message="je kunt je bestelling direct ophalen bij de (klantenservice) kassa"
+								dateLabel="Datum"
+								productLabel="Product"
+								priceLabel="Prijs"
+								totalLabel="Totaal"
+								nameLabel="Naam"
+								mailLabel="Mail"
+								phoneLabel="Telefoon"
+						>
+						</div>
+				</div>
+								<!-- trigger sendTransaction event in GTM -->
+				<script>
+	dataLayer.push({ ecommerce: null });
+	dataLayer.push
+	({
+		'event': 'sendTransaction',
+		'ecommerce':
+		{
+			'purchase':
+			{
+				'actionField':
+				{
+					'id': '1113667554',
+					'revenue': '18.79',
+					'tax': '0',
+					'shipping': '0.00',
+					
+				},
+				'products': [
+    {
+        "name": "50 stuks  10x15 + 10 extra Gratis  .",
+        "id": "PPRI00040099",
+        "price": "16.99998",
+        "category": "standaard afdrukken",
+        "variant": "0004000",
+        "quantity": 60
+    }
+]
+			}
+		}
+	});
+</script>
+				<script>
+					jQuery(this).load(function() {
+
+						if (window.imaxel.interop.isHosted()) {
+
+							jQuery('.kiosk-player-cancel-order-content').show();
+							jQuery('#new-order-button').show();
+							jQuery('.site-header').hide();
+
+							/**
+							 Print receipt
+							 */
+							const body = {
+								"id": jQuery('.site_data').attr('order-id'),
+								"receipt": getSupportedTicket()
+							};
+
+							window.imaxel.interop.guestPostMessage("ORDER", body);
+
+						} else {
+							jQuery('#new-order-button').hide();
+							jQuery('.site-header').show();
+						}
+					});
+
+
+					jQuery('#new-order-button').click(function(e) {
+						if (window.imaxel.interop.isHosted()) {
+							var siteUrl = jQuery('.site_data').attr('site-url');
+							window.imaxel.interop.guestPostMessage("START", {
+								url: siteUrl
+							});
+						}
+					});
+
+					function labAndValue(label, value) {
+						return `<tr><td style="width:39%; text-align:right; font-weight:bold;">` + label + `:</td><td style="width:1%;"></td><td style="width:60%; text-align:left; font-weight:normal;">` + value + `</td></tr>`;
+					}
+
+					function hr() {
+						return `<table><tbody><tr><td style="width:100%;"><hr /></td></tr></tbody></table>`;
+					}
+
+					function br() {
+						return `<tr><td style="width:100%;"><br /></td></tr>`;
+					}
+
+					function large(text) {
+						return `<tr><td style="width:100%; text-align:center; font-size:large;">` + text + `</td></tr>`;
+					}
+
+					function small(text) {
+						return `<tr><td style="width:100%; text-align:center; font-size:small;">` + text + `</td></tr>`;
+					}
+
+					function getSupportedTicket() {
+						var receipt = new Object();
+						receipt.orderId = jQuery('.site_data').attr('order-id');
+						receipt.shopName = jQuery('.site_data').attr('shop-name');
+						receipt.shopAddress = jQuery('.site_data').attr('shop-address');
+						receipt.postalCode = jQuery('.site_data').attr('shop-postal-code');
+						receipt.shopCity = jQuery('.site_data').attr('shop-city');
+						receipt.shopPhone = jQuery('.site_data').attr('shop-phone');
+						receipt.receiptNumber = jQuery('.site_data').attr('receipt-number');
+						receipt.receiptCreatedAt = jQuery('.site_data').attr('receipt-created-at');
+						receipt.customerName = jQuery('.site_data').attr('customer-name');
+						receipt.customerEmail = jQuery('.site_data').attr('customer-email');
+						receipt.customerPhone = jQuery('.site_data').attr('customer-phone');
+						receipt.qrCode = jQuery('.site_data').attr('receipt-qr-code');
+						receipt.qrCodeValue = jQuery('.site_data').attr('receipt-qr-code-value');
+						receipt.bottomMessage = jQuery('.site_data').attr('receipt-bottom-message');
+						receipt.products = JSON.parse(jQuery('.site_data').attr('products').replace(/\\"/g, '"'));
+						receipt.totalPrice = jQuery('.site_data').attr('total-price');
+						var dateLabel = jQuery('.site_data').attr('dateLabel');
+						var productLabel = jQuery('.site_data').attr('productLabel');
+						var priceLabel = jQuery('.site_data').attr('priceLabel');
+						var totalLabel = jQuery('.site_data').attr('totalLabel');
+						var nameLabel = jQuery('.site_data').attr('nameLabel');
+						var mailLabel = jQuery('.site_data').attr('mailLabel');
+						var phoneLabel = jQuery('.site_data').attr('phoneLabel');
+						returnValue = '';
+
+						returnValue += `<!DOCTYPE html>
+					<html>
+					<body>
+					<div class="receipt">
+						<header>
+						<table>
+							<tbody>
+								<tr><td style="width:100%; text-align:center; font-size:small;">` + receipt.shopName + `</td></tr>`;
+
+						if (receipt.shopAddress) {
+							returnValue += `<tr><td style="width:100%; text-align:center; font-size:small;">` + receipt.shopAddress + `</td></tr>`;
+						}
+						if (!receipt.shopPostalCode && receipt.shopCity) {
+							returnValue += `<tr><td style="width:100%; text-align:center; font-size:small;">` + receipt.shopPostalCode + ` - ` + receipt.shopCity + `</td></tr>`;
+						}
+						if (receipt.shopPhone) {
+							returnValue += `<tr><td style="width:100%; text-align:center; font-size:small;">` + receipt.shopPhone + `</td></tr>`;
+						}
+						returnValue += `</tbody>
+						</table>` +
+							hr() +
+							`<table>
+							<tbody>` +
+							large("Ticket #" + receipt.receiptNumber) +
+							`</tbody>
+						</table>
+						</header>
+						<section>` +
+							hr() +
+							`<table>
+								<tbody>` +
+							labAndValue(dateLabel, receipt.receiptCreatedAt);
+
+						//Products
+						receipt.products.forEach(product => {
+							returnValue += labAndValue(productLabel + "(" + product.quantity + "x)", product.name);
+							returnValue += labAndValue(priceLabel, product.price + product.currencySymbol);
+						});
+						returnValue += hr() +
+							`</tbody>
+							</table>
+						</section>`;
+						//Total
+						returnValue += `<section>` +
+							hr() +
+							`<table>
+								<tbody>` +
+							labAndValue(totalLabel, receipt.totalPrice) +
+							`</tbody>
+							</table>
+						</section>`;
+
+						//Customer info
+						returnValue += `<section>` +
+							hr() +
+							`<table>
+								<tbody>` +
+							(receipt.customerName ? labAndValue(nameLabel, receipt.customerName) : "") +
+							(receipt.customerEmail ? labAndValue(mailLabel, receipt.customerEmail) : "") +
+							(receipt.customerPhone ? labAndValue(phoneLabel, receipt.customerPhone) : "") +
+							`</tbody>
+							</table>` +
+							hr() +
+							`<picture data-barcode="value:` + receipt.receiptNumber + `; type:code128;"></picture>` +
+							hr() +
+							`</section>
+						<footer>
+							<table>
+								<tbody>
+									<tr><td style="width:100%; text-align:center; font-weight:normal;">` + receipt.bottomMessage + `</td></tr>
+								</tbody>
+							</table>
+						</footer>
+					</div>
+					</body>
+					</html>`;
+						return returnValue;
+
+
+					}
+				</script>
+
+
+			
+			</div>
+</div>
+</div></article></main></div></div><div class="photoprintme_footer_container"><div class="photoprintme_footer"><p style="color:black; font-weight: 600;">POWERED BY</p><a href="https://shops.photoprintme.com/HEMA-onlinekiosk"><div class="netkiosk_footer_logo" style="background-image:url(https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/images/logo_web.jpg);background-size:contain;background-position:left center;background-repeat:no-repeat;"></div></a></div><div class="photoprintme_footer_patern" style="background-image:url(https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/images/footer_line_h.png);"></div></div></div>	<!--[if lte IE 8]>
+	<style>
+		.attachment:focus {
+			outline: #1e8cbe solid;
+		}
+		.selected.attachment {
+			outline: #1e8cbe solid;
+		}
+	</style>
+	<![endif]-->
+	<script type="text/html" id="tmpl-media-frame">
+		<div class="media-frame-title" id="media-frame-title"></div>
+		<div class="media-frame-menu"></div>
+		<div class="media-frame-router"></div>
+		<div class="media-frame-content"></div>
+		<div class="media-frame-toolbar"></div>
+		<div class="media-frame-uploader"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-media-modal">
+		<div tabindex="0" class="media-modal wp-core-ui" role="dialog" aria-modal="true" aria-labelledby="media-frame-title">
+			<# if ( data.hasCloseButton ) { #>
+				<button type="button" class="media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text">Close dialog</span></span></button>
+			<# } #>
+			<div class="media-modal-content" role="document"></div>
+		</div>
+		<div class="media-modal-backdrop"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-window">
+		<div class="uploader-window-content">
+			<h1>Drop files to upload</h1>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-editor">
+		<div class="uploader-editor-content">
+			<div class="uploader-editor-title">Drop files to upload</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-inline">
+		<# var messageClass = data.message ? 'has-upload-message' : 'no-upload-message'; #>
+		<# if ( data.canClose ) { #>
+		<button class="close dashicons dashicons-no"><span class="screen-reader-text">Close uploader</span></button>
+		<# } #>
+		<div class="uploader-inline-content {{ messageClass }}">
+		<# if ( data.message ) { #>
+			<h2 class="upload-message">{{ data.message }}</h2>
+		<# } #>
+					<div class="upload-ui">
+				<h2 class="upload-instructions drop-instructions">Drop files anywhere to upload</h2>
+				<p class="upload-instructions drop-instructions">or</p>
+				<button type="button" class="browser button button-hero">Select Files</button>
+			</div>
+
+			<div class="upload-inline-status"></div>
+
+			<div class="post-upload-ui">
+				
+				<p class="max-upload-size">
+				Maximum upload file size: 1 MB.				</p>
+
+				<# if ( data.suggestedWidth && data.suggestedHeight ) { #>
+					<p class="suggested-dimensions">
+						Suggested image dimensions: {{data.suggestedWidth}} by {{data.suggestedHeight}} pixels.					</p>
+				<# } #>
+
+							</div>
+				</div>
+	</script>
+
+	<script type="text/html" id="tmpl-media-library-view-switcher">
+		<a href="/HEMA-onlinekiosk/checkout-page/order-received/3479521/?key=wc_order_pNjd4CsxqoVTG&#038;order_number=1113667554&#038;mode=list" class="view-list">
+			<span class="screen-reader-text">List View</span>
+		</a>
+		<a href="/HEMA-onlinekiosk/checkout-page/order-received/3479521/?key=wc_order_pNjd4CsxqoVTG&#038;order_number=1113667554&#038;mode=grid" class="view-grid current">
+			<span class="screen-reader-text">Grid View</span>
+		</a>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-status">
+		<h2>Uploading</h2>
+		<button type="button" class="button-link upload-dismiss-errors"><span class="screen-reader-text">Dismiss Errors</span></button>
+
+		<div class="media-progress-bar"><div></div></div>
+		<div class="upload-details">
+			<span class="upload-count">
+				<span class="upload-index"></span> / <span class="upload-total"></span>
+			</span>
+			<span class="upload-detail-separator">&ndash;</span>
+			<span class="upload-filename"></span>
+		</div>
+		<div class="upload-errors"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-uploader-status-error">
+		<span class="upload-error-filename">{{{ data.filename }}}</span>
+		<span class="upload-error-message">{{ data.message }}</span>
+	</script>
+
+	<script type="text/html" id="tmpl-edit-attachment-frame">
+		<div class="edit-media-header">
+			<button class="left dashicons <# if ( ! data.hasPrevious ) { #> disabled <# } #>"><span class="screen-reader-text">Edit previous media item</span></button>
+			<button class="right dashicons <# if ( ! data.hasNext ) { #> disabled <# } #>"><span class="screen-reader-text">Edit next media item</span></button>
+			<button type="button" class="media-modal-close"><span class="media-modal-icon"><span class="screen-reader-text">Close dialog</span></span></button>
+		</div>
+		<div class="media-frame-title"></div>
+		<div class="media-frame-content"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment-details-two-column">
+		<div class="attachment-media-view {{ data.orientation }}">
+			<div class="thumbnail thumbnail-{{ data.type }}">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div></div></div>
+				<# } else if ( data.sizes && data.sizes.large ) { #>
+					<img class="details-image" src="{{ data.sizes.large.url }}" draggable="false" alt="" />
+				<# } else if ( data.sizes && data.sizes.full ) { #>
+					<img class="details-image" src="{{ data.sizes.full.url }}" draggable="false" alt="" />
+				<# } else if ( -1 === jQuery.inArray( data.type, [ 'audio', 'video' ] ) ) { #>
+					<img class="details-image icon" src="{{ data.icon }}" draggable="false" alt="" />
+				<# } #>
+
+				<# if ( 'audio' === data.type ) { #>
+				<div class="wp-media-wrapper">
+					<audio style="visibility: hidden" controls class="wp-audio-shortcode" width="100%" preload="none">
+						<source type="{{ data.mime }}" src="{{ data.url }}"/>
+					</audio>
+				</div>
+				<# } else if ( 'video' === data.type ) {
+					var w_rule = '';
+					if ( data.width ) {
+						w_rule = 'width: ' + data.width + 'px;';
+					} else if ( wp.media.view.settings.contentWidth ) {
+						w_rule = 'width: ' + wp.media.view.settings.contentWidth + 'px;';
+					}
+				#>
+				<div style="{{ w_rule }}" class="wp-media-wrapper wp-video">
+					<video controls="controls" class="wp-video-shortcode" preload="metadata"
+						<# if ( data.width ) { #>width="{{ data.width }}"<# } #>
+						<# if ( data.height ) { #>height="{{ data.height }}"<# } #>
+						<# if ( data.image && data.image.src !== data.icon ) { #>poster="{{ data.image.src }}"<# } #>>
+						<source type="{{ data.mime }}" src="{{ data.url }}"/>
+					</video>
+				</div>
+				<# } #>
+
+				<div class="attachment-actions">
+					<# if ( 'image' === data.type && ! data.uploading && data.sizes && data.can.save ) { #>
+					<button type="button" class="button edit-attachment">Edit Image</button>
+					<# } else if ( 'pdf' === data.subtype && data.sizes ) { #>
+					Document Preview					<# } #>
+				</div>
+			</div>
+		</div>
+		<div class="attachment-info">
+			<span class="settings-save-status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+			<div class="details">
+				<div class="filename"><strong>File name:</strong> {{ data.filename }}</div>
+				<div class="filename"><strong>File type:</strong> {{ data.mime }}</div>
+				<div class="uploaded"><strong>Uploaded on:</strong> {{ data.dateFormatted }}</div>
+
+				<div class="file-size"><strong>File size:</strong> {{ data.filesizeHumanReadable }}</div>
+				<# if ( 'image' === data.type && ! data.uploading ) { #>
+					<# if ( data.width && data.height ) { #>
+						<div class="dimensions"><strong>Dimensions:</strong>
+							{{ data.width }} by {{ data.height }} pixels						</div>
+					<# } #>
+				<# } #>
+
+				<# if ( data.fileLength && data.fileLengthHumanReadable ) { #>
+					<div class="file-length"><strong>Length:</strong>
+						<span aria-hidden="true">{{ data.fileLength }}</span>
+						<span class="screen-reader-text">{{ data.fileLengthHumanReadable }}</span>
+					</div>
+				<# } #>
+
+				<# if ( 'audio' === data.type && data.meta.bitrate ) { #>
+					<div class="bitrate">
+						<strong>Bitrate:</strong> {{ Math.round( data.meta.bitrate / 1000 ) }}kb/s
+						<# if ( data.meta.bitrate_mode ) { #>
+						{{ ' ' + data.meta.bitrate_mode.toUpperCase() }}
+						<# } #>
+					</div>
+				<# } #>
+
+				<div class="compat-meta">
+					<# if ( data.compat && data.compat.meta ) { #>
+						{{{ data.compat.meta }}}
+					<# } #>
+				</div>
+			</div>
+
+			<div class="settings">
+				<# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+				<# if ( 'image' === data.type ) { #>
+					<label class="setting" data-setting="alt">
+						<span class="name">Alternative Text</span>
+						<input type="text" value="{{ data.alt }}" aria-describedby="alt-text-description" {{ maybeReadOnly }} />
+					</label>
+					<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener noreferrer">Describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+				<# } #>
+								<label class="setting" data-setting="title">
+					<span class="name">Title</span>
+					<input type="text" value="{{ data.title }}" {{ maybeReadOnly }} />
+				</label>
+								<# if ( 'audio' === data.type ) { #>
+								<label class="setting" data-setting="artist">
+					<span class="name">Artist</span>
+					<input type="text" value="{{ data.artist || data.meta.artist || '' }}" />
+				</label>
+								<label class="setting" data-setting="album">
+					<span class="name">Album</span>
+					<input type="text" value="{{ data.album || data.meta.album || '' }}" />
+				</label>
+								<# } #>
+				<label class="setting" data-setting="caption">
+					<span class="name">Caption</span>
+					<textarea {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+				</label>
+				<label class="setting" data-setting="description">
+					<span class="name">Description</span>
+					<textarea {{ maybeReadOnly }}>{{ data.description }}</textarea>
+				</label>
+				<div class="setting">
+					<span class="name">Uploaded By</span>
+					<span class="value">{{ data.authorName }}</span>
+				</div>
+				<# if ( data.uploadedToTitle ) { #>
+					<div class="setting">
+						<span class="name">Uploaded To</span>
+						<# if ( data.uploadedToLink ) { #>
+							<span class="value"><a href="{{ data.uploadedToLink }}">{{ data.uploadedToTitle }}</a></span>
+						<# } else { #>
+							<span class="value">{{ data.uploadedToTitle }}</span>
+						<# } #>
+					</div>
+				<# } #>
+				<label class="setting" data-setting="url">
+					<span class="name">Copy Link</span>
+					<input type="text" value="{{ data.url }}" readonly />
+				</label>
+				<div class="attachment-compat"></div>
+			</div>
+
+			<div class="actions">
+				<a class="view-attachment" href="{{ data.link }}">View attachment page</a>
+				<# if ( data.can.save ) { #> |
+					<a href="{{ data.editLink }}">Edit more details</a>
+				<# } #>
+				<# if ( ! data.uploading && data.can.remove ) { #> |
+											<button type="button" class="button-link delete-attachment">Delete Permanently</button>
+									<# } #>
+			</div>
+
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment">
+		<div class="attachment-preview js--select-attachment type-{{ data.type }} subtype-{{ data.subtype }} {{ data.orientation }}">
+			<div class="thumbnail">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div style="width: {{ data.percent }}%"></div></div>
+				<# } else if ( 'image' === data.type && data.sizes ) { #>
+					<div class="centered">
+						<img src="{{ data.size.url }}" draggable="false" alt="" />
+					</div>
+				<# } else { #>
+					<div class="centered">
+						<# if ( data.image && data.image.src && data.image.src !== data.icon ) { #>
+							<img src="{{ data.image.src }}" class="thumbnail" draggable="false" alt="" />
+						<# } else if ( data.sizes && data.sizes.medium ) { #>
+							<img src="{{ data.sizes.medium.url }}" class="thumbnail" draggable="false" alt="" />
+						<# } else { #>
+							<img src="{{ data.icon }}" class="icon" draggable="false" alt="" />
+						<# } #>
+					</div>
+					<div class="filename">
+						<div>{{ data.filename }}</div>
+					</div>
+				<# } #>
+			</div>
+			<# if ( data.buttons.close ) { #>
+				<button type="button" class="button-link attachment-close media-modal-icon"><span class="screen-reader-text">Remove</span></button>
+			<# } #>
+		</div>
+		<# if ( data.buttons.check ) { #>
+			<button type="button" class="check" tabindex="-1"><span class="media-modal-icon"></span><span class="screen-reader-text">Deselect</span></button>
+		<# } #>
+		<#
+		var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly';
+		if ( data.describe ) {
+			if ( 'image' === data.type ) { #>
+				<input type="text" value="{{ data.caption }}" class="describe" data-setting="caption"
+					placeholder="Caption this image&hellip;" {{ maybeReadOnly }} />
+			<# } else { #>
+				<input type="text" value="{{ data.title }}" class="describe" data-setting="title"
+					<# if ( 'video' === data.type ) { #>
+						placeholder="Describe this video&hellip;"
+					<# } else if ( 'audio' === data.type ) { #>
+						placeholder="Describe this audio file&hellip;"
+					<# } else { #>
+						placeholder="Describe this media file&hellip;"
+					<# } #> {{ maybeReadOnly }} />
+			<# }
+		} #>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment-details">
+		<h2>
+			Attachment Details			<span class="settings-save-status">
+				<span class="spinner"></span>
+				<span class="saved">Saved.</span>
+			</span>
+		</h2>
+		<div class="attachment-info">
+			<div class="thumbnail thumbnail-{{ data.type }}">
+				<# if ( data.uploading ) { #>
+					<div class="media-progress-bar"><div></div></div>
+				<# } else if ( 'image' === data.type && data.sizes ) { #>
+					<img src="{{ data.size.url }}" draggable="false" alt="" />
+				<# } else { #>
+					<img src="{{ data.icon }}" class="icon" draggable="false" alt="" />
+				<# } #>
+			</div>
+			<div class="details">
+				<div class="filename">{{ data.filename }}</div>
+				<div class="uploaded">{{ data.dateFormatted }}</div>
+
+				<div class="file-size">{{ data.filesizeHumanReadable }}</div>
+				<# if ( 'image' === data.type && ! data.uploading ) { #>
+					<# if ( data.width && data.height ) { #>
+						<div class="dimensions">
+							{{ data.width }} by {{ data.height }} pixels						</div>
+					<# } #>
+
+					<# if ( data.can.save && data.sizes ) { #>
+						<a class="edit-attachment" href="{{ data.editLink }}&amp;image-editor" target="_blank">Edit Image</a>
+					<# } #>
+				<# } #>
+
+				<# if ( data.fileLength && data.fileLengthHumanReadable ) { #>
+					<div class="file-length">Length:						<span aria-hidden="true">{{ data.fileLength }}</span>
+						<span class="screen-reader-text">{{ data.fileLengthHumanReadable }}</span>
+					</div>
+				<# } #>
+
+				<# if ( ! data.uploading && data.can.remove ) { #>
+											<button type="button" class="button-link delete-attachment">Delete Permanently</button>
+									<# } #>
+
+				<div class="compat-meta">
+					<# if ( data.compat && data.compat.meta ) { #>
+						{{{ data.compat.meta }}}
+					<# } #>
+				</div>
+			</div>
+		</div>
+
+		<# var maybeReadOnly = data.can.save || data.allowLocalEdits ? '' : 'readonly'; #>
+		<# if ( 'image' === data.type ) { #>
+			<label class="setting" data-setting="alt">
+				<span class="name">Alt Text</span>
+				<input type="text" value="{{ data.alt }}" aria-describedby="alt-text-description" {{ maybeReadOnly }} />
+			</label>
+			<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener noreferrer">Describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+		<# } #>
+				<label class="setting" data-setting="title">
+			<span class="name">Title</span>
+			<input type="text" value="{{ data.title }}" {{ maybeReadOnly }} />
+		</label>
+				<# if ( 'audio' === data.type ) { #>
+				<label class="setting" data-setting="artist">
+			<span class="name">Artist</span>
+			<input type="text" value="{{ data.artist || data.meta.artist || '' }}" />
+		</label>
+				<label class="setting" data-setting="album">
+			<span class="name">Album</span>
+			<input type="text" value="{{ data.album || data.meta.album || '' }}" />
+		</label>
+				<# } #>
+		<label class="setting" data-setting="caption">
+			<span class="name">Caption</span>
+			<textarea {{ maybeReadOnly }}>{{ data.caption }}</textarea>
+		</label>
+		<label class="setting" data-setting="description">
+			<span class="name">Description</span>
+			<textarea {{ maybeReadOnly }}>{{ data.description }}</textarea>
+		</label>
+		<label class="setting" data-setting="url">
+			<span class="name">Copy Link</span>
+			<input type="text" value="{{ data.url }}" readonly />
+		</label>
+	</script>
+
+	<script type="text/html" id="tmpl-media-selection">
+		<div class="selection-info">
+			<span class="count"></span>
+			<# if ( data.editable ) { #>
+				<button type="button" class="button-link edit-selection">Edit Selection</button>
+			<# } #>
+			<# if ( data.clearable ) { #>
+				<button type="button" class="button-link clear-selection">Clear</button>
+			<# } #>
+		</div>
+		<div class="selection-view"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-attachment-display-settings">
+		<h2>Attachment Display Settings</h2>
+
+		<# if ( 'image' === data.type ) { #>
+			<label class="setting align">
+				<span>Alignment</span>
+				<select class="alignment"
+					data-setting="align"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="align"
+					<# } #>>
+
+					<option value="left">
+						Left					</option>
+					<option value="center">
+						Center					</option>
+					<option value="right">
+						Right					</option>
+					<option value="none" selected>
+						None					</option>
+				</select>
+			</label>
+		<# } #>
+
+		<div class="setting">
+			<label>
+				<# if ( data.model.canEmbed ) { #>
+					<span>Embed or Link</span>
+				<# } else { #>
+					<span>Link To</span>
+				<# } #>
+
+				<select class="link-to"
+					data-setting="link"
+					<# if ( data.userSettings && ! data.model.canEmbed ) { #>
+						data-user-setting="urlbutton"
+					<# } #>>
+
+				<# if ( data.model.canEmbed ) { #>
+					<option value="embed" selected>
+						Embed Media Player					</option>
+					<option value="file">
+				<# } else { #>
+					<option value="none" selected>
+						None					</option>
+					<option value="file">
+				<# } #>
+					<# if ( data.model.canEmbed ) { #>
+						Link to Media File					<# } else { #>
+						Media File					<# } #>
+					</option>
+					<option value="post">
+					<# if ( data.model.canEmbed ) { #>
+						Link to Attachment Page					<# } else { #>
+						Attachment Page					<# } #>
+					</option>
+				<# if ( 'image' === data.type ) { #>
+					<option value="custom">
+						Custom URL					</option>
+				<# } #>
+				</select>
+			</label>
+			<input type="text" class="link-to-custom" data-setting="linkUrl" />
+		</div>
+
+		<# if ( 'undefined' !== typeof data.sizes ) { #>
+			<label class="setting">
+				<span>Size</span>
+				<select class="size" name="size"
+					data-setting="size"
+					<# if ( data.userSettings ) { #>
+						data-user-setting="imgsize"
+					<# } #>>
+											<#
+						var size = data.sizes['thumbnail'];
+						if ( size ) { #>
+							<option value="thumbnail" >
+								Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['medium'];
+						if ( size ) { #>
+							<option value="medium" >
+								Medium &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['large'];
+						if ( size ) { #>
+							<option value="large" >
+								Large &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+											<#
+						var size = data.sizes['full'];
+						if ( size ) { #>
+							<option value="full"  selected='selected'>
+								Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+							</option>
+						<# } #>
+									</select>
+			</label>
+		<# } #>
+	</script>
+
+	<script type="text/html" id="tmpl-gallery-settings">
+		<h2>Gallery Settings</h2>
+
+		<label class="setting">
+			<span>Link To</span>
+			<select class="link-to"
+				data-setting="link"
+				<# if ( data.userSettings ) { #>
+					data-user-setting="urlbutton"
+				<# } #>>
+
+				<option value="post" <# if ( ! wp.media.galleryDefaults.link || 'post' == wp.media.galleryDefaults.link ) {
+					#>selected="selected"<# }
+				#>>
+					Attachment Page				</option>
+				<option value="file" <# if ( 'file' == wp.media.galleryDefaults.link ) { #>selected="selected"<# } #>>
+					Media File				</option>
+				<option value="none" <# if ( 'none' == wp.media.galleryDefaults.link ) { #>selected="selected"<# } #>>
+					None				</option>
+			</select>
+		</label>
+
+		<label class="setting">
+			<span>Columns</span>
+			<select class="columns" name="columns"
+				data-setting="columns">
+									<option value="1" <#
+						if ( 1 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						1					</option>
+									<option value="2" <#
+						if ( 2 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						2					</option>
+									<option value="3" <#
+						if ( 3 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						3					</option>
+									<option value="4" <#
+						if ( 4 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						4					</option>
+									<option value="5" <#
+						if ( 5 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						5					</option>
+									<option value="6" <#
+						if ( 6 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						6					</option>
+									<option value="7" <#
+						if ( 7 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						7					</option>
+									<option value="8" <#
+						if ( 8 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						8					</option>
+									<option value="9" <#
+						if ( 9 == wp.media.galleryDefaults.columns ) { #>selected="selected"<# }
+					#>>
+						9					</option>
+							</select>
+		</label>
+
+		<label class="setting">
+			<span>Random Order</span>
+			<input type="checkbox" data-setting="_orderbyRandom" />
+		</label>
+
+		<label class="setting size">
+			<span>Size</span>
+			<select class="size" name="size"
+				data-setting="size"
+				<# if ( data.userSettings ) { #>
+					data-user-setting="imgsize"
+				<# } #>
+				>
+									<option value="thumbnail">
+						Thumbnail					</option>
+									<option value="medium">
+						Medium					</option>
+									<option value="large">
+						Large					</option>
+									<option value="full">
+						Full Size					</option>
+							</select>
+		</label>
+	</script>
+
+	<script type="text/html" id="tmpl-playlist-settings">
+		<h2>Playlist Settings</h2>
+
+		<# var emptyModel = _.isEmpty( data.model ),
+			isVideo = 'video' === data.controller.get('library').props.get('type'); #>
+
+		<label class="setting">
+			<input type="checkbox" data-setting="tracklist" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<# if ( isVideo ) { #>
+			<span>Show Video List</span>
+			<# } else { #>
+			<span>Show Tracklist</span>
+			<# } #>
+		</label>
+
+		<# if ( ! isVideo ) { #>
+		<label class="setting">
+			<input type="checkbox" data-setting="artists" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<span>Show Artist Name in Tracklist</span>
+		</label>
+		<# } #>
+
+		<label class="setting">
+			<input type="checkbox" data-setting="images" <# if ( emptyModel ) { #>
+				checked="checked"
+			<# } #> />
+			<span>Show Images</span>
+		</label>
+	</script>
+
+	<script type="text/html" id="tmpl-embed-link-settings">
+		<label class="setting link-text">
+			<span>Link Text</span>
+			<input type="text" class="alignment" data-setting="linkText" />
+		</label>
+		<div class="embed-container" style="display: none;">
+			<div class="embed-preview"></div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-embed-image-settings">
+		<div class="thumbnail">
+			<img src="{{ data.model.url }}" draggable="false" alt="" />
+		</div>
+
+		<label class="setting alt-text has-description">
+			<span>Alternative Text</span>
+			<input type="text" data-setting="alt" aria-describedby="alt-text-description" />
+		</label>
+		<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener noreferrer">Describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+
+					<label class="setting caption">
+				<span>Caption</span>
+				<textarea data-setting="caption" />
+			</label>
+		
+		<div class="setting align">
+			<span>Align</span>
+			<div class="button-group button-large" data-setting="align">
+				<button class="button" value="left">
+					Left				</button>
+				<button class="button" value="center">
+					Center				</button>
+				<button class="button" value="right">
+					Right				</button>
+				<button class="button active" value="none">
+					None				</button>
+			</div>
+		</div>
+
+		<div class="setting link-to">
+			<span>Link To</span>
+			<div class="button-group button-large" data-setting="link">
+				<button class="button" value="file">
+					Image URL				</button>
+				<button class="button" value="custom">
+					Custom URL				</button>
+				<button class="button active" value="none">
+					None				</button>
+			</div>
+			<input type="text" class="link-to-custom" data-setting="linkUrl" />
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-image-details">
+		<div class="media-embed">
+			<div class="embed-media-settings">
+				<div class="column-image">
+					<div class="image">
+						<img src="{{ data.model.url }}" draggable="false" alt="" />
+
+						<# if ( data.attachment && window.imageEdit ) { #>
+							<div class="actions">
+								<input type="button" class="edit-attachment button" value="Edit Original" />
+								<input type="button" class="replace-attachment button" value="Replace" />
+							</div>
+						<# } #>
+					</div>
+				</div>
+				<div class="column-settings">
+					<label class="setting alt-text has-description">
+						<span>Alternative Text</span>
+						<input type="text" data-setting="alt" value="{{ data.model.alt }}" aria-describedby="alt-text-description" />
+					</label>
+					<p class="description" id="alt-text-description"><a href="https://www.w3.org/WAI/tutorials/images/decision-tree" target="_blank" rel="noopener noreferrer">Describe the purpose of the image<span class="screen-reader-text"> (opens in a new tab)</span></a>. Leave empty if the image is purely decorative.</p>
+
+											<label class="setting caption">
+							<span>Caption</span>
+							<textarea data-setting="caption">{{ data.model.caption }}</textarea>
+						</label>
+					
+					<h2>Display Settings</h2>
+					<div class="setting align">
+						<span>Align</span>
+						<div class="button-group button-large" data-setting="align">
+							<button class="button" value="left">
+								Left							</button>
+							<button class="button" value="center">
+								Center							</button>
+							<button class="button" value="right">
+								Right							</button>
+							<button class="button active" value="none">
+								None							</button>
+						</div>
+					</div>
+
+					<# if ( data.attachment ) { #>
+						<# if ( 'undefined' !== typeof data.attachment.sizes ) { #>
+							<label class="setting size">
+								<span>Size</span>
+								<select class="size" name="size"
+									data-setting="size"
+									<# if ( data.userSettings ) { #>
+										data-user-setting="imgsize"
+									<# } #>>
+																			<#
+										var size = data.sizes['thumbnail'];
+										if ( size ) { #>
+											<option value="thumbnail">
+												Thumbnail &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['medium'];
+										if ( size ) { #>
+											<option value="medium">
+												Medium &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['large'];
+										if ( size ) { #>
+											<option value="large">
+												Large &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																			<#
+										var size = data.sizes['full'];
+										if ( size ) { #>
+											<option value="full">
+												Full Size &ndash; {{ size.width }} &times; {{ size.height }}
+											</option>
+										<# } #>
+																		<option value="custom">
+										Custom Size									</option>
+								</select>
+							</label>
+						<# } #>
+							<div class="custom-size<# if ( data.model.size !== 'custom' ) { #> hidden<# } #>">
+								<label><span>Width <small>(px)</small></span> <input data-setting="customWidth" type="number" step="1" value="{{ data.model.customWidth }}" /></label><span class="sep">&times;</span><label><span>Height <small>(px)</small></span><input data-setting="customHeight" type="number" step="1" value="{{ data.model.customHeight }}" /></label>
+							</div>
+					<# } #>
+
+					<div class="setting link-to">
+						<span>Link To</span>
+						<select data-setting="link">
+						<# if ( data.attachment ) { #>
+							<option value="file">
+								Media File							</option>
+							<option value="post">
+								Attachment Page							</option>
+						<# } else { #>
+							<option value="file">
+								Image URL							</option>
+						<# } #>
+							<option value="custom">
+								Custom URL							</option>
+							<option value="none">
+								None							</option>
+						</select>
+						<input type="text" class="link-to-custom" data-setting="linkUrl" />
+					</div>
+					<div class="advanced-section">
+						<h2><button type="button" class="button-link advanced-toggle">Advanced Options</button></h2>
+						<div class="advanced-settings hidden">
+							<div class="advanced-image">
+								<label class="setting title-text">
+									<span>Image Title Attribute</span>
+									<input type="text" data-setting="title" value="{{ data.model.title }}" />
+								</label>
+								<label class="setting extra-classes">
+									<span>Image CSS Class</span>
+									<input type="text" data-setting="extraClasses" value="{{ data.model.extraClasses }}" />
+								</label>
+							</div>
+							<div class="advanced-link">
+								<div class="setting link-target">
+									<label><input type="checkbox" data-setting="linkTargetBlank" value="_blank" <# if ( data.model.linkTargetBlank ) { #>checked="checked"<# } #>>Open link in a new tab</label>
+								</div>
+								<label class="setting link-rel">
+									<span>Link Rel</span>
+									<input type="text" data-setting="linkRel" value="{{ data.model.linkRel }}" />
+								</label>
+								<label class="setting link-class-name">
+									<span>Link CSS Class</span>
+									<input type="text" data-setting="linkClassName" value="{{ data.model.linkClassName }}" />
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-image-editor">
+		<div id="media-head-{{ data.id }}"></div>
+		<div id="image-editor-{{ data.id }}"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-audio-details">
+		<# var ext, html5types = {
+			mp3: wp.media.view.settings.embedMimes.mp3,
+			ogg: wp.media.view.settings.embedMimes.ogg
+		}; #>
+
+				<div class="media-embed media-embed-details">
+			<div class="embed-media-settings embed-audio-settings">
+				<audio style="visibility: hidden"
+	controls
+	class="wp-audio-shortcode"
+	width="{{ _.isUndefined( data.model.width ) ? 400 : data.model.width }}"
+	preload="{{ _.isUndefined( data.model.preload ) ? 'none' : data.model.preload }}"
+	<#
+		if ( ! _.isUndefined( data.model.autoplay ) && data.model.autoplay ) {
+		#> autoplay<#
+	}
+		if ( ! _.isUndefined( data.model.loop ) && data.model.loop ) {
+		#> loop<#
+	}
+	#>
+>
+	<# if ( ! _.isEmpty( data.model.src ) ) { #>
+	<source src="{{ data.model.src }}" type="{{ wp.media.view.settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+	<# } #>
+
+		<# if ( ! _.isEmpty( data.model.mp3 ) ) { #>
+	<source src="{{ data.model.mp3 }}" type="{{ wp.media.view.settings.embedMimes[ 'mp3' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.ogg ) ) { #>
+	<source src="{{ data.model.ogg }}" type="{{ wp.media.view.settings.embedMimes[ 'ogg' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.flac ) ) { #>
+	<source src="{{ data.model.flac }}" type="{{ wp.media.view.settings.embedMimes[ 'flac' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.m4a ) ) { #>
+	<source src="{{ data.model.m4a }}" type="{{ wp.media.view.settings.embedMimes[ 'm4a' ] }}" />
+	<# } #>
+			<# if ( ! _.isEmpty( data.model.wav ) ) { #>
+	<source src="{{ data.model.wav }}" type="{{ wp.media.view.settings.embedMimes[ 'wav' ] }}" />
+	<# } #>
+		</audio>
+	
+				<# if ( ! _.isEmpty( data.model.src ) ) {
+					ext = data.model.src.split('.').pop();
+					if ( html5types[ ext ] ) {
+						delete html5types[ ext ];
+					}
+				#>
+				<div class="setting">
+					<label for="audio-source">URL</label>
+					<input type="text" id="audio-source" readonly data-setting="src" value="{{ data.model.src }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.mp3 ) ) {
+					if ( ! _.isUndefined( html5types.mp3 ) ) {
+						delete html5types.mp3;
+					}
+				#>
+				<div class="setting">
+					<label for="mp3-source">MP3</span>
+					<input type="text" id="mp3-source" readonly data-setting="mp3" value="{{ data.model.mp3 }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.ogg ) ) {
+					if ( ! _.isUndefined( html5types.ogg ) ) {
+						delete html5types.ogg;
+					}
+				#>
+				<div class="setting">
+					<label for="ogg-source">OGG</span>
+					<input type="text" id="ogg-source" readonly data-setting="ogg" value="{{ data.model.ogg }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.flac ) ) {
+					if ( ! _.isUndefined( html5types.flac ) ) {
+						delete html5types.flac;
+					}
+				#>
+				<div class="setting">
+					<label for="flac-source">FLAC</span>
+					<input type="text" id="flac-source" readonly data-setting="flac" value="{{ data.model.flac }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.m4a ) ) {
+					if ( ! _.isUndefined( html5types.m4a ) ) {
+						delete html5types.m4a;
+					}
+				#>
+				<div class="setting">
+					<label for="m4a-source">M4A</span>
+					<input type="text" id="m4a-source" readonly data-setting="m4a" value="{{ data.model.m4a }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.wav ) ) {
+					if ( ! _.isUndefined( html5types.wav ) ) {
+						delete html5types.wav;
+					}
+				#>
+				<div class="setting">
+					<label for="wav-source">WAV</span>
+					<input type="text" id="wav-source" readonly data-setting="wav" value="{{ data.model.wav }}" />
+					<button type="button" class="button-link remove-setting">Remove audio source</button>
+				</div>
+				<# } #>
+				
+				<# if ( ! _.isEmpty( html5types ) ) { #>
+				<div class="setting">
+					<span>Add alternate sources for maximum HTML5 playback:</span>
+					<div class="button-large">
+					<# _.each( html5types, function (mime, type) { #>
+					<button class="button add-media-source" data-mime="{{ mime }}">{{ type }}</button>
+					<# } ) #>
+					</div>
+				</div>
+				<# } #>
+
+				<div class="setting preload">
+					<span>Preload</span>
+					<div class="button-group button-large" data-setting="preload">
+						<button class="button" value="auto">Auto</button>
+						<button class="button" value="metadata">Metadata</button>
+						<button class="button active" value="none">None</button>
+					</div>
+				</div>
+
+				<label class="setting checkbox-setting autoplay">
+					<input type="checkbox" data-setting="autoplay" />
+					<span>Autoplay</span>
+				</label>
+
+				<label class="setting checkbox-setting">
+					<input type="checkbox" data-setting="loop" />
+					<span>Loop</span>
+				</label>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-video-details">
+		<# var ext, html5types = {
+			mp4: wp.media.view.settings.embedMimes.mp4,
+			ogv: wp.media.view.settings.embedMimes.ogv,
+			webm: wp.media.view.settings.embedMimes.webm
+		}; #>
+
+				<div class="media-embed media-embed-details">
+			<div class="embed-media-settings embed-video-settings">
+				<div class="wp-video-holder">
+				<#
+				var w = ! data.model.width || data.model.width > 640 ? 640 : data.model.width,
+					h = ! data.model.height ? 360 : data.model.height;
+
+				if ( data.model.width && w !== data.model.width ) {
+					h = Math.ceil( ( h * w ) / data.model.width );
+				}
+				#>
+
+				<#  var w_rule = '', classes = [],
+		w, h, settings = wp.media.view.settings,
+		isYouTube = isVimeo = false;
+
+	if ( ! _.isEmpty( data.model.src ) ) {
+		isYouTube = data.model.src.match(/youtube|youtu\.be/);
+		isVimeo = -1 !== data.model.src.indexOf('vimeo');
+	}
+
+	if ( settings.contentWidth && data.model.width >= settings.contentWidth ) {
+		w = settings.contentWidth;
+	} else {
+		w = data.model.width;
+	}
+
+	if ( w !== data.model.width ) {
+		h = Math.ceil( ( data.model.height * w ) / data.model.width );
+	} else {
+		h = data.model.height;
+	}
+
+	if ( w ) {
+		w_rule = 'width: ' + w + 'px; ';
+	}
+
+	if ( isYouTube ) {
+		classes.push( 'youtube-video' );
+	}
+
+	if ( isVimeo ) {
+		classes.push( 'vimeo-video' );
+	}
+
+#>
+<div style="{{ w_rule }}" class="wp-video">
+<video controls
+	class="wp-video-shortcode {{ classes.join( ' ' ) }}"
+	<# if ( w ) { #>width="{{ w }}"<# } #>
+	<# if ( h ) { #>height="{{ h }}"<# } #>
+			<#
+		if ( ! _.isUndefined( data.model.poster ) && data.model.poster ) {
+			#> poster="{{ data.model.poster }}"<#
+		} #>
+			preload			="{{ _.isUndefined( data.model.preload ) ? 'metadata' : data.model.preload }}"
+				<#
+		if ( ! _.isUndefined( data.model.autoplay ) && data.model.autoplay ) {
+		#> autoplay<#
+	}
+		if ( ! _.isUndefined( data.model.loop ) && data.model.loop ) {
+		#> loop<#
+	}
+	#>
+>
+	<# if ( ! _.isEmpty( data.model.src ) ) {
+		if ( isYouTube ) { #>
+		<source src="{{ data.model.src }}" type="video/youtube" />
+		<# } else if ( isVimeo ) { #>
+		<source src="{{ data.model.src }}" type="video/vimeo" />
+		<# } else { #>
+		<source src="{{ data.model.src }}" type="{{ settings.embedMimes[ data.model.src.split('.').pop() ] }}" />
+		<# }
+	} #>
+
+		<# if ( data.model.mp4 ) { #>
+	<source src="{{ data.model.mp4 }}" type="{{ settings.embedMimes[ 'mp4' ] }}" />
+	<# } #>
+		<# if ( data.model.m4v ) { #>
+	<source src="{{ data.model.m4v }}" type="{{ settings.embedMimes[ 'm4v' ] }}" />
+	<# } #>
+		<# if ( data.model.webm ) { #>
+	<source src="{{ data.model.webm }}" type="{{ settings.embedMimes[ 'webm' ] }}" />
+	<# } #>
+		<# if ( data.model.ogv ) { #>
+	<source src="{{ data.model.ogv }}" type="{{ settings.embedMimes[ 'ogv' ] }}" />
+	<# } #>
+		<# if ( data.model.flv ) { #>
+	<source src="{{ data.model.flv }}" type="{{ settings.embedMimes[ 'flv' ] }}" />
+	<# } #>
+		{{{ data.model.content }}}
+</video>
+</div>
+	
+				<# if ( ! _.isEmpty( data.model.src ) ) {
+					ext = data.model.src.split('.').pop();
+					if ( html5types[ ext ] ) {
+						delete html5types[ ext ];
+					}
+				#>
+				<div class="setting">
+					<label for="video-source">URL</label>
+					<input type="text" id="video-source" readonly data-setting="src" value="{{ data.model.src }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.mp4 ) ) {
+					if ( ! _.isUndefined( html5types.mp4 ) ) {
+						delete html5types.mp4;
+					}
+				#>
+				<div class="setting">
+					<label for="mp4-source">MP4</label>
+					<input type="text" id="mp4-source" readonly data-setting="mp4" value="{{ data.model.mp4 }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.m4v ) ) {
+					if ( ! _.isUndefined( html5types.m4v ) ) {
+						delete html5types.m4v;
+					}
+				#>
+				<div class="setting">
+					<label for="m4v-source">M4V</label>
+					<input type="text" id="m4v-source" readonly data-setting="m4v" value="{{ data.model.m4v }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.webm ) ) {
+					if ( ! _.isUndefined( html5types.webm ) ) {
+						delete html5types.webm;
+					}
+				#>
+				<div class="setting">
+					<label for="webm-source">WEBM</label>
+					<input type="text" id="webm-source" readonly data-setting="webm" value="{{ data.model.webm }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.ogv ) ) {
+					if ( ! _.isUndefined( html5types.ogv ) ) {
+						delete html5types.ogv;
+					}
+				#>
+				<div class="setting">
+					<label for="ogv-source">OGV</label>
+					<input type="text" id="ogv-source" readonly data-setting="ogv" value="{{ data.model.ogv }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								<# if ( ! _.isEmpty( data.model.flv ) ) {
+					if ( ! _.isUndefined( html5types.flv ) ) {
+						delete html5types.flv;
+					}
+				#>
+				<div class="setting">
+					<label for="flv-source">FLV</label>
+					<input type="text" id="flv-source" readonly data-setting="flv" value="{{ data.model.flv }}" />
+					<button type="button" class="button-link remove-setting">Remove video source</button>
+				</div>
+				<# } #>
+								</div>
+
+				<# if ( ! _.isEmpty( html5types ) ) { #>
+				<div class="setting">
+					<span>Add alternate sources for maximum HTML5 playback:</span>
+					<div class="button-large">
+					<# _.each( html5types, function (mime, type) { #>
+					<button class="button add-media-source" data-mime="{{ mime }}">{{ type }}</button>
+					<# } ) #>
+					</div>
+				</div>
+				<# } #>
+
+				<# if ( ! _.isEmpty( data.model.poster ) ) { #>
+				<div class="setting">
+					<label for="poster-image">Poster Image</label>
+					<input type="text" id="poster-image" readonly data-setting="poster" value="{{ data.model.poster }}" />
+					<button type="button" class="button-link remove-setting">Remove poster image</button>
+				</div>
+				<# } #>
+				<div class="setting preload">
+					<span>Preload</span>
+					<div class="button-group button-large" data-setting="preload">
+						<button class="button" value="auto">Auto</button>
+						<button class="button" value="metadata">Metadata</button>
+						<button class="button active" value="none">None</button>
+					</div>
+				</div>
+
+				<label class="setting checkbox-setting autoplay">
+					<input type="checkbox" data-setting="autoplay" />
+					<span>Autoplay</span>
+				</label>
+
+				<label class="setting checkbox-setting">
+					<input type="checkbox" data-setting="loop" />
+					<span>Loop</span>
+				</label>
+
+				<div class="setting" data-setting="content">
+					<#
+					var content = '';
+					if ( ! _.isEmpty( data.model.content ) ) {
+						var tracks = jQuery( data.model.content ).filter( 'track' );
+						_.each( tracks.toArray(), function (track) {
+							content += track.outerHTML; #>
+						<label for="video-track">Tracks (subtitles, captions, descriptions, chapters, or metadata)</span>
+						<input class="content-track" type="text" id="video-track" readonly value="{{ track.outerHTML }}" />
+						<button type="button" class="button-link remove-setting remove-track">Remove video track</button>
+						<# } ); #>
+					<# } else { #>
+					<span>Tracks (subtitles, captions, descriptions, chapters, or metadata)</span>
+					<em>There are no associated subtitles.</em>
+					<# } #>
+					<textarea class="hidden content-setting">{{ content }}</textarea>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="tmpl-editor-gallery">
+		<# if ( data.attachments.length ) { #>
+			<div class="gallery gallery-columns-{{ data.columns }}">
+				<# _.each( data.attachments, function( attachment, index ) { #>
+					<dl class="gallery-item">
+						<dt class="gallery-icon">
+							<# if ( attachment.thumbnail ) { #>
+								<img src="{{ attachment.thumbnail.url }}" width="{{ attachment.thumbnail.width }}" height="{{ attachment.thumbnail.height }}" alt="{{ attachment.alt }}" />
+							<# } else { #>
+								<img src="{{ attachment.url }}" alt="{{ attachment.alt }}" />
+							<# } #>
+						</dt>
+						<# if ( attachment.caption ) { #>
+							<dd class="wp-caption-text gallery-caption">
+								{{{ data.verifyHTML( attachment.caption ) }}}
+							</dd>
+						<# } #>
+					</dl>
+					<# if ( index % data.columns === data.columns - 1 ) { #>
+						<br style="clear: both;">
+					<# } #>
+				<# } ); #>
+			</div>
+		<# } else { #>
+			<div class="wpview-error">
+				<div class="dashicons dashicons-format-gallery"></div><p>No items found.</p>
+			</div>
+		<# } #>
+	</script>
+
+	<script type="text/html" id="tmpl-crop-content">
+		<img class="crop-image" src="{{ data.url }}" alt="Image crop area preview. Requires mouse interaction.">
+		<div class="upload-errors"></div>
+	</script>
+
+	<script type="text/html" id="tmpl-site-icon-preview">
+		<h2>Preview</h2>
+		<strong aria-hidden="true">As a browser icon</strong>
+		<div class="favicon-preview">
+			<img src="https://d1uqogra2sd8vg.cloudfront.net/wp-admin/images/browser.png" class="browser-preview" width="182" height="" alt="" />
+
+			<div class="favicon">
+				<img id="preview-favicon" src="{{ data.url }}" alt="Preview as a browser icon"/>
+			</div>
+			<span class="browser-title" aria-hidden="true"></span>
+		</div>
+
+		<strong aria-hidden="true">As an app icon</strong>
+		<div class="app-icon-preview">
+			<img id="preview-app-icon" src="{{ data.url }}" alt="Preview as an app icon"/>
+		</div>
+	</script>
+
+		<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/HEMA-onlinekiosk\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Winkelmand bekijken","cart_url":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/carrito\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-admin/js/password-strength-meter.min.js?ver=1562232014'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_password_strength_meter_params = {"min_password_strength":"3","stop_checkout":"","i18n_password_error":"Een sterker wachtwoord invoeren.","i18n_password_hint":"Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! \" ? $ % ^ & )."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/HEMA-onlinekiosk\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_country_select_params = {"countries":"{\"AF\":[],\"AO\":{\"BGO\":\"Bengo\",\"BLU\":\"Benguela\",\"BIE\":\"Bi\\u00e9\",\"CAB\":\"Cabinda\",\"CNN\":\"Cunene\",\"HUA\":\"Huambo\",\"HUI\":\"Hu\\u00edla\",\"CCU\":\"Kuando Kubango\",\"CNO\":\"Kwanza-Norte\",\"CUS\":\"Kwanza-Sul\",\"LUA\":\"Luanda\",\"LNO\":\"Lunda-Norte\",\"LSU\":\"Lunda-Sul\",\"MAL\":\"Malanje\",\"MOX\":\"Mexico\",\"NAM\":\"Namibi\\u00eb\",\"UIG\":\"U\\u00edge\",\"ZAI\":\"Za\\u00efre\"},\"AR\":{\"C\":\"Ciudad Aut\u00f3noma de Buenos Aires\",\"B\":\"Buenos Aires\",\"K\":\"Catamarca\",\"H\":\"Chaco\",\"U\":\"Chubut\",\"X\":\"C\u00f3rdoba\",\"W\":\"Corrientes\",\"E\":\"Entre R\u00edos\",\"P\":\"Formosa\",\"Y\":\"Jujuy\",\"L\":\"La Pampa\",\"F\":\"La Rioja\",\"M\":\"Mendoza\",\"N\":\"Misiones\",\"Q\":\"Neuqu\u00e9n\",\"R\":\"R\u00edo Negro\",\"A\":\"Salta\",\"J\":\"San Juan\",\"D\":\"San Luis\",\"Z\":\"Santa Cruz\",\"S\":\"Santa Fe\",\"G\":\"Santiago del Estero\",\"V\":\"Vuurland\",\"T\":\"Tucum\u00e1n\"},\"AT\":[],\"AU\":{\"ACT\":\"Australian Capital Territory\",\"NSW\":\"Nieuw-Zuid-Wales\",\"NT\":\"Noordelijk Territorium\",\"QLD\":\"Queensland\",\"SA\":\"Zuid-Australi\\u00eb\",\"TAS\":\"Tasmani\\u00eb\",\"VIC\":\"Victoria\",\"WA\":\"West-Australi\\u00eb\"},\"AX\":[],\"BD\":{\"BD-05\":\"Bagerhat\",\"BD-01\":\"Bandarban\",\"BD-02\":\"Barguna\",\"BD-06\":\"Barisal\",\"BD-07\":\"Bhola\",\"BD-03\":\"Bogra\",\"BD-04\":\"Brahmanbaria\",\"BD-09\":\"Chandpur\",\"BD-10\":\"Chattogram\",\"BD-12\":\"Chuadanga\",\"BD-11\":\"Cox's Bazar\",\"BD-08\":\"Comilla\",\"BD-13\":\"Dhaka\",\"BD-14\":\"Dinajpur\",\"BD-15\":\"Faridpur \",\"BD-16\":\"Feni\",\"BD-19\":\"Gaibandha\",\"BD-18\":\"Gazipur\",\"BD-17\":\"Gopalganj\",\"BD-20\":\"Habiganj\",\"BD-21\":\"Jamalpur\",\"BD-22\":\"Jashore\",\"BD-25\":\"Jhalokati\",\"BD-23\":\"Jhenaidah\",\"BD-24\":\"Joypurhat\",\"BD-29\":\"Khagrachhari\",\"BD-27\":\"Khulna\",\"BD-26\":\"Kishoreganj\",\"BD-28\":\"Kurigram\",\"BD-30\":\"Kushtia\",\"BD-31\":\"Lakshmipur\",\"BD-32\":\"Lalmonirhat\",\"BD-36\":\"Madaripur\",\"BD-37\":\"Magura\",\"BD-33\":\"Manikganj \",\"BD-39\":\"Meherpur\",\"BD-38\":\"Moulvibazar\",\"BD-35\":\"Munshiganj\",\"BD-34\":\"Mymensingh\",\"BD-48\":\"Naogaon\",\"BD-43\":\"Narail\",\"BD-40\":\"Narayanganj\",\"BD-42\":\"Narsingdi\",\"BD-44\":\"Natore\",\"BD-45\":\"Nawabganj\",\"BD-41\":\"Netrakona\",\"BD-46\":\"Nilphamari\",\"BD-47\":\"Noakhali\",\"BD-49\":\"Pabna\",\"BD-52\":\"Panchagarh\",\"BD-51\":\"Patuakhali\",\"BD-50\":\"Pirojpur\",\"BD-53\":\"Rajbari\",\"BD-54\":\"Rajshahi\",\"BD-56\":\"Rangamati\",\"BD-55\":\"Rangpur\",\"BD-58\":\"Satkhira\",\"BD-62\":\"Shariatpur\",\"BD-57\":\"Sherpur\",\"BD-59\":\"Sirajganj\",\"BD-61\":\"Sunamganj\",\"BD-60\":\"Sylhet\",\"BD-63\":\"Tangail\",\"BD-64\":\"Thakurgaon\"},\"BE\":[],\"BG\":{\"BG-01\":\"Blagoevgrad\",\"BG-02\":\"Burgas\",\"BG-08\":\"Dobrich\",\"BG-07\":\"Gabrovo\",\"BG-26\":\"Haskovo\",\"BG-09\":\"Kardzhali\",\"BG-10\":\"Kyustendil\",\"BG-11\":\"Lovech\",\"BG-12\":\"Montana\",\"BG-13\":\"Pazardzhik\",\"BG-14\":\"Pernik\",\"BG-15\":\"Pleven\",\"BG-16\":\"Plovdiv\",\"BG-17\":\"Razgrad\",\"BG-18\":\"Ruse\",\"BG-27\":\"Shumen\",\"BG-19\":\"Silistra\",\"BG-20\":\"Sliven\",\"BG-21\":\"Smolyan\",\"BG-23\":\"Sofia\",\"BG-22\":\"Sofia-Grad\",\"BG-24\":\"Stara Zagora\",\"BG-25\":\"Targovishte\",\"BG-03\":\"Varna\",\"BG-04\":\"Veliko Tarnovo\",\"BG-05\":\"Vidin\",\"BG-06\":\"Vratsa\",\"BG-28\":\"Yambol\"},\"BH\":[],\"BI\":[],\"BO\":{\"B\":\"Chuquisaca\",\"H\":\"Beni\",\"C\":\"Cochabamba\",\"L\":\"La Paz\",\"O\":\"Oruro\",\"N\":\"Pando\",\"P\":\"Potos\\u00ed\",\"S\":\"Santa Cruz\",\"T\":\"Tarija\"},\"BR\":{\"AC\":\"Acre\",\"AL\":\"Alagoas\",\"AP\":\"Amap\u00e1\",\"AM\":\"Amazonas\",\"BA\":\"Bahia\",\"CE\":\"Cear\u00e1\",\"DF\":\"Distrito Federal\",\"ES\":\"Esp\u00edrito Santo\",\"GO\":\"Goi\u00e1s\",\"MA\":\"Maranh\u00e3o\",\"MT\":\"Mato Grosso\",\"MS\":\"Mato Grosso do Sul\",\"MG\":\"Minas Gerais\",\"PA\":\"Par\u00e1\",\"PB\":\"Para\u00edba\",\"PR\":\"Paran\u00e1\",\"PE\":\"Pernambuco\",\"PI\":\"Piau\u00ed\",\"RJ\":\"Rio de Janeiro\",\"RN\":\"Rio Grande do Norte\",\"RS\":\"Rio Grande do Sul\",\"RO\":\"Rond\u00f4nia\",\"RR\":\"Roraima\",\"SC\":\"Santa Catarina\",\"SP\":\"S\u00e3o Paulo\",\"SE\":\"Sergipe\",\"TO\":\"Tocantins\"},\"CA\":{\"AB\":\"Alberta\",\"BC\":\"Brits-Columbia\",\"MB\":\"Manitoba\",\"NB\":\"New Brunswick\",\"NL\":\"Newfoundland en Labrador\",\"NT\":\"Northwest Territories\",\"NS\":\"Nova Scotia\",\"NU\":\"Nunavut\",\"ON\":\"Ontario\",\"PE\":\"Prins Edwardeiland\",\"QC\":\"Quebec\",\"SK\":\"Saskatchewan\",\"YT\":\"Yukon\"},\"CH\":{\"AG\":\"Aargau\",\"AR\":\"Appenzell Ausserrhoden\",\"AI\":\"Appenzell Innerrhoden\",\"BL\":\"Basel-Landschaft\",\"BS\":\"Basel-Stadt\",\"BE\":\"Bern\",\"FR\":\"Fribourg\",\"GE\":\"Gen\\u00e8ve\",\"GL\":\"Glarus\",\"GR\":\"Graub\u00fcnden\",\"JU\":\"Jura\",\"LU\":\"Luzern\",\"NE\":\"Neuch\u00e2tel\",\"NW\":\"Nidwalden\",\"OW\":\"Obwalden\",\"SH\":\"Schaffhausen\",\"SZ\":\"Schwyz\",\"SO\":\"Solothurn\",\"SG\":\"St. Gallen\",\"TG\":\"Thurgau\",\"TI\":\"Ticino\",\"UR\":\"Uri\",\"VS\":\"Valais\",\"VD\":\"Vaud\",\"ZG\":\"Zug\",\"ZH\":\"Z\u00fcrich\"},\"CN\":{\"CN1\":\"Yunnan \\\/ \u4e91\u5357\",\"CN2\":\"Beijing \\\/ \u5317\u4eac\",\"CN3\":\"Tianjin \\\/ \u5929\u6d25\",\"CN4\":\"Hebei \\\/ \u6cb3\u5317\",\"CN5\":\"Shanxi \\\/ \u5c71\u897f\",\"CN6\":\"Inner Mongolia \\\/ \u5167\u8499\u53e4\",\"CN7\":\"Liaoning \\\/ \u8fbd\u5b81\",\"CN8\":\"Jilin \\\/ \u5409\u6797\",\"CN9\":\"Heilongjiang \\\/ \u9ed1\u9f99\u6c5f\",\"CN10\":\"Shanghai \\\/ \u4e0a\u6d77\",\"CN11\":\"Jiangsu \\\/ \u6c5f\u82cf\",\"CN12\":\"Zhejiang \\\/ \u6d59\u6c5f\",\"CN13\":\"Anhui \\\/ \u5b89\u5fbd\",\"CN14\":\"Fujian \\\/ \u798f\u5efa\",\"CN15\":\"Jiangxi \\\/ \u6c5f\u897f\",\"CN16\":\"Shandong \\\/ \u5c71\u4e1c\",\"CN17\":\"Henan \\\/ \u6cb3\u5357\",\"CN18\":\"Hubei \\\/ \u6e56\u5317\",\"CN19\":\"Hunan \\\/ \u6e56\u5357\",\"CN20\":\"Guangdong \\\/ \u5e7f\u4e1c\",\"CN21\":\"Guangxi Zhuang \\\/ \u5e7f\u897f\u58ee\u65cf\",\"CN22\":\"Hainan \\\/ \u6d77\u5357\",\"CN23\":\"Chongqing \\\/ \u91cd\u5e86\",\"CN24\":\"Sichuan \\\/ \u56db\u5ddd\",\"CN25\":\"Guizhou \\\/ \u8d35\u5dde\",\"CN26\":\"Shaanxi \\\/ \u9655\u897f\",\"CN27\":\"Gansu \\\/ \u7518\u8083\",\"CN28\":\"Qinghai \\\/ \u9752\u6d77\",\"CN29\":\"Ningxia Hui \\\/ \u5b81\u590f\",\"CN30\":\"Macao \\\/ \u6fb3\u95e8\",\"CN31\":\"Tibet \\\/ \u897f\u85cf\",\"CN32\":\"Xinjiang \\\/ \u65b0\u7586\"},\"CZ\":[],\"DE\":[],\"DK\":[],\"EE\":[],\"ES\":{\"C\":\"A Coru\u00f1a\",\"VI\":\"Araba\\\/\u00c1lava\",\"AB\":\"Albacete\",\"A\":\"Alicante\",\"AL\":\"Almer\u00eda\",\"O\":\"Asturias\",\"AV\":\"\u00c1vila\",\"BA\":\"Badajoz\",\"PM\":\"Baleares\",\"B\":\"Barcelona\",\"BU\":\"Burgos\",\"CC\":\"C\u00e1ceres\",\"CA\":\"C\u00e1diz\",\"S\":\"Cantabria\",\"CS\":\"Castell\u00f3n\",\"CE\":\"Ceuta\",\"CR\":\"Ciudad Real\",\"CO\":\"C\u00f3rdoba\",\"CU\":\"Cuenca\",\"GI\":\"Girona\",\"GR\":\"Granada\",\"GU\":\"Guadalajara\",\"SS\":\"Gipuzkoa\",\"H\":\"Huelva\",\"HU\":\"Huesca\",\"J\":\"Ja\u00e9n\",\"LO\":\"La Rioja\",\"GC\":\"Las Palmas\",\"LE\":\"Le\u00f3n\",\"L\":\"Lleida\",\"LU\":\"Lugo\",\"M\":\"Madrid\",\"MA\":\"M\u00e1laga\",\"ML\":\"Melilla\",\"MU\":\"Murcia\",\"NA\":\"Navarra\",\"OR\":\"Ourense\",\"P\":\"Palencia\",\"PO\":\"Pontevedra\",\"SA\":\"Salamanca\",\"TF\":\"Santa Cruz de Tenerife\",\"SG\":\"Segovia\",\"SE\":\"Sevilla\",\"SO\":\"Soria\",\"T\":\"Tarragona\",\"TE\":\"Teruel\",\"TO\":\"Toledo\",\"V\":\"Valencia\",\"VA\":\"Valladolid\",\"BI\":\"Bizkaia\",\"ZA\":\"Zamora\",\"Z\":\"Zaragoza\"},\"FI\":[],\"FR\":[],\"GP\":[],\"GR\":{\"I\":\"Attica\",\"A\":\"Oost-Macedoni\\u00eb en Thraci\\u00eb\",\"B\":\"Centraal-Macedoni\\u00eb\",\"C\":\"West-Macedoni\\u00eb\",\"D\":\"Epirus\",\"E\":\"Thessali\\u00eb\",\"F\":\"Ionische Eilanden\",\"G\":\"West-Griekenland\",\"H\":\"Centraal-Griekenland\",\"J\":\"Peloponnesos\",\"K\":\"Noord-Ege\\u00efsche Eilanden\",\"L\":\"Zuid-Ege\\u00efsche Eilanden\",\"M\":\"Kreta\"},\"GF\":[],\"HK\":{\"HONG KONG\":\"Hongkong (eiland)\",\"KOWLOON\":\"Kowloon\",\"NEW TERRITORIES\":\"New Territories\"},\"HU\":{\"BK\":\"B\\u00e1cs-Kiskun\",\"BE\":\"B\\u00e9k\\u00e9s\",\"BA\":\"Baranya\",\"BZ\":\"Borsod-Aba\\u00faj-Zempl\\u00e9n\",\"BU\":\"Budapest\",\"CS\":\"Csongr\\u00e1d\",\"FE\":\"Fej\\u00e9r\",\"GS\":\"Gy\\u0151r-Moson-Sopron\",\"HB\":\"Hajd\\u00fa-Bihar\",\"HE\":\"Heves\",\"JN\":\"J\\u00e1sz-Nagykun-Szolnok\",\"KE\":\"Kom\\u00e1rom-Esztergom\",\"NO\":\"N\\u00f3gr\\u00e1d\",\"PE\":\"Pest\",\"SO\":\"Somogy\",\"SZ\":\"Szabolcs-Szatm\\u00e1r-Bereg\",\"TO\":\"Tolna\",\"VA\":\"Vas\",\"VE\":\"Veszpr\\u00e9m\",\"ZA\":\"Zala\"},\"ID\":{\"AC\":\"Aceh\",\"SU\":\"Noord-Sumatra\",\"SB\":\"West-Sumatra \",\"RI\":\"Riau\",\"KR\":\"Riau-archipel\",\"JA\":\"Jambi\",\"SS\":\"Zuid-Sumatra\",\"BB\":\"Bangka Belitung\",\"BE\":\"Bengkulu\",\"LA\":\"Lampung\",\"JK\":\"Jakarta\",\"JB\":\"West-Java\",\"BT\":\"Bantam\",\"JT\":\"Midden-Java\",\"JI\":\"Oost-Java\",\"YO\":\"Jogjakarta\",\"BA\":\"Bali\",\"NB\":\"West-Nusa Tenggara\",\"NT\":\"Oost-Nusa Tenggara\",\"KB\":\"West-Kalimantan\",\"KT\":\"Midden-Kalimantan\",\"KI\":\"Oost-Kalimantan\",\"KS\":\"Zuid-Kalimantan\",\"KU\":\"Noord-Kalimantan\",\"SA\":\"Noord-Celebes\",\"ST\":\"Midden-Celebes\",\"SG\":\"Zuidoost-Celebes\",\"SR\":\"West-Celebes\",\"SN\":\"Zuid-Celebes\",\"GO\":\"Gorontalo\",\"MA\":\"Molukken\",\"MU\":\"Noord-Molukken\",\"PA\":\"Papoea\",\"PB\":\"West-Papoea\"},\"IE\":{\"CW\":\"Carlow\",\"CN\":\"Cavan\",\"CE\":\"Clare\",\"CO\":\"Cork\",\"DL\":\"Donegal\",\"D\":\"Dublin\",\"G\":\"Galway\",\"KY\":\"Kerry\",\"KE\":\"Kildare\",\"KK\":\"Kilkenny\",\"LS\":\"Laois\",\"LM\":\"Leitrim\",\"LK\":\"Limerick\",\"LD\":\"Longford\",\"LH\":\"Louth\",\"MO\":\"Mayo\",\"MH\":\"Meath\",\"MN\":\"Monaghan\",\"OY\":\"Offaly\",\"RN\":\"Roscommon\",\"SO\":\"Sligo\",\"TA\":\"Tipperary\",\"WD\":\"Waterford\",\"WH\":\"Westmeath\",\"WX\":\"Wexford\",\"WW\":\"Wicklow\"},\"IN\":{\"AP\":\"Andhra Pradesh\",\"AR\":\"Arunachal Pradesh\",\"AS\":\"Assam\",\"BR\":\"Bihar\",\"CT\":\"Chhattisgarh\",\"GA\":\"Goa\",\"GJ\":\"Gujarat\",\"HR\":\"Haryana\",\"HP\":\"Himachal Pradesh\",\"JK\":\"Jammu en Kasjmir\",\"JH\":\"Jharkhand\",\"KA\":\"Karnataka\",\"KL\":\"Kerala\",\"MP\":\"Madhya Pradesh\",\"MH\":\"Maharashtra\",\"MN\":\"Manipur\",\"ML\":\"Meghalaya\",\"MZ\":\"Mizoram\",\"NL\":\"Nagaland\",\"OR\":\"Orissa\",\"PB\":\"Punjab\",\"RJ\":\"Rajasthan\",\"SK\":\"Sikkim\",\"TN\":\"Tamil Nadu\",\"TS\":\"Telangana\",\"TR\":\"Tripura\",\"UK\":\"Uttarakhand\",\"UP\":\"Uttar Pradesh\",\"WB\":\"West-Bengalen\",\"AN\":\"Andamanen en Nicobaren\",\"CH\":\"Chandigarh\",\"DN\":\"Dadra en Nagar Haveli\",\"DD\":\"Daman en Diu\",\"DL\":\"Delhi\",\"LD\":\"Laccadiven\",\"PY\":\"Pondicherry (Puducherry)\"},\"IR\":{\"KHZ\":\"Khoezistan  (\\u062e\\u0648\\u0632\\u0633\\u062a\\u0627\\u0646)\",\"THR\":\"Teheran  (\\u062a\\u0647\\u0631\\u0627\\u0646)\",\"ILM\":\"Ilam (\\u0627\\u06cc\\u0644\\u0627\\u0645)\",\"BHR\":\"Bushehr (\\u0628\\u0648\\u0634\\u0647\\u0631)\",\"ADL\":\"Ardebil (\\u0627\\u0631\\u062f\\u0628\\u06cc\\u0644)\",\"ESF\":\"Isfahan (\\u0627\\u0635\\u0641\\u0647\\u0627\\u0646)\",\"YZD\":\"Yazd (\\u06cc\\u0632\\u062f)\",\"KRH\":\"Kermanshah (\\u06a9\\u0631\\u0645\\u0627\\u0646\\u0634\\u0627\\u0647)\",\"KRN\":\"Kerman (\\u06a9\\u0631\\u0645\\u0627\\u0646)\",\"HDN\":\"Hamadan (\\u0647\\u0645\\u062f\\u0627\\u0646)\",\"GZN\":\"Qazvin (\\u0642\\u0632\\u0648\\u06cc\\u0646)\",\"ZJN\":\"Zanjan (\\u0632\\u0646\\u062c\\u0627\\u0646)\",\"LRS\":\"Loeristan (\\u0644\\u0631\\u0633\\u062a\\u0627\\u0646)\",\"ABZ\":\"Alborz (\\u0627\\u0644\\u0628\\u0631\\u0632)\",\"EAZ\":\"Oost-Azerbeidzjan (\\u0622\\u0630\\u0631\\u0628\\u0627\\u06cc\\u062c\\u0627\\u0646 \\u0634\\u0631\\u0642\\u06cc)\",\"WAZ\":\"West-Azerbeidzjan (\\u0622\\u0630\\u0631\\u0628\\u0627\\u06cc\\u062c\\u0627\\u0646 \\u063a\\u0631\\u0628\\u06cc)\",\"CHB\":\"Chahar Mahaal en Bakhtiari (\\u0686\\u0647\\u0627\\u0631\\u0645\\u062d\\u0627\\u0644 \\u0648 \\u0628\\u062e\\u062a\\u06cc\\u0627\\u0631\\u06cc)\",\"SKH\":\"Zuid-Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u062c\\u0646\\u0648\\u0628\\u06cc)\",\"RKH\":\"Razavi-Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u0631\\u0636\\u0648\\u06cc)\",\"NKH\":\"Noord-Khorasan (\\u062e\\u0631\\u0627\\u0633\\u0627\\u0646 \\u062c\\u0646\\u0648\\u0628\\u06cc)\",\"SMN\":\"Semnan (\\u0633\\u0645\\u0646\\u0627\\u0646)\",\"FRS\":\"Fars (\\u0641\\u0627\\u0631\\u0633)\",\"QHM\":\"Qom (\\u0642\\u0645)\",\"KRD\":\"Koerdistan (\\u06a9\\u0631\\u062f\\u0633\\u062a\\u0627\\u0646)\",\"KBD\":\"Kohgiluyeh en Boyer Ahmad (\\u06a9\\u0647\\u06af\\u06cc\\u0644\\u0648\\u06cc\\u06cc\\u0647 \\u0648 \\u0628\\u0648\\u06cc\\u0631\\u0627\\u062d\\u0645\\u062f)\",\"GLS\":\"Golestan (\\u06af\\u0644\\u0633\\u062a\\u0627\\u0646)\",\"GIL\":\"Gilan (\\u06af\\u06cc\\u0644\\u0627\\u0646)\",\"MZN\":\"Mazandaran (\\u0645\\u0627\\u0632\\u0646\\u062f\\u0631\\u0627\\u0646)\",\"MKZ\":\"Markazi (\\u0645\\u0631\\u06a9\\u0632\\u06cc)\",\"HRZ\":\"Hormozgan (\\u0647\\u0631\\u0645\\u0632\\u06af\\u0627\\u0646)\",\"SBN\":\"Sistan en Beloetsjistan (\\u0633\\u06cc\\u0633\\u062a\\u0627\\u0646 \\u0648 \\u0628\\u0644\\u0648\\u0686\\u0633\\u062a\\u0627\\u0646)\"},\"IS\":[],\"IT\":{\"AG\":\"Agrigento\",\"AL\":\"Alessandria\",\"AN\":\"Ancona\",\"AO\":\"Aosta\",\"AR\":\"Arezzo\",\"AP\":\"Ascoli Piceno\",\"AT\":\"Asti\",\"AV\":\"Avellino\",\"BA\":\"Bari\",\"BT\":\"Barletta-Andria-Trani\",\"BL\":\"Belluno\",\"BN\":\"Benevento\",\"BG\":\"Bergamo\",\"BI\":\"Biella\",\"BO\":\"Bologna\",\"BZ\":\"Bolzano\",\"BS\":\"Brescia\",\"BR\":\"Brindisi\",\"CA\":\"Cagliari\",\"CL\":\"Caltanissetta\",\"CB\":\"Campobasso\",\"CE\":\"Caserta\",\"CT\":\"Catania\",\"CZ\":\"Catanzaro\",\"CH\":\"Chieti\",\"CO\":\"Como\",\"CS\":\"Cosenza\",\"CR\":\"Cremona\",\"KR\":\"Crotone\",\"CN\":\"Cuneo\",\"EN\":\"Enna\",\"FM\":\"Fermo\",\"FE\":\"Ferrara\",\"FI\":\"Florence\",\"FG\":\"Foggia\",\"FC\":\"Forl\\u00ec-Cesena\",\"FR\":\"Frosinone\",\"GE\":\"Genua\",\"GO\":\"Gorizia\",\"GR\":\"Grosseto\",\"IM\":\"Imperia\",\"IS\":\"Isernia\",\"SP\":\"La Spezia\",\"AQ\":\"L'Aquila\",\"LT\":\"Latina\",\"LE\":\"Lecce\",\"LC\":\"Lecco\",\"LI\":\"Livorno\",\"LO\":\"Lodi\",\"LU\":\"Lucca\",\"MC\":\"Macerata\",\"MN\":\"Mantova\",\"MS\":\"Massa-Carrara\",\"MT\":\"Matera\",\"ME\":\"Messina\",\"MI\":\"Milaan\",\"MO\":\"Modena\",\"MB\":\"Monza e Brianza\",\"NA\":\"Napels\",\"NO\":\"Novara\",\"NU\":\"Nuoro\",\"OR\":\"Oristano\",\"PD\":\"Padova\",\"PA\":\"Palermo\",\"PR\":\"Parma\",\"PV\":\"Pavia\",\"PG\":\"Perugia\",\"PU\":\"Pesaro e Urbino\",\"PE\":\"Pescara\",\"PC\":\"Piacenza\",\"PI\":\"Pisa\",\"PT\":\"Pistoia\",\"PN\":\"Pordenone\",\"PZ\":\"Potenza\",\"PO\":\"Prato\",\"RG\":\"Ragusa\",\"RA\":\"Ravenna\",\"RC\":\"Reggio Calabria\",\"RE\":\"Reggio Emilia\",\"RI\":\"Rieti\",\"RN\":\"Rimini\",\"RM\":\"Rome\",\"RO\":\"Rovigo\",\"SA\":\"Salerno\",\"SS\":\"Sassari\",\"SV\":\"Savona\",\"SI\":\"Siena\",\"SR\":\"Siracusa\",\"SO\":\"Sondrio\",\"SU\":\"Sud Sardegna\",\"TA\":\"Taranto\",\"TE\":\"Teramo\",\"TR\":\"Terni\",\"TO\":\"Turijn\",\"TP\":\"Trapani\",\"TN\":\"Trento\",\"TV\":\"Treviso\",\"TS\":\"Tri\\u00ebst\",\"UD\":\"Udine\",\"VA\":\"Varese\",\"VE\":\"Veneti\\u00eb\",\"VB\":\"Verbano-Cusio-Ossola\",\"VC\":\"Vercelli\",\"VR\":\"Verona\",\"VV\":\"Vibo Valentia\",\"VI\":\"Vicenza\",\"VT\":\"Viterbo\"},\"IL\":[],\"IM\":[],\"JP\":{\"JP01\":\"Hokkaido\",\"JP02\":\"Aomori\",\"JP03\":\"Iwate\",\"JP04\":\"Miyagi\",\"JP05\":\"Akita\",\"JP06\":\"Yamagata\",\"JP07\":\"Fukushima\",\"JP08\":\"Ibaraki\",\"JP09\":\"Tochigi\",\"JP10\":\"Gunma\",\"JP11\":\"Saitama\",\"JP12\":\"Chiba\",\"JP13\":\"Tokio\",\"JP14\":\"Kanagawa\",\"JP15\":\"Niigata\",\"JP16\":\"Toyama\",\"JP17\":\"Ishikawa\",\"JP18\":\"Fukui\",\"JP19\":\"Yamanashi\",\"JP20\":\"Nagano\",\"JP21\":\"Gifu\",\"JP22\":\"Shizuoka\",\"JP23\":\"Aichi\",\"JP24\":\"Mie\",\"JP25\":\"Shiga\",\"JP26\":\"Kyoto\",\"JP27\":\"Osaka\",\"JP28\":\"Hyogo\",\"JP29\":\"Nara\",\"JP30\":\"Wakayama\",\"JP31\":\"Tottori\",\"JP32\":\"Shimane\",\"JP33\":\"Okayama\",\"JP34\":\"Hiroshima\",\"JP35\":\"Yamaguchi\",\"JP36\":\"Tokushima\",\"JP37\":\"Kagawa\",\"JP38\":\"Ehime\",\"JP39\":\"Kochi\",\"JP40\":\"Fukuoka\",\"JP41\":\"Saga\",\"JP42\":\"Nagasaki\",\"JP43\":\"Kumamoto\",\"JP44\":\"Oita\",\"JP45\":\"Miyazaki\",\"JP46\":\"Kagoshima\",\"JP47\":\"Okinawa\"},\"KR\":[],\"KW\":[],\"LB\":[],\"LR\":{\"BM\":\"Bomi\",\"BN\":\"Bong\",\"GA\":\"Gbarpolu\",\"GB\":\"Grand Bassa\",\"GC\":\"Grand Cape Mount\",\"GG\":\"Grand Gedeh\",\"GK\":\"Grand Kru\",\"LO\":\"Lofa\",\"MA\":\"Margibi\",\"MY\":\"Maryland\",\"MO\":\"Montserrado\",\"NM\":\"Nimba\",\"RV\":\"Rivercess\",\"RG\":\"River Gee\",\"SN\":\"Sinoe\"},\"LU\":[],\"MD\":{\"C\":\"Chi\\u0219in\\u0103u\",\"BL\":\"B\\u0103l\\u021bi\",\"AN\":\"Anenii Noi\",\"BS\":\"Basarabeasca\",\"BR\":\"Briceni\",\"CH\":\"Cahul\",\"CT\":\"Cantemir\",\"CL\":\"C\\u0103l\\u0103ra\\u0219i\",\"CS\":\"C\\u0103u\\u0219eni\",\"CM\":\"Cimi\\u0219lia\",\"CR\":\"Criuleni\",\"DN\":\"Dondu\\u0219eni\",\"DR\":\"Drochia\",\"DB\":\"Dub\\u0103sari\",\"ED\":\"Edine\\u021b\",\"FL\":\"F\\u0103le\\u0219ti\",\"FR\":\"Flore\\u0219ti\",\"GE\":\"UTA G\\u0103g\\u0103uzia\",\"GL\":\"Glodeni\",\"HN\":\"H\\u00eence\\u0219ti\",\"IL\":\"Ialoveni\",\"LV\":\"Leova\",\"NS\":\"Nisporeni\",\"OC\":\"Ocni\\u021ba\",\"OR\":\"Orhei\",\"RZ\":\"Rezina\",\"RS\":\"R\\u00ee\\u0219cani\",\"SG\":\"S\\u00eengerei\",\"SR\":\"Soroca\",\"ST\":\"Str\\u0103\\u0219eni\",\"SD\":\"\\u0218old\\u0103ne\\u0219ti\",\"SV\":\"\\u0218tefan Vod\\u0103\",\"TR\":\"Taraclia\",\"TL\":\"Telene\\u0219ti\",\"UN\":\"Ungheni\"},\"MQ\":[],\"MT\":[],\"MX\":{\"DF\":\"Ciudad de M\u00e9xico\",\"JA\":\"Jalisco\",\"NL\":\"Nuevo Le\u00f3n\",\"AG\":\"Aguascalientes\",\"BC\":\"Baja California\",\"BS\":\"Baja California Sur\",\"CM\":\"Campeche\",\"CS\":\"Chiapas\",\"CH\":\"Chihuahua\",\"CO\":\"Coahuila \",\"CL\":\"Colima\",\"DG\":\"Durango\",\"GT\":\"Guanajuato\",\"GR\":\"Guerrero\",\"HG\":\"Hidalgo\",\"MX\":\"Estado de M\u00e9xico\",\"MI\":\"Michoac\u00e1n\",\"MO\":\"Morelos\",\"NA\":\"Nayarit\",\"OA\":\"Oaxaca\",\"PU\":\"Puebla\",\"QT\":\"Quer\u00e9taro\",\"QR\":\"Quintana Roo\",\"SL\":\"San Luis Potos\u00ed\",\"SI\":\"Sinaloa\",\"SO\":\"Sonora\",\"TB\":\"Tabasco\",\"TM\":\"Tamaulipas\",\"TL\":\"Tlaxcala\",\"VE\":\"Veracruz\",\"YU\":\"Yucat\u00e1n\",\"ZA\":\"Zacatecas\"},\"MY\":{\"JHR\":\"Johor\",\"KDH\":\"Kedah\",\"KTN\":\"Kelantan\",\"LBN\":\"Labuan\",\"MLK\":\"Malakka (Melaka)\",\"NSN\":\"Negeri Sembilan\",\"PHG\":\"Pahang\",\"PNG\":\"Penang (Pulau Pinang)\",\"PRK\":\"Perak\",\"PLS\":\"Perlis\",\"SBH\":\"Sabah\",\"SWK\":\"Sarawak\",\"SGR\":\"Selangor\",\"TRG\":\"Terengganu\",\"PJY\":\"Putrajaya\",\"KUL\":\"Kuala Lumpur\"},\"NG\":{\"AB\":\"Abia\",\"FC\":\"Abuja\",\"AD\":\"Adamawa\",\"AK\":\"Akwa Ibom\",\"AN\":\"Anambra\",\"BA\":\"Bauchi\",\"BY\":\"Bayelsa\",\"BE\":\"Benue\",\"BO\":\"Borno\",\"CR\":\"Cross River\",\"DE\":\"Delta\",\"EB\":\"Ebonyi\",\"ED\":\"Edo\",\"EK\":\"Ekiti\",\"EN\":\"Enugu\",\"GO\":\"Gombe\",\"IM\":\"Imo\",\"JI\":\"Jigawa\",\"KD\":\"Kaduna\",\"KN\":\"Kano\",\"KT\":\"Katsina\",\"KE\":\"Kebbi\",\"KO\":\"Kogi\",\"KW\":\"Kwara\",\"LA\":\"Lagos\",\"NA\":\"Nassarawa\",\"NI\":\"Niger\",\"OG\":\"Ogun\",\"ON\":\"Ondo\",\"OS\":\"Osun\",\"OY\":\"Oyo\",\"PL\":\"Plateau\",\"RI\":\"Rivers\",\"SO\":\"Sokoto\",\"TA\":\"Taraba\",\"YO\":\"Yobe\",\"ZA\":\"Zamfara\"},\"NL\":[],\"NO\":[],\"NP\":{\"BAG\":\"Bagmati\",\"BHE\":\"Bheri\",\"DHA\":\"Dhaulagiri\",\"GAN\":\"Gandaki\",\"JAN\":\"Janakpur\",\"KAR\":\"Karnali\",\"KOS\":\"Koshi\",\"LUM\":\"Lumbini\",\"MAH\":\"Mahakali\",\"MEC\":\"Mechi\",\"NAR\":\"Narayani\",\"RAP\":\"Rapti\",\"SAG\":\"Sagarmatha\",\"SET\":\"Seti\"},\"NZ\":{\"NL\":\"Northland\",\"AK\":\"Auckland\",\"WA\":\"Waikato\",\"BP\":\"Bay of Plenty\",\"TK\":\"Taranaki\",\"GI\":\"Gisborne\",\"HB\":\"Hawke\u2019s Bay\",\"MW\":\"Manawatu-Wanganui\",\"WE\":\"Wellington\",\"NS\":\"Nelson\",\"MB\":\"Marlborough\",\"TM\":\"Tasman\",\"WC\":\"West Coast\",\"CT\":\"Canterbury\",\"OT\":\"Otago\",\"SL\":\"Southland\"},\"PE\":{\"CAL\":\"El Callao\",\"LMA\":\"Municipalidad Metropolitana de Lima\",\"AMA\":\"Amazonas\",\"ANC\":\"Ancash\",\"APU\":\"Apur\u00edmac\",\"ARE\":\"Arequipa\",\"AYA\":\"Ayacucho\",\"CAJ\":\"Cajamarca\",\"CUS\":\"Cusco\",\"HUV\":\"Huancavelica\",\"HUC\":\"Hu\u00e1nuco\",\"ICA\":\"Ica\",\"JUN\":\"Jun\u00edn\",\"LAL\":\"La Libertad\",\"LAM\":\"Lambayeque\",\"LIM\":\"Lima\",\"LOR\":\"Loreto\",\"MDD\":\"Madre de Dios\",\"MOQ\":\"Moquegua\",\"PAS\":\"Pasco\",\"PIU\":\"Piura\",\"PUN\":\"Puno\",\"SAM\":\"San Mart\u00edn\",\"TAC\":\"Tacna\",\"TUM\":\"Tumbes\",\"UCA\":\"Ucayali\"},\"PH\":{\"ABR\":\"Abra\",\"AGN\":\"Agusan del Norte\",\"AGS\":\"Agusan del Sur\",\"AKL\":\"Aklan\",\"ALB\":\"Albay\",\"ANT\":\"Antique\",\"APA\":\"Apayao\",\"AUR\":\"Aurora\",\"BAS\":\"Basilan\",\"BAN\":\"Bataan\",\"BTN\":\"Batanes\",\"BTG\":\"Batangas\",\"BEN\":\"Benguet\",\"BIL\":\"Biliran\",\"BOH\":\"Bohol\",\"BUK\":\"Bukidnon\",\"BUL\":\"Bulacan\",\"CAG\":\"Cagayan\",\"CAN\":\"Camarines Norte\",\"CAS\":\"Camarines Sur\",\"CAM\":\"Camiguin\",\"CAP\":\"Capiz\",\"CAT\":\"Catanduanes\",\"CAV\":\"Cavite\",\"CEB\":\"Cebu\",\"COM\":\"Compostela Valley\",\"NCO\":\"Cotabato\",\"DAV\":\"Davao del Norte\",\"DAS\":\"Davao del Sur\",\"DAC\":\"Davao Occidental\",\"DAO\":\"Davao Oriental\",\"DIN\":\"Dinagat Islands\",\"EAS\":\"Eastern Samar\",\"GUI\":\"Guimaras\",\"IFU\":\"Ifugao\",\"ILN\":\"Ilocos Norte\",\"ILS\":\"Ilocos Sur\",\"ILI\":\"Iloilo\",\"ISA\":\"Isabela\",\"KAL\":\"Kalinga\",\"LUN\":\"La Union\",\"LAG\":\"Laguna\",\"LAN\":\"Lanao del Norte\",\"LAS\":\"Lanao del Sur\",\"LEY\":\"Leyte\",\"MAG\":\"Maguindanao\",\"MAD\":\"Marinduque\",\"MAS\":\"Masbate\",\"MSC\":\"Misamis Occidental\",\"MSR\":\"Misamis Oriental\",\"MOU\":\"Mountain Province\",\"NEC\":\"Negros Occidental\",\"NER\":\"Negros Oriental\",\"NSA\":\"Northern Samar\",\"NUE\":\"Nueva Ecija\",\"NUV\":\"Nueva Vizcaya\",\"MDC\":\"Occidental Mindoro\",\"MDR\":\"Oriental Mindoro\",\"PLW\":\"Palawan\",\"PAM\":\"Pampanga\",\"PAN\":\"Pangasinan\",\"QUE\":\"Quezon\",\"QUI\":\"Quirino\",\"RIZ\":\"Rizal\",\"ROM\":\"Romblon\",\"WSA\":\"Samar\",\"SAR\":\"Sarangani\",\"SIQ\":\"Siquijor\",\"SOR\":\"Sorsogon\",\"SCO\":\"South Cotabato\",\"SLE\":\"Southern Leyte\",\"SUK\":\"Sultan Kudarat\",\"SLU\":\"Sulu\",\"SUN\":\"Surigao del Norte\",\"SUR\":\"Surigao del Sur\",\"TAR\":\"Tarlac\",\"TAW\":\"Tawi-Tawi\",\"ZMB\":\"Zambales\",\"ZAN\":\"Zamboanga del Norte\",\"ZAS\":\"Zamboanga del Sur\",\"ZSI\":\"Zamboanga Sibugay\",\"00\":\"Metro Manila\"},\"PK\":{\"JK\":\"Azad Kasjmir\",\"BA\":\"Beloetsjistan\",\"TA\":\"FBS\",\"GB\":\"Gilgit-Baltistan\",\"IS\":\"Hoofdstedelijk Territorium Islamabad\",\"KP\":\"Khyber-Pakhtunkhwa\",\"PB\":\"Punjab\",\"SD\":\"Sindh\"},\"PL\":[],\"PT\":[],\"PY\":{\"PY-ASU\":\"Asunci\\u00f3n\",\"PY-1\":\"Concepci\\u00f3n\",\"PY-2\":\"San Pedro\",\"PY-3\":\"Cordillera\",\"PY-4\":\"Guair\\u00e1\",\"PY-5\":\"Caaguaz\\u00fa\",\"PY-6\":\"Caazap\\u00e1\",\"PY-7\":\"Itap\\u00faa\",\"PY-8\":\"Misiones\",\"PY-9\":\"Paraguar\\u00ed\",\"PY-10\":\"Alto Paran\\u00e1\",\"PY-11\":\"Central\",\"PY-12\":\"\\u00d1eembuc\\u00fa\",\"PY-13\":\"Amambay\",\"PY-14\":\"Canindey\\u00fa\",\"PY-15\":\"Presidente Hayes\",\"PY-16\":\"Alto Paraguay\",\"PY-17\":\"Boquer\\u00f3n\"},\"RE\":[],\"RO\":{\"AB\":\"Alba\",\"AR\":\"Arad\",\"AG\":\"Arge\\u0219\",\"BC\":\"Bac\\u0103u\",\"BH\":\"Bihor\",\"BN\":\"Bistri\\u021ba-N\\u0103s\\u0103ud\",\"BT\":\"Boto\\u0219ani\",\"BR\":\"Br\\u0103ila\",\"BV\":\"Bra\\u0219ov\",\"B\":\"Bucure\\u0219ti\",\"BZ\":\"Buz\\u0103u\",\"CL\":\"C\\u0103l\\u0103ra\\u0219i\",\"CS\":\"Cara\\u0219-Severin\",\"CJ\":\"Cluj\",\"CT\":\"Constan\\u021ba\",\"CV\":\"Covasna\",\"DB\":\"D\\u00e2mbovi\\u021ba\",\"DJ\":\"Dolj\",\"GL\":\"Gala\\u021bi\",\"GR\":\"Giurgiu\",\"GJ\":\"Gorj\",\"HR\":\"Harghita\",\"HD\":\"Hunedoara\",\"IL\":\"Ialomi\\u021ba\",\"IS\":\"Ia\\u0219i\",\"IF\":\"Ilfov\",\"MM\":\"Maramure\\u0219\",\"MH\":\"Mehedin\\u021bi\",\"MS\":\"Mure\\u0219\",\"NT\":\"Neam\\u021b\",\"OT\":\"Olt\",\"PH\":\"Prahova\",\"SJ\":\"S\\u0103laj\",\"SM\":\"Satu Mare\",\"SB\":\"Sibiu\",\"SV\":\"Suceava\",\"TR\":\"Teleorman\",\"TM\":\"Timi\\u0219\",\"TL\":\"Tulcea\",\"VL\":\"V\\u00e2lcea\",\"VS\":\"Vaslui\",\"VN\":\"Vrancea\"},\"RS\":[],\"SG\":[],\"SK\":[],\"SI\":[],\"TH\":{\"TH-37\":\"Amnat Charoen\",\"TH-15\":\"Ang Thong\",\"TH-14\":\"Ayutthaya\",\"TH-10\":\"Bangkok\",\"TH-38\":\"Bueng Kan\",\"TH-31\":\"Buri Ram\",\"TH-24\":\"Chachoengsao\",\"TH-18\":\"Chai Nat\",\"TH-36\":\"Chaiyaphum\",\"TH-22\":\"Chanthaburi\",\"TH-50\":\"Chiang Mai\",\"TH-57\":\"Chiang Rai\",\"TH-20\":\"Chonburi\",\"TH-86\":\"Chumphon\",\"TH-46\":\"Kalasin\",\"TH-62\":\"Kamphaeng Phet\",\"TH-71\":\"Kanchanaburi\",\"TH-40\":\"Khon Kaen\",\"TH-81\":\"Krabi\",\"TH-52\":\"Lampang\",\"TH-51\":\"Lamphun\",\"TH-42\":\"Loei\",\"TH-16\":\"Lopburi\",\"TH-58\":\"Mae Hong Son\",\"TH-44\":\"Maha Sarakham\",\"TH-49\":\"Mukdahan\",\"TH-26\":\"Nakhon Nayok\",\"TH-73\":\"Nakhon Pathom\",\"TH-48\":\"Nakhon Phanom\",\"TH-30\":\"Nakhon Ratchasima\",\"TH-60\":\"Nakhon Sawan\",\"TH-80\":\"Nakhon Si Thammarat\",\"TH-55\":\"Nan\",\"TH-96\":\"Narathiwat\",\"TH-39\":\"Nong Bua Lam Phu\",\"TH-43\":\"Nong Khai\",\"TH-12\":\"Nonthaburi\",\"TH-13\":\"Pathum Thani\",\"TH-94\":\"Pattani\",\"TH-82\":\"Phang Nga\",\"TH-93\":\"Phatthalung\",\"TH-56\":\"Phayao\",\"TH-67\":\"Phetchabun\",\"TH-76\":\"Phetchaburi\",\"TH-66\":\"Phichit\",\"TH-65\":\"Phitsanulok\",\"TH-54\":\"Phrae\",\"TH-83\":\"Phuket\",\"TH-25\":\"Prachin Buri\",\"TH-77\":\"Prachuap Khiri Khan\",\"TH-85\":\"Ranong\",\"TH-70\":\"Ratchaburi\",\"TH-21\":\"Rayong\",\"TH-45\":\"Roi Et\",\"TH-27\":\"Sa Kaeo\",\"TH-47\":\"Sakon Nakhon\",\"TH-11\":\"Samut Prakan\",\"TH-74\":\"Samut Sakhon\",\"TH-75\":\"Samut Songkhram\",\"TH-19\":\"Saraburi\",\"TH-91\":\"Satun\",\"TH-17\":\"Sing Buri\",\"TH-33\":\"Sisaket\",\"TH-90\":\"Songkhla\",\"TH-64\":\"Sukhothai\",\"TH-72\":\"Suphan Buri\",\"TH-84\":\"Surat Thani\",\"TH-32\":\"Surin\",\"TH-63\":\"Tak\",\"TH-92\":\"Trang\",\"TH-23\":\"Trat\",\"TH-34\":\"Ubon Ratchathani\",\"TH-41\":\"Udon Thani\",\"TH-61\":\"Uthai Thani\",\"TH-53\":\"Uttaradit\",\"TH-95\":\"Yala\",\"TH-35\":\"Yasothon\"},\"TR\":{\"TR01\":\"Adana\",\"TR02\":\"Ad\u0131yaman\",\"TR03\":\"Afyon\",\"TR04\":\"A\u011fr\u0131\",\"TR05\":\"Amasya\",\"TR06\":\"Ankara\",\"TR07\":\"Antalya\",\"TR08\":\"Artvin\",\"TR09\":\"Ayd\u0131n\",\"TR10\":\"Bal\u0131kesir\",\"TR11\":\"Bilecik\",\"TR12\":\"Bing\u00f6l\",\"TR13\":\"Bitlis\",\"TR14\":\"Bolu\",\"TR15\":\"Burdur\",\"TR16\":\"Bursa\",\"TR17\":\"\u00c7anakkale\",\"TR18\":\"\u00c7ank\u0131r\u0131\",\"TR19\":\"\u00c7orum\",\"TR20\":\"Denizli\",\"TR21\":\"Diyarbak\u0131r\",\"TR22\":\"Edirne\",\"TR23\":\"Elaz\u0131\u011f\",\"TR24\":\"Erzincan\",\"TR25\":\"Erzurum\",\"TR26\":\"Eski\u015fehir\",\"TR27\":\"Gaziantep\",\"TR28\":\"Giresun\",\"TR29\":\"G\u00fcm\u00fc\u015fhane\",\"TR30\":\"Hakkari\",\"TR31\":\"Hatay\",\"TR32\":\"Isparta\",\"TR33\":\"\u0130\u00e7el\",\"TR34\":\"\u0130stanbul\",\"TR35\":\"\u0130zmir\",\"TR36\":\"Kars\",\"TR37\":\"Kastamonu\",\"TR38\":\"Kayseri\",\"TR39\":\"K\u0131rklareli\",\"TR40\":\"K\u0131r\u015fehir\",\"TR41\":\"Kocaeli\",\"TR42\":\"Konya\",\"TR43\":\"K\u00fctahya\",\"TR44\":\"Malatya\",\"TR45\":\"Manisa\",\"TR46\":\"Kahramanmara\u015f\",\"TR47\":\"Mardin\",\"TR48\":\"Mu\u011fla\",\"TR49\":\"Mu\u015f\",\"TR50\":\"Nev\u015fehir\",\"TR51\":\"Ni\u011fde\",\"TR52\":\"Ordu\",\"TR53\":\"Rize\",\"TR54\":\"Sakarya\",\"TR55\":\"Samsun\",\"TR56\":\"Siirt\",\"TR57\":\"Sinop\",\"TR58\":\"Sivas\",\"TR59\":\"Tekirda\u011f\",\"TR60\":\"Tokat\",\"TR61\":\"Trabzon\",\"TR62\":\"Tunceli\",\"TR63\":\"\u015eanl\u0131urfa\",\"TR64\":\"U\u015fak\",\"TR65\":\"Van\",\"TR66\":\"Yozgat\",\"TR67\":\"Zonguldak\",\"TR68\":\"Aksaray\",\"TR69\":\"Bayburt\",\"TR70\":\"Karaman\",\"TR71\":\"K\u0131r\u0131kkale\",\"TR72\":\"Batman\",\"TR73\":\"\u015e\u0131rnak\",\"TR74\":\"Bart\u0131n\",\"TR75\":\"Ardahan\",\"TR76\":\"I\u011fd\u0131r\",\"TR77\":\"Yalova\",\"TR78\":\"Karab\u00fck\",\"TR79\":\"Kilis\",\"TR80\":\"Osmaniye\",\"TR81\":\"D\u00fczce\"},\"TZ\":{\"TZ01\":\"Arusha\",\"TZ02\":\"Dar es Salaam\",\"TZ03\":\"Dodoma\",\"TZ04\":\"Iringa\",\"TZ05\":\"Kagera\",\"TZ06\":\"Noord-Pemba\",\"TZ07\":\"Noord-Zanzibar\",\"TZ08\":\"Kigoma\",\"TZ09\":\"Kilimanjaro\",\"TZ10\":\"Zuid-Pemba\",\"TZ11\":\"Zuid-Zanzibar\",\"TZ12\":\"Lindi\",\"TZ13\":\"Mara\",\"TZ14\":\"Mbeya\",\"TZ15\":\"West-Zanzibar\",\"TZ16\":\"Morogoro\",\"TZ17\":\"Mtwara\",\"TZ18\":\"Mwanza\",\"TZ19\":\"Coast\",\"TZ20\":\"Rukwa\",\"TZ21\":\"Ruvuma\",\"TZ22\":\"Shinyanga\",\"TZ23\":\"Singida\",\"TZ24\":\"Tabora\",\"TZ25\":\"Tanga\",\"TZ26\":\"Manyara\",\"TZ27\":\"Geita\",\"TZ28\":\"Katavi\",\"TZ29\":\"Njombe\",\"TZ30\":\"Simiyu\"},\"LK\":[],\"SE\":[],\"UG\":{\"UG314\":\"Abim\",\"UG301\":\"Adjumani\",\"UG322\":\"Agago\",\"UG323\":\"Alebtong\",\"UG315\":\"Amolatar\",\"UG324\":\"Amudat\",\"UG216\":\"Amuria\",\"UG316\":\"Amuru\",\"UG302\":\"Apac\",\"UG303\":\"Arua\",\"UG217\":\"Budaka\",\"UG218\":\"Bududa\",\"UG201\":\"Bugiri\",\"UG235\":\"Bugweri\",\"UG420\":\"Buhweju\",\"UG117\":\"Buikwe\",\"UG219\":\"Bukedea\",\"UG118\":\"Bukomansimbi\",\"UG220\":\"Bukwa\",\"UG225\":\"Bulambuli\",\"UG416\":\"Buliisa\",\"UG401\":\"Bundibugyo\",\"UG430\":\"Bunyangabu\",\"UG402\":\"Bushenyi\",\"UG202\":\"Busia\",\"UG221\":\"Butaleja\",\"UG119\":\"Butambala\",\"UG233\":\"Butebo\",\"UG120\":\"Buvuma\",\"UG226\":\"Buyende\",\"UG317\":\"Dokolo\",\"UG121\":\"Gomba\",\"UG304\":\"Gulu\",\"UG403\":\"Hoima\",\"UG417\":\"Ibanda\",\"UG203\":\"Iganga\",\"UG418\":\"Isingiro\",\"UG204\":\"Jinja\",\"UG318\":\"Kaabong\",\"UG404\":\"Kabale\",\"UG405\":\"Kabarole\",\"UG213\":\"Kaberamaido\",\"UG427\":\"Kagadi\",\"UG428\":\"Kakumiro\",\"UG101\":\"Kalangala\",\"UG222\":\"Kaliro\",\"UG122\":\"Kalungu\",\"UG102\":\"Kampala\",\"UG205\":\"Kamuli\",\"UG413\":\"Kamwenge\",\"UG414\":\"Kanungu\",\"UG206\":\"Kapchorwa\",\"UG236\":\"Kapelebyong\",\"UG126\":\"Kasanda\",\"UG406\":\"Kasese\",\"UG207\":\"Katakwi\",\"UG112\":\"Kayunga\",\"UG407\":\"Kibaale\",\"UG103\":\"Kiboga\",\"UG227\":\"Kibuku\",\"UG432\":\"Kikuube\",\"UG419\":\"Kiruhura\",\"UG421\":\"Kiryandongo\",\"UG408\":\"Kisoro\",\"UG305\":\"Kitgum\",\"UG319\":\"Koboko\",\"UG325\":\"Kole\",\"UG306\":\"Kotido\",\"UG208\":\"Kumi\",\"UG333\":\"Kwania\",\"UG228\":\"Kween\",\"UG123\":\"Kyankwanzi\",\"UG422\":\"Kyegegwa\",\"UG415\":\"Kyenjojo\",\"UG125\":\"Kyotera\",\"UG326\":\"Lamwo\",\"UG307\":\"Lira\",\"UG229\":\"Luuka\",\"UG104\":\"Luwero\",\"UG124\":\"Lwengo\",\"UG114\":\"Lyantonde\",\"UG223\":\"Manafwa\",\"UG320\":\"Maracha\",\"UG105\":\"Masaka\",\"UG409\":\"Masindi\",\"UG214\":\"Mayuge\",\"UG209\":\"Mbale\",\"UG410\":\"Mbarara\",\"UG423\":\"Mitooma\",\"UG115\":\"Mityana\",\"UG308\":\"Moroto\",\"UG309\":\"Moyo\",\"UG106\":\"Mpigi\",\"UG107\":\"Mubende\",\"UG108\":\"Mukono\",\"UG334\":\"Nabilatuk\",\"UG311\":\"Nakapiripirit\",\"UG116\":\"Nakaseke\",\"UG109\":\"Nakasongola\",\"UG230\":\"Namayingo\",\"UG234\":\"Namisindwa\",\"UG224\":\"Namutumba\",\"UG327\":\"Napak\",\"UG310\":\"Nebbi\",\"UG231\":\"Ngora\",\"UG424\":\"Ntoroko\",\"UG411\":\"Ntungamo\",\"UG328\":\"Nwoya\",\"UG331\":\"Omoro\",\"UG329\":\"Otuke\",\"UG321\":\"Oyam\",\"UG312\":\"Pader\",\"UG332\":\"Pakwach\",\"UG210\":\"Pallisa\",\"UG110\":\"Rakai\",\"UG429\":\"Rubanda\",\"UG425\":\"Rubirizi\",\"UG431\":\"Rukiga\",\"UG412\":\"Rukungiri\",\"UG111\":\"Sembabule\",\"UG232\":\"Serere\",\"UG426\":\"Sheema\",\"UG215\":\"Sironko\",\"UG211\":\"Soroti\",\"UG212\":\"Tororo\",\"UG113\":\"Wakiso\",\"UG313\":\"Yumbe\",\"UG330\":\"Zombo\"},\"UM\":{\"81\":\"Baker\",\"84\":\"Howland\",\"86\":\"Jarvis\",\"67\":\"Johnston\",\"89\":\"Kingman\",\"71\":\"Midway Atoll\",\"76\":\"Navassa\",\"95\":\"Palmyra\",\"79\":\"Wake\"},\"US\":{\"AL\":\"Alabama\",\"AK\":\"Alaska\",\"AZ\":\"Arizona\",\"AR\":\"Arkansas\",\"CA\":\"Californi\\u00eb\",\"CO\":\"Colorado\",\"CT\":\"Connecticut\",\"DE\":\"Delaware\",\"DC\":\"District of Columbia\",\"FL\":\"Florida\",\"GA\":\"Georgia\",\"HI\":\"Hawaii\",\"ID\":\"Idaho\",\"IL\":\"Illinois\",\"IN\":\"Indiana\",\"IA\":\"Iowa\",\"KS\":\"Kansas\",\"KY\":\"Kentucky\",\"LA\":\"Louisiana\",\"ME\":\"Maine\",\"MD\":\"Maryland\",\"MA\":\"Massachusetts\",\"MI\":\"Michigan\",\"MN\":\"Minnesota\",\"MS\":\"Mississippi\",\"MO\":\"Missouri\",\"MT\":\"Montana\",\"NE\":\"Nebraska\",\"NV\":\"Nevada\",\"NH\":\"New Hampshire\",\"NJ\":\"New Jersey\",\"NM\":\"New Mexico\",\"NY\":\"New York\",\"NC\":\"North Carolina\",\"ND\":\"North Dakota\",\"OH\":\"Ohio\",\"OK\":\"Oklahoma\",\"OR\":\"Oregon\",\"PA\":\"Pennsylvania\",\"RI\":\"Rhode Island\",\"SC\":\"South Carolina\",\"SD\":\"South Dakota\",\"TN\":\"Tennessee\",\"TX\":\"Texas\",\"UT\":\"Utah\",\"VT\":\"Vermont\",\"VA\":\"Virginia\",\"WA\":\"Washington\",\"WV\":\"West Virginia\",\"WI\":\"Wisconsin\",\"WY\":\"Wyoming\",\"AA\":\"Armed Forces (AA)\",\"AE\":\"Armed Forces (AE)\",\"AP\":\"Armed Forces (AP)\"},\"VN\":[],\"YT\":[],\"ZA\":{\"EC\":\"Oost-Kaap\",\"FS\":\"Vrijstaat\",\"GP\":\"Gauteng\",\"KZN\":\"KwaZoeloe-Natal\",\"LP\":\"Limpopo\",\"MP\":\"Mpumalanga\",\"NC\":\"Noord-Kaap\",\"NW\":\"Noordwest\",\"WC\":\"West-Kaap\"},\"ZM\":{\"ZM-01\":\"Western\",\"ZM-02\":\"Central\",\"ZM-03\":\"Eastern\",\"ZM-04\":\"Luapula\",\"ZM-05\":\"Northern\",\"ZM-06\":\"North-Western\",\"ZM-07\":\"Southern\",\"ZM-08\":\"Copperbelt\",\"ZM-09\":\"Lusaka\",\"ZM-10\":\"Muchinga\"}}","i18n_select_state_text":"Selecteer een optie\u2026","i18n_no_matches":"Geen overeenkomsten gevonden","i18n_ajax_error":"Laden mislukt","i18n_input_too_short_1":"Voer 1 of meer tekens in","i18n_input_too_short_n":"Voer %qty% of meer tekens in","i18n_input_too_long_1":"Verwijder 1 teken","i18n_input_too_long_n":"Verwijder %qty% tekens","i18n_selection_too_long_1":"Je mag slechts 1 artikel selecteren","i18n_selection_too_long_n":"Je mag slechts %qty% artikelen selecteren","i18n_load_more":"Meer resultaten aan het laden\u2026","i18n_searching":"Bezig met zoeken\u2026"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_address_i18n_params = {"locale":"{\"AE\":{\"postcode\":{\"required\":false,\"hidden\":true},\"state\":{\"required\":false}},\"AF\":{\"state\":{\"required\":false}},\"AO\":{\"postcode\":{\"required\":false,\"hidden\":true},\"state\":{\"label\":\"Provincie\"}},\"AT\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"AU\":{\"city\":{\"label\":\"Voorstad\"},\"postcode\":{\"label\":\"Postcode\"},\"state\":{\"label\":\"Provincie\"}},\"AX\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"BD\":{\"postcode\":{\"required\":false},\"state\":{\"label\":\"District\"}},\"BE\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false,\"label\":\"Provincie\"}},\"BH\":{\"postcode\":{\"required\":false},\"state\":{\"required\":false}},\"BI\":{\"state\":{\"required\":false}},\"BO\":{\"postcode\":{\"required\":false,\"hidden\":true}},\"BS\":{\"postcode\":{\"required\":false,\"hidden\":true}},\"CA\":{\"postcode\":{\"label\":\"Postal code\"},\"state\":{\"label\":\"Provincie\"}},\"CH\":{\"postcode\":{\"priority\":65},\"state\":{\"label\":\"Kanton\",\"required\":false}},\"CL\":{\"city\":{\"required\":true},\"postcode\":{\"required\":false},\"state\":{\"label\":\"Regio\"}},\"CN\":{\"state\":{\"label\":\"Provincie\"}},\"CO\":{\"postcode\":{\"required\":false}},\"CZ\":{\"state\":{\"required\":false}},\"DE\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"DK\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"EE\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"FI\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"FR\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"GP\":{\"state\":{\"required\":false}},\"GF\":{\"state\":{\"required\":false}},\"GR\":{\"state\":{\"required\":false}},\"HK\":{\"postcode\":{\"required\":false},\"city\":{\"label\":\"Plaats\"},\"state\":{\"label\":\"Regio\"}},\"HU\":{\"state\":{\"label\":\"County\"}},\"ID\":{\"state\":{\"label\":\"Provincie\"}},\"IE\":{\"postcode\":{\"required\":false,\"label\":\"Eircode\"},\"state\":{\"label\":\"County\"}},\"IS\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"IL\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"IM\":{\"state\":{\"required\":false}},\"IT\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":true,\"label\":\"Provincie\"}},\"JP\":{\"last_name\":{\"class\":[\"form-row-first\"],\"priority\":10},\"first_name\":{\"class\":[\"form-row-last\"],\"priority\":20},\"postcode\":{\"class\":[\"form-row-first\"],\"priority\":65},\"state\":{\"label\":\"Prefectuur\",\"class\":[\"form-row-last\"],\"priority\":66},\"city\":{\"priority\":67},\"address_1\":{\"priority\":68},\"address_2\":{\"priority\":69}},\"KR\":{\"state\":{\"required\":false}},\"KW\":{\"state\":{\"required\":false}},\"LV\":{\"state\":{\"label\":\"Gemeente\",\"required\":false}},\"LB\":{\"state\":{\"required\":false}},\"MQ\":{\"state\":{\"required\":false}},\"MT\":{\"state\":{\"required\":false}},\"MZ\":{\"postcode\":{\"required\":false,\"hidden\":true},\"state\":{\"label\":\"Provincie\"}},\"NL\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false,\"label\":\"Provincie\"}},\"NG\":{\"postcode\":{\"label\":\"Postcode\",\"required\":false,\"hidden\":true},\"state\":{\"label\":\"Provincie\"}},\"NZ\":{\"postcode\":{\"label\":\"Postcode\"},\"state\":{\"required\":false,\"label\":\"Regio\"}},\"NO\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"NP\":{\"state\":{\"label\":\"Provincie\"},\"postcode\":{\"required\":false}},\"PL\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"PT\":{\"state\":{\"required\":false}},\"RE\":{\"state\":{\"required\":false}},\"RO\":{\"state\":{\"label\":\"County\",\"required\":true}},\"RS\":{\"state\":{\"required\":false,\"hidden\":true}},\"SG\":{\"state\":{\"required\":false},\"city\":{\"required\":false}},\"SK\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"SI\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"SR\":{\"postcode\":{\"required\":false,\"hidden\":true}},\"ES\":{\"postcode\":{\"priority\":65},\"state\":{\"label\":\"Provincie\"}},\"LI\":{\"postcode\":{\"priority\":65},\"state\":{\"label\":\"Gemeente\",\"required\":false}},\"LK\":{\"state\":{\"required\":false}},\"LU\":{\"state\":{\"required\":false}},\"MD\":{\"state\":{\"label\":\"Gemeente\\\/district\"}},\"SE\":{\"postcode\":{\"priority\":65},\"state\":{\"required\":false}},\"TR\":{\"postcode\":{\"priority\":65},\"state\":{\"label\":\"Provincie\"}},\"UG\":{\"postcode\":{\"required\":false,\"hidden\":true},\"city\":{\"label\":\"Town \\\/ Village\",\"required\":true},\"state\":{\"label\":\"District\",\"required\":true}},\"US\":{\"postcode\":{\"label\":\"Postcode\"},\"state\":{\"label\":\"Provincie\"}},\"GB\":{\"postcode\":{\"label\":\"Postcode\"},\"state\":{\"label\":\"County\",\"required\":false}},\"ST\":{\"postcode\":{\"required\":false,\"hidden\":true},\"state\":{\"label\":\"District\"}},\"VN\":{\"state\":{\"required\":false,\"hidden\":true},\"postcode\":{\"priority\":65,\"required\":false,\"hidden\":false},\"address_2\":{\"required\":false,\"hidden\":true}},\"WS\":{\"postcode\":{\"required\":false,\"hidden\":true}},\"YT\":{\"state\":{\"required\":false}},\"ZA\":{\"state\":{\"label\":\"Provincie\"}},\"ZW\":{\"postcode\":{\"required\":false,\"hidden\":true}},\"default\":{\"first_name\":{\"label\":\"Voornaam\",\"required\":true,\"class\":[\"form-row-first\"],\"autocomplete\":\"given-name\",\"priority\":10},\"last_name\":{\"label\":\"Achternaam\",\"required\":true,\"class\":[\"form-row-last\"],\"autocomplete\":\"family-name\",\"priority\":20}}}","locale_fields":"{\"address_1\":\"#billing_address_1_field, #shipping_address_1_field\",\"address_2\":\"#billing_address_2_field, #shipping_address_2_field\",\"state\":\"#billing_state_field, #shipping_state_field, #calc_shipping_state_field\",\"postcode\":\"#billing_postcode_field, #shipping_postcode_field, #calc_shipping_postcode_field\",\"city\":\"#billing_city_field, #shipping_city_field, #calc_shipping_city_field\"}","i18n_required_text":"verplicht","i18n_optional_text":"optioneel"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min.js?ver=1723036878'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_checkout_params = {"ajax_url":"\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/HEMA-onlinekiosk\/?wc-ajax=%%endpoint%%","update_order_review_nonce":"af4b15b878","apply_coupon_nonce":"013054e806","remove_coupon_nonce":"583a025263","option_guest_checkout":"yes","checkout_url":"\/HEMA-onlinekiosk\/?wc-ajax=checkout","is_checkout":"0","debug_mode":"","i18n_checkout_error":"Er is iets misgegaan bij het verwerken van je bestelling. Probeer het nog eens."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce/assets/js/frontend/checkout.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://js.stripe.com/v3/?ver=3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_stripe_payment_request_params = {"ajax_url":"\/HEMA-onlinekiosk\/?wc-ajax=%%endpoint%%","stripe":{"key":"pk_test_yjTY1IRgaEnwEDsMdtJOizvl","allow_prepaid_card":"yes"},"nonce":{"payment":"265f268e7e","shipping":"bd8d819b2e","update_shipping":"4d247f4e53","checkout":"5a2513a96f","add_to_cart":"46d6bc82b9","get_selected_product_data":"7b2517041b","log_errors":"6856e9f00e","clear_cart":"a39828847e"},"i18n":{"no_prepaid_card":"Sorry, we're not accepting prepaid cards at this time.","unknown_shipping":"Unknown shipping option \"[option]\"."},"checkout":{"url":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/checkout-page\/","currency_code":"eur","country_code":"ES","needs_shipping":"no","needs_payer_phone":true},"button":{"type":"buy","theme":"dark","height":"44","locale":"nl","is_custom":false,"is_branded":false,"css_selector":"","branded_type":"default"},"login_confirmation":"","is_product_page":"","product":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/plugins/woocommerce-gateway-stripe/assets/js/stripe-payment-request.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/hoverIntent.min.js?ver=1544008667'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/genesis/lib/js/menu/superfish.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/genesis/lib/js/skip-links.min.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/underscore.min.js?ver=1562232014'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/shortcode.min.js?ver=1544008668'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/backbone.min.js?ver=1562232014'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/wp-util.min.js?ver=1544008669'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/wp-backbone.min.js?ver=1544008668'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpMediaModelsL10n = {"settings":{"ajaxurl":"\/HEMA-onlinekiosk\/wp-admin\/admin-ajax.php","post":{"id":0}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/media-models.min.js?ver=1562232014'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pluploadL10n = {"queue_limit_exceeded":"You have attempted to queue too many files.","file_exceeds_size_limit":"%s exceeds the maximum upload size for this site.","zero_byte_file":"This file is empty. Please try another.","invalid_filetype":"Sorry, this file type is not permitted for security reasons.","not_an_image":"This file is not an image. Please try another.","image_memory_exceeded":"Memory exceeded. Please try another smaller file.","image_dimensions_exceeded":"This is larger than the maximum size. Please try another.","default_error":"An error occurred in the upload. Please try again later.","missing_upload_url":"There was a configuration error. Please contact the server administrator.","upload_limit_exceeded":"You may only upload 1 file.","http_error":"HTTP error.","upload_failed":"Upload failed.","big_upload_failed":"Please try uploading this file with the %1$sbrowser uploader%2$s.","big_upload_queued":"%s exceeds the maximum upload size for the multi-file uploader when used in your browser.","io_error":"IO error.","security_error":"Security error.","file_cancelled":"File canceled.","upload_stopped":"Upload stopped.","dismiss":"Dismiss","crunching":"Crunching\u2026","deleted":"moved to the trash.","error_uploading":"\u201c%s\u201d has failed to upload."};
+var _wpPluploadSettings = {"defaults":{"file_data_name":"async-upload","url":"\/HEMA-onlinekiosk\/wp-admin\/async-upload.php","filters":{"max_file_size":"1536000b","mime_types":[{"extensions":"jpg,jpeg,jpe,png,gif,mov,qt,avi,mpeg,mpg,mpe,3gp,3gpp,3g2,3gp2,mid,midi,pdf,doc,docx,docm,pot,pps,ppt,pptx,pptm,odt,ppsx,ppsm,xla,xls,xlt,xlw,xlsx,xlsm,xlsb,key,mp3,m4a,m4b,ogg,oga,flac,wav,mp4,m4v,webm,ogv,flv"}]},"multipart_params":{"action":"upload-attachment","_wpnonce":"2f90d9c8e5"}},"browser":{"mobile":false,"supported":true},"limitExceeded":false};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/plupload/wp-plupload.min.js?ver=1544008691'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/ui/core.min.js?ver=1544008699'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/ui/widget.min.js?ver=1544008700'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/ui/mouse.min.js?ver=1544008700'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/jquery/ui/sortable.min.js?ver=1544008700'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=1544022598'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpApiSettings = {"root":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/api\/","nonce":"0b83c3675d","versionString":"wp\/v2\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/api-request.min.js?ver=1548245411'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpMediaViewsL10n = {"url":"URL","addMedia":"Add Media","search":"Search","select":"Select","cancel":"Cancel","update":"Update","replace":"Replace","remove":"Remove","back":"Back","selected":"%d selected","dragInfo":"Drag and drop to reorder media files.","uploadFilesTitle":"Upload Files","uploadImagesTitle":"Upload Images","mediaLibraryTitle":"Media Library","insertMediaTitle":"Add Media","createNewGallery":"Create a new gallery","createNewPlaylist":"Create a new playlist","createNewVideoPlaylist":"Create a new video playlist","returnToLibrary":"\u2190 Return to library","allMediaItems":"All media items","allDates":"All dates","noItemsFound":"No items found.","insertIntoPost":"Insert into post","unattached":"Unattached","mine":"Mine","trash":"Trash","uploadedToThisPost":"Uploaded to this post","warnDelete":"You are about to permanently delete this item from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkDelete":"You are about to permanently delete these items from your site.\nThis action cannot be undone.\n 'Cancel' to stop, 'OK' to delete.","warnBulkTrash":"You are about to trash these items.\n  'Cancel' to stop, 'OK' to delete.","bulkSelect":"Bulk Select","trashSelected":"Move to Trash","restoreSelected":"Restore from Trash","deletePermanently":"Delete Permanently","apply":"Apply","filterByDate":"Filter by date","filterByType":"Filter by type","searchMediaLabel":"Search Media","searchMediaPlaceholder":"Search media items...","noMedia":"No media files found.","attachmentDetails":"Attachment Details","insertFromUrlTitle":"Insert from URL","setFeaturedImageTitle":"Featured Image","setFeaturedImage":"Set featured image","createGalleryTitle":"Create Gallery","editGalleryTitle":"Edit Gallery","cancelGalleryTitle":"\u2190 Cancel Gallery","insertGallery":"Insert gallery","updateGallery":"Update gallery","addToGallery":"Add to gallery","addToGalleryTitle":"Add to Gallery","reverseOrder":"Reverse order","imageDetailsTitle":"Image Details","imageReplaceTitle":"Replace Image","imageDetailsCancel":"Cancel Edit","editImage":"Edit Image","chooseImage":"Choose Image","selectAndCrop":"Select and Crop","skipCropping":"Skip Cropping","cropImage":"Crop Image","cropYourImage":"Crop your image","cropping":"Cropping\u2026","suggestedDimensions":"Suggested image dimensions: %1$s by %2$s pixels.","cropError":"There has been an error cropping your image.","audioDetailsTitle":"Audio Details","audioReplaceTitle":"Replace Audio","audioAddSourceTitle":"Add Audio Source","audioDetailsCancel":"Cancel Edit","videoDetailsTitle":"Video Details","videoReplaceTitle":"Replace Video","videoAddSourceTitle":"Add Video Source","videoDetailsCancel":"Cancel Edit","videoSelectPosterImageTitle":"Select Poster Image","videoAddTrackTitle":"Add Subtitles","playlistDragInfo":"Drag and drop to reorder tracks.","createPlaylistTitle":"Create Audio Playlist","editPlaylistTitle":"Edit Audio Playlist","cancelPlaylistTitle":"\u2190 Cancel Audio Playlist","insertPlaylist":"Insert audio playlist","updatePlaylist":"Update audio playlist","addToPlaylist":"Add to audio playlist","addToPlaylistTitle":"Add to Audio Playlist","videoPlaylistDragInfo":"Drag and drop to reorder videos.","createVideoPlaylistTitle":"Create Video Playlist","editVideoPlaylistTitle":"Edit Video Playlist","cancelVideoPlaylistTitle":"\u2190 Cancel Video Playlist","insertVideoPlaylist":"Insert video playlist","updateVideoPlaylist":"Update video playlist","addToVideoPlaylist":"Add to video playlist","addToVideoPlaylistTitle":"Add to Video Playlist","attachmentsList":"Attachments list","settings":{"tabs":[],"tabUrl":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/wp-admin\/media-upload.php?chromeless=1","mimeTypes":{"image":"Images","audio":"Audio","video":"Video"},"captions":true,"nonce":{"sendToEditor":"066bfdd4f6"},"post":{"id":0},"defaultProps":{"link":"none","align":"","size":""},"attachmentCounts":{"audio":1,"video":1},"oEmbedProxyUrl":"https:\/\/shops.photoprintme.com\/HEMA-onlinekiosk\/api\/oembed\/1.0\/proxy","embedExts":["mp3","ogg","flac","m4a","wav","mp4","m4v","webm","ogv","flv"],"embedMimes":{"mp3":"audio\/mpeg","ogg":"audio\/ogg","flac":"audio\/flac","m4a":"audio\/mpeg","wav":"audio\/wav","mp4":"video\/mp4","m4v":"video\/mp4","webm":"video\/webm","ogv":"video\/ogg","flv":"video\/x-flv"},"contentWidth":null,"months":[{"year":"2024","month":"8","text":"August 2024"},{"year":"2024","month":"7","text":"July 2024"},{"year":"2024","month":"6","text":"June 2024"},{"year":"2024","month":"5","text":"May 2024"},{"year":"2024","month":"4","text":"April 2024"},{"year":"2024","month":"3","text":"March 2024"},{"year":"2024","month":"1","text":"January 2024"},{"year":"2023","month":"12","text":"December 2023"},{"year":"2023","month":"11","text":"November 2023"},{"year":"2023","month":"8","text":"August 2023"},{"year":"2023","month":"7","text":"July 2023"},{"year":"2023","month":"5","text":"May 2023"},{"year":"2023","month":"4","text":"April 2023"},{"year":"2023","month":"3","text":"March 2023"},{"year":"2023","month":"2","text":"February 2023"},{"year":"2023","month":"1","text":"January 2023"},{"year":"2022","month":"12","text":"December 2022"},{"year":"2022","month":"11","text":"November 2022"},{"year":"2022","month":"10","text":"October 2022"},{"year":"2022","month":"9","text":"September 2022"},{"year":"2022","month":"7","text":"July 2022"},{"year":"2022","month":"6","text":"June 2022"},{"year":"2022","month":"1","text":"January 2022"},{"year":"2021","month":"12","text":"December 2021"},{"year":"2019","month":"10","text":"October 2019"},{"year":"2019","month":"7","text":"July 2019"},{"year":"2019","month":"3","text":"March 2019"},{"year":"2019","month":"2","text":"February 2019"},{"year":"2019","month":"1","text":"January 2019"}],"mediaTrash":0}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/media-views.min.js?ver=1567660743'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/media-editor.min.js?ver=1544008667'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/media-audiovideo.min.js?ver=1562232014'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var genesis_responsive_menu = {"mainMenu":"","menuIconClass":"dashicons-before dashicons-menu","subMenu":"Submenu","subMenuIconsClass":"dashicons-before dashicons-arrow-down-alt2","menuClasses":{"combine":[".nav-primary",".nav-header"],"others":[]}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-content/themes/imaxel-printspot/js/responsive-menus.js?ver=1723036878'></script>
+<script type='text/javascript' src='https://code.jquery.com/ui/1.12.1/jquery-ui.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js?ver=4.0.3'></script>
+<script type='text/javascript' src='https://d1uqogra2sd8vg.cloudfront.net/wp-includes/js/wp-embed.min.js?ver=1544701184'></script>
+</body></html>
+
+<!-- Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com -->

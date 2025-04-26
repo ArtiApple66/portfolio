@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Javascript-->
-    <script src="scriptindex.js"></script>
+    <script src="index.js"></script>
     <!--Icons-->
     <script src="https://kit.fontawesome.com/1a86ac6ad5.js" crossorigin="anonymous"></script>
 </head>
@@ -22,7 +22,7 @@
 <!--navbar-->
 <nav>
     <div class="navleft">
-    <img class="logo" src="Images/logo.png">
+    <img class="logo" src="images/logo.png">
     <span class="logotext">PORTFOLIO</span>
     </div>
     <ul>
@@ -31,6 +31,7 @@
         <li><a href="#gallery">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#Education">Education</a></li>
+        <li><a href="#Work">Work</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
     <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
@@ -51,29 +52,38 @@
         <div class="circle1"></div>
     </div>
     
-    <!--about-->
-    <div id="about">
+   <!--about-->
+    <div class="about" id="about">
         <div class="circle2"></div>
-        <div id="text-container">
-            <h1 id="title">Hi! My name is Elisa van Klink</h1>
-            <img class="me" src="Images/me.png" alt="me">
-            <div class="shape"></div> <!--for the mask/ wrap around the picture-->
-            <span id="text">
-                I am a 24-year-old Master's student specializing in Building Technology at the Technical University of Delft, with a background in Architecture. This portfolio serves to showcase my expertise in computational design and digital fabrication in various projects I did over the years during my study.
+        <div class="container">
+            <article class = "intro">
+                <img src="Images/me2.png" class="float-image" alt="Portrait of Elisa">
+                <h1 class="title">Hi! My name is Elisa van Klink</h1>
+                <p class="text">As a 24-year-old Master's graduate in Building Technology, with a bachelor in Architecture, 
+                I specialize in the intersection of computational design and digital fabrication. I am driven by a 
+                creative mindset and a strong work ethic, constantly striving to push myself further. 
                 <br><br>
-                Beyond the confines of academia and design labs, I find balance and inspiration in the great outdoors. Nature not only recharges me but also influences my design philosophy, encouraging me to create structures that harmonize with their environments.
+                Beyond my technical expertise, I am a levelheaded and calm individual, known to rather listen 
+                attentively than speak for myself and approach challenges with a thoughtful, analytical 
+                mindset. 
                 <br><br>
-                As an avid korfball player, I bring the same team spirit, strategic planning, and dynamic energy from the field into every project I undertake.
+                Outside of academia, I find balance and inspiration in nature, which deeply influences my 
+                design philosophy, encouraging me to create structures that seamlessly integrate with their 
+                environment. 
                 <br><br>
-                Explore my work and discover how I integrate technical prowess with creative vision to forge smarter, sustainable environments or contact me to get to know me even better!
-                <br><br>
-            </span>
-            <a href="#gallery">
-                <button id="button" class="work">Projects</button>
-            </a>
-            <a href="#contact">
-                <button id="button" class="talk">Let's talk!</button>
-            </a>
+                Additionally, as an avid korfball player, I bring a team-oriented, strategic approach 
+                to every project I undertake, combining technical expertise with a passion for crafting smarter, 
+                more sustainable built environments.
+                </p>
+                <p class="buttonabout">
+                    <a href="#gallery">
+                        <button id="button1" class="work">Projects</button>
+                    </a>
+                    <a href="#contact">
+                        <button id="button2" class="talk">Let's talk!</button>
+                    </a>
+                </p>
+            </article>
         </div>
     </div>
 
@@ -84,26 +94,34 @@
 
             <!--Project 1-->
             <div class="image-item">
-                <img src="Images/tsugite.jpg" alt="Project 1">
-                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7178785371499991040/"><div class="overlay">CORE - Tsugite</div></a>
+                <img src="Images/homecraft.jpg" alt="Project 1">
+                <a href="homecraft.html"><div class="overlay">Master Thesis - Homecraft</div></a>
             </div>
 
             <!--Project 2-->
             <div class="image-item">
-                <img src="Images/window.jpg" alt="Project 2">
-                <a href="#"><div class="overlay">Facade design - Student housing</div></a>
+                <img src="Images/tsugite.jpg" alt="Project 2">
+                <a href="core.html"><div class="overlay">CORE - Tsugite</div></a>
             </div>
+
+            <!--- https://www.linkedin.com/feed/update/urn:li:activity:7178785371499991040/ -->
 
             <!--Project 3-->
             <div class="image-item">
-                <img src="Images/render.png" alt="Project 3">
-                <a href="climashade2.html"><div class="overlay">Buckylab - Climashade</div></a>
+                <img src="Images/window.jpg" alt="Project 3">
+                <a href="facade.html"><div class="overlay">Facade design - Student housing</div></a>
             </div>
 
             <!--Project 4-->
             <div class="image-item">
-                <img src="Images/Screenshot 2024-03-02 204111.jpg" alt="Project 4">
-                <a href="#"><div class="overlay">ON4 - Apartmentcomplex</div></a>
+                <img src="Images/render.png" alt="Project 4">
+                <a href="climashade2.html"><div class="overlay">Buckylab - Climashade</div></a>
+            </div>
+
+            <!--Project 5-->
+            <div class="image-item">
+                <img src="Images/mudcastle.jpg" alt="Project 5">
+                <a href="extreme.html"><div class="overlay">EXTREME - The Mud Castle</div></a>
             </div>
 
             <!--Project 5-->
@@ -111,12 +129,18 @@
                 <img src="Images/wildreed.jpg" alt="Project 5">
                 <a href="wildreed.html"><div class="overlay">Design informatics - Wildreed Observatory</div></a>
             </div>
+
+            <!--Project 6-->
+            <div class="image-item">
+                <img src="Images/archineering.jpg" alt="Project 6">
+                <a href="archineering.html"><div class="overlay">Archineering - Minor</div></a>
+            </div>
         </div>
     </div>
     
     <!--Skills-->
     <div id="skills" class="skills">
-        <h1 class="titleskills">My skills</h1>
+        <h1 class="titleskills">Technical skills</h1>
         <div class="skill-grid"> 
 
             <!--Skill 1-->
@@ -157,7 +181,7 @@
             
             <div class="achievement">
                 <!--Education 1-->
-                <div class="achievement-year">2024</div>
+                <div class="achievement-year">2022 2025</div>
                 <div class="achievement-details">
                     <div class="achievement-title">Masters in Architecture, Technical University Delft</div>
                     <div class="achievement-description">Track: Building technology, focus on computational design and Digital design</div>
@@ -167,7 +191,7 @@
 
             <div class="achievement">
                 <!--Education 2-->
-                <div class="achievement-year">2022</div>
+                <div class="achievement-year">2019 2022</div>
                 <div class="achievement-details">
                     <div class="achievement-title">Bachelor of Architecture, Technical University Delft</div>
                     <div class="achievement-description">Focus on architectural design, minor in Archineering</div>
@@ -177,25 +201,41 @@
 
             <div class="achievement">
                 <!--Education 3-->
-                <div class="achievement-year">2018</div>
+                <div class="achievement-year">2017 2019</div>
                 <div class="achievement-details">
                     <div class="achievement-title">VWO, Sint-Maartenscollege</div>
-                    <div class="achievement-description">With a natural sciences profile, as well as informatics</div>
+                    <div class="achievement-description">With a natural sciences profile, and informatics</div>
                 </div>
                 <img class ="achivementimgmaarten" src="Images/download (1).png" alt="logosintmaarten">
             </div>
 
             <div class="achievement">
                 <!--Education 4-->
-                <div class="achievement-year">2016</div>
+                <div class="achievement-year">2012 2017</div>
                 <div class="achievement-details">
                     <div class="achievement-title">HAVO, Sint-Maartenscollege</div>
-                    <div class="achievement-description">With a natural sciences profile, as well as informatics</div>
+                    <div class="achievement-description">With a natural sciences profile and informatics</div>
                 </div>
                 <img class ="achivementimgmaarten" src="Images/download (1).png" alt="logosintmaarten">
             </div>
         </div>
     </div> 
+
+    <!--Work-->
+    <div id="Work">
+        <div class="Work">
+            <h1>Work experience</h1>
+            <div class="work1">
+                <!--work 1-->
+                <div class="work-year">2016 2019</div>
+                <div class="work-details">
+                    <div class="work-title">Part-time opruimhulp, Bibliotheek aan de vliet</div>
+                    <div class="work-description"> Restocking and organizing books, helping clients <br> Adress: Fluitpolderplein 5 2262 ED Leidschendam</div>
+                </div>
+                <img class ="workimgbieb" src="Images/bieb.png" alt="logobieb">
+            </div>
+        </div>
+    </div>
 
     <!--Contact-->
     <div id="contact" class="contact-section">
@@ -207,7 +247,7 @@
                     <input id="email" type="email" name="email" placeholder="Your Email" required>
                     <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                     <button type="button" onclick="sendEmail()">Send Message</button>
-                    <a href="CV1(2).pdf" download="CV1(2).pdf" class="download-button">Download My Resume</a>
+                    <a href="CVelisa.pdf" download="CVelisa.pdf" class="download-button">Download My Resume</a>
                     <p id="error-message" style="color: red; display: none;"></p>
                 </form>
             </div>

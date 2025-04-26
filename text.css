@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#text-container {
+    height: 90vh;
+    width: 80vw;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 calc(5vw + 20px);
+    margin-top: calc(8vh + 30px);
+    position: relative;
+    padding: 20px; /* Add some padding to avoid text touching the edges */
+}
+
+#title {
+    margin: 0;
+    font-size: 10vw; /* Adjust as necessary */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#text {
+    display: block; /* Make the span behave like a block element */
+    margin: 0;
+    line-height: 1.2;
+}
+

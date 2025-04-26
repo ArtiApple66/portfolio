@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Poster Image</title>
+    <link rel="stylesheet" href="tryout.css">
+</head>
+<body>
+    <!--about-->
+    <div class="container">
+        <div class="header">
+          <h1 class="title">My Title</h1>
+          <div class="buttons">
+            <button>Button 1</button>
+            <button>Button 2</button>
+          </div>
+        </div>
+        <div class="content">
+          <p id="text">This is the text that should fill the remaining space.</p>
+          <img class="bottom-right-image" src="Images/me.png" alt="Decorative Image" />
+        </div>
+      </div>
+</body>
+</html>
+
+<script>
+    function resizeText() {
+      const container = document.querySelector('.content');
+      const text = document.getElementById('text');
+      let fontSize = 100; // Start big
+  
+      text.style.fontSize = fontSize + "px";
+  
+      while ((text.scrollHeight > container.clientHeight || text.scrollWidth > container.clientWidth) && fontSize > 10) {
+        fontSize -= 1;
+        text.style.fontSize = fontSize + "px";
+      }
+    }
+  
+    window.addEventListener('resize', resizeText);
+    window.addEventListener('load', resizeText);
+  </script>

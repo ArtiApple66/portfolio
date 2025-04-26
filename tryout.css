@@ -1,0 +1,39 @@
+
+#title{
+    margin: 0;
+    padding-bottom: 0.67em;
+}
+
+#about{
+    width: 100%;
+}
+
+#text-container {
+    display: flow-root;
+    height: 90vh;
+    min-height: 800px;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: calc(5vw + 20px);
+    margin-right: calc(5vw + 20px);
+    padding: 20px; 
+}
+
+#text {
+    flex-grow: 1;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#buttonabout{
+   padding-top: 10px;
+}
+
+.float-image {
+    float: right;
+    shape-outside: url(Images/me.png);
+    width: 200px;
+}

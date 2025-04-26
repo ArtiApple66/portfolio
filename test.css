@@ -1,0 +1,50 @@
+
+.title{
+    margin: 0;
+    padding-bottom: 0.67em;
+}
+
+.about{
+    width: 100%;
+}
+
+.text{
+    margin: 0;
+}
+
+.container {
+    display: flow-root;
+    height: 90vh;
+    min-height: 800px;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: calc(5vw + 20px);
+    margin-right: calc(5vw + 20px);
+    padding: 20px; 
+}
+
+.intro {
+    display: block;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.buttonabout{
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.float-image {
+    float: right;
+    shape-outside: url(Images/me2.png);
+    width: 300px;
+    shape-margin: 2rem;
+    margin-top: calc(90vh - 300px);
+}
+
+@media (max-height: 890px){
+    .float-image{
+        margin-top: 500px;
+    }
+}

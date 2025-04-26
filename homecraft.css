@@ -173,6 +173,26 @@ nav a{
     color: #d9c5a0;
    }
 
+.doc2{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+   }
+   
+.doc2:hover{
+    color: #d9c5a0;
+   }
+
+.doc3{
+    text-decoration: none;
+    color: black;
+    font-family: 'Bebas Neue', serif; 
+    font-size: calc(10px + 1vh);
+   }
+   
+.doc3:hover{
+    color: #d9c5a0;
+   }
 /*-------header--------*/
 #header{
   height: calc(100vh - calc(30px + 2vh)); 
@@ -302,7 +322,7 @@ nav a{
 }
 
 /*------concept--------*/
-#concept{
+#concept, #structural, #architectural, #digital{
     margin-bottom: 0;
     scroll-margin-top: calc(30px + 8vh);
     z-index: 10;
@@ -470,7 +490,7 @@ nav a{
 .designer-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin-top: -10px;
     position: relative;
     gap: 40px;
@@ -505,12 +525,7 @@ nav a{
     margin-bottom: 10px;
 }
 
-.designer-item a{
-    text-decoration: none;
-    color: #000;
-    font-size: calc(10px + 1vh);
-    font-family:'Bebas Neue', sans-serif;
-}
+
 
 .designer-item a:hover{
     color: #d9a648;
@@ -518,10 +533,6 @@ nav a{
 
 /*---smal designers--*/
 @media (max-width: 1000px) {
-    .designer-grid {
-        grid-template-columns: 1fr;
-    }
-
     .designer-grid img {
         width: 50%;
         margin-left: auto;

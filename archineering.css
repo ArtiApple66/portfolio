@@ -241,7 +241,7 @@ nav a{
     padding: 10px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0; 
-    background-color:#afc9e3;
+    background-color:#717171;
     font-size: calc(1vh + 10px);
 }
 
@@ -290,7 +290,7 @@ nav a{
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
-  background-color: #afc9e3
+  background-color: #717171;
    
 }
 
@@ -568,7 +568,7 @@ nav a{
     width: 100vw;
     z-index: 10;
     position: relative;
-    background-color: #afc9e3;
+    background-color: #bbb;
     text-align: center;
 }
 

@@ -117,7 +117,7 @@ nav a{
 }
 
 /*----Navbar small---*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .icon {
       display: block;
       cursor: pointer;
@@ -209,6 +209,7 @@ nav a{
     padding: 10px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0; /* Initial state to ensure JavaScript control */
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .headertext.animate {
@@ -224,6 +225,19 @@ nav a{
         transform: translate(-50%, -50%);
         opacity: 1;
     }
+}
+
+.header-button.animate{
+  animation: slideIn2 1s ease-in-out forwards;
+}
+
+@keyframes slideIn2 {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .header-button {
@@ -246,6 +260,7 @@ nav a{
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
+  background: rgba(255, 255, 255, 0.3);
    
 }
 

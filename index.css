@@ -548,6 +548,11 @@ span.headersubtitle{
     }
 }
 
+.pgallery{
+    font-size: calc(15px + 1vmin);
+    font-family: 'Roboto', sans-serif;
+}
+
 /*----skills------*/
 .skills {
     display: flex;

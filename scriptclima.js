@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000); // Duration of the animation (1s)
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const headerTextWrapper = document.querySelector('.header-button');
+    
+    // Add the animation class to trigger the slide in animation
+    headerTextWrapper.classList.add('animate');
+    
+    // Remove the animation class after the animation completes
+    setTimeout(() => {
+        headerTextWrapper.classList.remove('animate');
+        handleScroll(true); // Recalculate scroll position and opacity
+    }, 1000); // Duration of the animation (1s)
+});
+
 function handleScroll(initialLoad = false) {
     var headerTextWrapper = document.querySelector('.headertext');
     var headerbutton = document.querySelector('.header-button');

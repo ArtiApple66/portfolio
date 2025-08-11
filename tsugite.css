@@ -241,7 +241,7 @@ nav a{
     padding: 10px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0; 
-    background-color:#afc9e3;
+    background-color:#6c3014;
     font-size: calc(1vh + 10px);
 }
 
@@ -282,15 +282,14 @@ nav a{
 .scroll-down-button {
   padding: 10px 20px; 
   background-color: transparent; 
-  color: white; 
-  border: 2px solid white; 
+  color: white;  
   font-family: 'roboto', sans-serif; 
   font-weight: bolder;
   font-size: 2.5vh; 
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
-  background-color: #afc9e3
+  background-color: #6c3014;
    
 }
 
@@ -335,7 +334,7 @@ nav a{
 }
 
 /*------concept--------*/
-#concept, #structural, #architectural, #digital{
+#concept, #structural, #architectural, #digital, #Symposium{
     margin-bottom: 0;
     scroll-margin-top: calc(30px + 8vh);
     z-index: 10;
@@ -381,6 +380,42 @@ nav a{
     width: 70%;
   }
 }
+
+/*----- video ------*/
+
+#video{
+  scroll-margin-top: calc(30px + 7vh);
+  height: (100vh - (30px + 2vh));
+  z-index: 10;
+  position: relative;
+  margin: 5vw;
+  padding: 5vw;
+  background-color: white;
+}
+
+.videocontainer{
+  background-color: white;
+  position: relative;
+  width: 100%; 
+  height: auto;
+}
+
+#myVideo {
+width: 60%;
+height: 70vh;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+/*vid small*/
+@media (max-width:1200px){
+#myVideo{
+  width: 100%;
+  height: 50vh;
+}
+}
+
 
 /*------project drawings/ pictures/ slideshow------*/
 #projects{
@@ -568,7 +603,7 @@ nav a{
     width: 100vw;
     z-index: 10;
     position: relative;
-    background-color: #afc9e3;
+    background-color: #6c3014;
     text-align: center;
 }
 
@@ -613,7 +648,7 @@ nav a{
 }
 
 .footer-section a:hover {
-  color: black;
+  color: #d9c5a0;
 }
 
 .footer-bottom {

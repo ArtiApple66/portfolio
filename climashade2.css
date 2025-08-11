@@ -163,6 +163,7 @@ nav a{
   }  
 }
 
+
 /*-------header--------*/
 #header{
   height: calc(100vh - calc(30px + 2vh)); 
@@ -257,7 +258,7 @@ nav a{
 .scroll-down-button {
   padding: 10px 20px; 
   background-color: transparent; 
-  color: black; 
+  color: white; 
   border: 2px solid white; 
   font-family: 'roboto', sans-serif; 
   font-weight: bolder;
@@ -265,13 +266,13 @@ nav a{
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
-  background-color: white;
+  background-color: #d9a648;
    
 }
 
 .scroll-down-button:hover {
-  background-color: #d9a648; 
-  color: white;
+  background-color: white; 
+  color: black;
   cursor: pointer; 
 }
 
@@ -313,6 +314,7 @@ nav a{
 .bucky{
   text-decoration: none;
   font-weight: bolder;
+  color:#000;
 }
 
 .bucky:visited{

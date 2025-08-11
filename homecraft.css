@@ -581,6 +581,7 @@ nav a{
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    border-bottom: 1px solid white;
 }
 
 .footer-section {

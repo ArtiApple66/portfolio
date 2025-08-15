@@ -117,7 +117,7 @@ nav a{
 }
 
 /*----Navbar small---*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .icon {
       display: block;
       cursor: pointer;

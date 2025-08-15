@@ -23,7 +23,10 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#concept">Concept</a></li>
+                <li><a href="#concept">Design objectives</a></li>
+                <li><a href="#references">References</a></li>
+                <li><a href="#shelter">Shelter design</a></li>
+                <li><a href="#interface">From sketch to shelter</a></li>
                 <li><a href="#projects">Pictures</a></li>
                 <li><a href="#designers">Team</a></li>
                 <li><a href="index.html#gallery">Back</a></li>
@@ -41,7 +44,9 @@
                 <h2>Tsugite</h2>
                 <h3>CORE studio | 2024</h3> 
                 <p>
-                    Computation for Earthquake Resilience and Recovery 
+                    Computation for 
+                    <br>
+                    Earthquake Resilience and Recovery 
                     <br>
                     Custom shelter solutions for earthquake-prone regions based on Japanese wood joinery
                 </p>
@@ -57,14 +62,53 @@
         <div id="about">
             <div id="textab">
             <div id="text-container">
-                <h1 id="title">What was the project about?</h1>
+                <h1 id="title">What was the course about?</h1>
                 <span id="text">
-                    
+                    The CORE Studio explored the use of computational design methods and digital technologies in the built environment, with a focus on Earthquake Resilience and Recovery in response to the February 2023 earthquakes in Türkiye and Syria. Here we explored and addressed all phases of earthquake management: Mitigation, preparedness, response and recovery.  Applying tools and techniques such as coding, parametric design, robotics, artificial intelligence, digital fabrication, and geographic information systems to develop innovative and responsive solutions. Free to choose our own subject as well as research partners within these bounds.
+                    <br><br>
+                    I teamed up with Amir Ghadiri and together we set out to address critical gaps in post-disaster shelter design, production, and usability. In earthquake-affected areas, limited resources, inaccessible tools, and logistical barriers often hinder recovery efforts. Our research also revealed that existing shelters typically accommodate only 4 people, despite larger household sizes in many regions, forcing families to separate during already vulnerable times. So our aim was to explore computational solutions for customizable, scalable shelters that could adapt to diverse needs during the transitional phase between emergency response and long-term recovery.
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/thedreamteam.png"> 
+                    </div>
                 </span>
             </div>
             </div>
         </div>
-
+        
+         <!------Concept------->
+        <div id="concept" class="concept">
+            <div class ="conceptcontainer">
+                <h1 class="concept-heading">Design objectives</h1>
+                <span id="text2">
+                    In this project our focus was on the following design objectives:
+                    <br><br>
+                    <b>Rapid assembly with minimal resources:</b>
+                    <br>
+                    We prioritized a shelter system that could be quickly assembled by untrained individuals using only basic tools (such as a hammer or screwdriver), ensuring that even a small team or couple could erect it independently. Thus the design also needed to be intuitive, with clear assembly logic that required no specialized skills or instructions. 
+                    <br><br>
+                    <b>Compact and portable components:</b>
+                    <br>
+                    To address logistical challenges in disaster zones, we wanted every element of the shelter designed to be lightweight and compact. This would ensure that components could be transported even to remote or inaccessible areas using minimal infrastructure, a small car, pickup truck, or even manual carrying by one or two people. Portability being the key to delivering aid where conventional machinery or large vehicles can’t operate.
+                    <br><br>
+                    <b>Modular adaptability:</b>
+                    <br>
+                    For the design we also opted for flexibility in both immediate and long-term use.  To create a modular system so that the same set of components could be reconfigured to create either smaller units for individuals or larger units for bigger households. Ensuring the design could serve diverse community needs without requiring additional specialized parts. On top of that, after a disaster people might be in a tight spot financially at first so we wanted to create an option for people to start with a basic configuration and expand the shelter as their needs evolved, whether to accommodate changing household sizes or to create private spaces within shared living arrangements. To customize their shelter to their needs and grow with them until they no longer need it. 
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/solution.png"> 
+                    </div>
+                    <br>
+                    <b>Structural safety in earthquake prone regions:</b>
+                    <br>
+                    Given our focus on earthquake-prone regions, structural resilience was critical, the shelter had to withstand aftershocks, which can persist for months after the initial disaster, while remaining stable under repeated seismic stress.
+                    <br><br>
+                    <b>How did we want to reach those goals?</b>
+                    <br>
+                    Our idea was to, through the design of an application where people would be able to draw their own floorplan of the size they think they needed (or could afford) generate the components for their design in 3D based on their input, and structural soundness (also incorporating the forces at play during earthquakes and aftershocks), and through digital fabrication, fabricate the needed parts that can be shipped over them compactly and erected without the needs of specialized tools, and if needed be disassembled and erected somewhere else.
+                </span>
+            </div>
+        </div>
 
         <!----In the future this page will be filled with all the details of this project, but for now it's still a work in progress. 
                     In the mean time you can check out these linked in posts to get more infromation:
@@ -78,12 +122,116 @@
                     <br><br>
                     <a class="doc" href="Tsugite_Elisa_Amir_CORE_Report.pdf" download="Tsugite_Elisa_Amir_CORE_Report.pdf" class="download-button"> Tsugite report</a> -->
 
-        <!------concept------->
-        <div id="concept" class="concept">
+        <!------The shelter design------->
+        <div id="references" class="concept">
             <div class ="conceptcontainer">
-                <h1 class="concept-heading">The concept</h1>
+                <h1 class="concept-heading">References</h1>
                 <span id="text2">
-                    
+                    To align our project goals with proven construction methods, we investigated traditional and contemporary structural systems that prioritized simplicity, seismic resilience, and modularity. Our exploration led us to three key inspirations:
+                    <br><br>
+                    <b>Japanese wood joints:</b>
+                    <br>
+                    After some research we stumbled upon Tsugite, a traditional Japanese wood-joining technique that relies solely on interlocking geometry and friction, eliminating the need for bolts, adhesives, or specialized tools. While historically labor-intensive and dependent on artisan craftsmanship, we discovered a modern adaptation by some students from the University of Tokyo, similarly named <a class="doc2" href="https://www.ma-la.com/tsugite.html">tsugite</a>. They developed an interactive application that validates joint feasibility and structural integrity computationally, then outputs CNC-millable templates. So anyone that downloaded the application, even without prior knowledge about these types of joints was able to design and produce their own. This innovation resonated with our aim to make shelter construction accessible, inspiring our approach to user-customizable, tool-free assembly. (Images are from <a class="doc2" href="https://www.ma-la.com/tsugite.html">this website</a>)
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/tsugite22.png"> 
+                    </div>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/tsugite2.png"> 
+                    </div>
+                    <br><br>
+                    <b>Global seizmic resitant wood structures:</b>
+                    <br>
+                    Further research into other wood on wood joints led us to traditional systems that were proven to also be resilient against the forces at play during earthquakes. For example,  Dougong is a traditional Chinese bracketing system that dissipates seismic forces through flexible wooden interlockings. (Images are from <a class="doc2" href="https://www.core77.com/posts/67922/These-Ingenious-2500-Year-Old-Chinese-Wood-Joints-Make-Buildings-Earthquake-Proof">Core77</a>)
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/dougong.jpg"> 
+                    </div>
+                    <br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/dougong 2.jpg"> 
+                    </div>
+                    <br>
+                    Or Hımış a Turkish timber-frame technique combining lightweight wood lattices with infill panels, renowned for surviving historic earthquakes due to its energy-absorbing grid structure. An example can be seen in the picture below where you can see the remains of a regular building next to one with a Hımış structure after an earthquake, where the latter is still mostly intact. (Images from <a class="doc2" href="https:// www.world-housing.net/tutorials/ other/dhajji-dewarI">Journal of Architectural Heritage (top) </a> and <a class="doc2" href="https://doi.org/10.1016/ b978-0-12-821087-1.00015-6">Elsevier (bottom)</a>)
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/himis1.png"> 
+                    </div>
+                    <br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/himis3.png"> 
+                    </div>
+                    <br>
+                    <b>Modular contemporaty solutions:</b>
+                    <br>
+                    Projects like the <a class="doc2" href="https://www.rethinktokyo.com/2018/08/08/tsugite-japanese-joinery-wood">GC Prostho Museum Research Center (Kengo Kuma)</a> demonstrated how Chidori joints, a puzzle-like wood system based on a Japanese game, could scale into modern architecture. Similarly, the <a class="doc2" href="https://www.researchgate.net/profile/Claude-Demers/publication/269337065_Wooden_Adaptive_Architecture_System_WAAS/links/54876a370cf289302e2edb07/Wooden-Adaptive-Architecture-System-WAAS.pdf">WAAS (Wooden Adaptive Architecture System)</a> showcased a modular grid of standardized timber components, enabling reconfigurable spaces from off-the-shelf materials. Both aligned with our vision of adaptable shelters that could evolve with users’ needs. (Images from <a class="doc2" href="https://www.rethinktokyo.com/2018/08/08/tsugite-japanese-joinery-wood">Rethink Tokyo</a> and <a class="doc2" href="https://www.researchgate.net/profile/Claude-Demers/publication/269337065_Wooden_Adaptive_Architecture_System_WAAS/links/54876a370cf289302e2edb07/Wooden-Adaptive-Architecture-System-WAAS.pdf">WAAS</a>)
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/museum.jpg"> 
+                    </div>
+                    <br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/waas.png"> 
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <!------The shelter design------->
+        <div id="shelter" class="concept">
+            <div class ="conceptcontainer">
+                <h1 class="concept-heading">Shelter design</h1>
+                <span id="text2">
+                    With all of the above in mind, drawing from traditional Japanese Chidori joints and Turkish Hımış construction, we designed a modular shelter system that combines seismic resilience with intuitive assembly. The design features seven interlocking joint types, eight beam profiles, and two bracing configurations, all working within a standardized 1×1×1 meter grid. This human-scale modularity serves multiple purposes: the compact dimensions enable transport by small vehicle or even hand-carrying, while the consistent sizing allows for straightforward structural calculations and safe on-site assembly (builders can stand on completed sections as they work upward). The joints maintain the tool-free philosophy of Tsugite, using precise friction-fit connections that require no hardware, yet inherit Chidori’s flexibility to withstand aftershocks. Meanwhile, the bracing system adapts Hımış’s proven timber lattice for lateral stability. Crucially, the limited component library, allows infinite reconfigurations from simple user sketches. Whether creating shelters for individuals or multi-generational households, the system is well fit to transform basic drawings into structurally sound, adaptable spaces that empower survivors to rebuild on their own terms.  
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/tsugite.jpg"> 
+                    </div>
+                    <br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/jointstug.png"> 
+                    </div>
+                </span>
+            </div>
+        </div>
+
+        <!------The interface design------->
+        <div id="interface" class="concept">
+            <div class ="conceptcontainer">
+                <h1 class="concept-heading">From sketch to shelter</h1>
+                <span id="text2">
+                    So the next thing to do was to create the design for the application. The journey began with a Tkinter-based interface, a pragmatic pivot from our initial web app vision to simplify the translation from drawing to 3D model to physical model without having to worry about things like API’s, where users input personal details and sketch their shelter plans on a gridded canvas. Early challenges with sketch accuracy led us to refine the approach: instead of freehand drawing, users now select predefined 1×1 meter grid cells, ensuring precise translation of their spatial needs while automatically validating minimum area requirements (6 m² per person). Down below are the iterations of canvas and the design of the interface respectively.
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/drawingpad.png"> 
+                    </div>
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/interface.png"> 
+                    </div>
+                    <br><br>
+                    These grid coordinates, exported via CSV, feed into Rhino/Grasshopper where parametric scripts generate the 3D structure, converting 2D layouts into interlocking timber frames. While we initially relied on manual data transfer (having encountered limitations with the Hops plugin), this process successfully demonstrated how user sketches could drive model generation. 
+                    <br><br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/figure 8.jpg"> 
+                    </div>
+                    <br><br>
+                    Structural optimization followed a dual approach: detailed earthquake simulations in ANSYS validated our bracing strategy for a prototype shelter, while separate Karamba 3D tests explored automated cross-section optimization, a critical future integration to dynamically adjust member sizes and bracing locations based on calculated stresses.
+                    <br><br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/ansys.png"> 
+                    </div>
+                    <br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/structural.png"> 
+                    </div>
+                    <br><br>
+                    We also translated one of the generated Grasshopper models into CNC-ready drawings for a scale prototype. Though we mostly manually prepared line drawings for laser cutting (a step ripe for automation), the resulting friction-fit assembly proved the viability of tool-free construction, even as it revealed opportunities to improve joint rigidity during assembly. This end-to-end test confirmed our core premise: that computational design could democratize disaster-responsive architecture, from intuitive planning interfaces to resilient physical structures. Future iterations would tighten the feedback loop between user input, structural analysis, and fabrication, closing the gap between emergency needs and adaptable, user-driven solutions.
+                    <br><br><br>
+                    <div class="conimgcontainer">
+                            <img class ="conimg" src="Images/figure 9 unsharp.jpg"> 
+                    </div>
+
                 </span>
             </div>
         </div>
@@ -109,7 +257,7 @@
         </div>
 
         <!------Symposium------->
-        <div id="Symposium" class="concept">
+        <div id="symposium" class="concept">
             <div class ="conceptcontainer">
                 <h1 class="concept-heading">The CORE Symposium</h1>
                 <span id="text2">
@@ -147,29 +295,27 @@
                         <img src="Images/tsugite.jpg" alt="Image 1">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 2">
+                        <img src="Images/jointstug.png" alt="Image 2">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 3">
+                        <img src="Images/interface.png" alt="Image 3">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 4">
+                        <img src="Images/futureint.png" alt="Image 4">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 5">
+                        <img src="Images/cnc1.png" alt="Image 5">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 6">
+                        <img src="Images/shelterv1.png" alt="Image 6">
                     </div>
                     <div class="slide fade">
-                        <img src="Images/" alt="Image 7">
+                        <img src="Images/build.png" alt="Image 7">
                     </div>
                     <div class="slide fade">
                         <img src="Images/boothamit.jpg" alt="Image 8">
                     </div>
-                    <div class="slide fade">
-                        <img src="Images/.png" alt="Image 9">
-                    </div>
+
 
                     <!-- Add more slides as needed -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -186,7 +332,6 @@
                     <span class="dot" onclick="currentSlide(6)"></span>
                     <span class="dot" onclick="currentSlide(7)"></span>
                     <span class="dot" onclick="currentSlide(8)"></span>
-                    <span class="dot" onclick="currentSlide(9)"></span>
                     <!-- Add more dots as needed -->
                 </div>
             </div>
@@ -202,7 +347,7 @@
                     <img src="Images/amir.jfif" alt="designer 1">
                     <div class="subtitledesigner">Amir Ghadiri</div>
                     <div class="discriptiondesigner">
-                        
+                        Amir spearheaded the core challenge of transforming floorplans into 3D structural systems through Grasshopper, while his knowledge of traditional joinery from a previous course informed our joint designs. He worked day and night to get results and I am proud of what we managed to do together. 
                     </div>
                     <p><i class="fa-solid fa-envelope"></i> <a class="doc3" href="mailto:amirghadiri9393@gmail.com?subject=Your%20Subject&body=Your%20message%20here"> amirghadiri9393@gmail.com</a></p>
                     <p><i class="fa-brands fa-linkedin"></i> <a class="doc3" href="https://www.linkedin.com/in/amir-ghadiri/">Linked in</a></p>
@@ -213,7 +358,7 @@
                     <img src="Images/IMG_20190531_180253.jpg" alt="designer 2">
                     <div class="subtitledesigner">Elisa van Klink</div>
                     <div class="discriptiondesigner">
-                        
+                        I developed the user interface (Tkinter app) that captured shelter designs and fed coordinates to Amir's system. With his system I managed to also run structural analysis with Karamba and with the total design of the shelter run a more detailed analysis on one of the results. I also took care of preparing CNC files and assembly logic for our friction-fit scale model, which we built together. 
                     </div>
                     <p><i class="fa-solid fa-envelope"></i> <a class="doc3" href="mailto:elisavanklink@gmail.com?subject=Your%20Subject&body=Your%20message%20here">elisavanklink@gmail.com</a></p>
                     <p><i class="fa-brands fa-linkedin"></i> <a class="doc3" href="https://www.linkedin.com/in/elisa-van-klink-4ba785219/">Linked in</a></p>

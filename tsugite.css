@@ -117,7 +117,7 @@ nav a{
 }
 
 /*----Navbar small---*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .icon {
       display: block;
       cursor: pointer;
@@ -241,7 +241,7 @@ nav a{
     padding: 10px;
     transition: opacity 0.5s ease-in-out;
     opacity: 0; 
-    background-color:#6c3014;
+    background-color:#4a4c61;
     font-size: calc(1vh + 10px);
 }
 
@@ -289,7 +289,8 @@ nav a{
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
-  background-color: #6c3014;
+  border: 2px solid white; 
+  background-color: #4a4c61;
    
 }
 
@@ -300,7 +301,7 @@ nav a{
 }
 
 
-/*about*/
+/*---------about--------*/
 #about{
   margin-top: calc(8vh + 30px);
   width: 100%;
@@ -334,7 +335,7 @@ nav a{
 }
 
 /*------concept--------*/
-#concept, #structural, #architectural, #digital, #Symposium{
+#concept, #goals, #shelter, #symposium, #references, #interface {
     margin-bottom: 0;
     scroll-margin-top: calc(30px + 8vh);
     z-index: 10;
@@ -365,14 +366,6 @@ nav a{
 
 .LD1{
   margin-left: 40px;
-}
-
-.LD2{
-  margin-left: 50px;
-}
-
-.LD3{
-  margin-left: 60px;
 }
 
 @media (min-width: 1000px) {
@@ -603,7 +596,7 @@ margin-right: auto;
     width: 100vw;
     z-index: 10;
     position: relative;
-    background-color: #6c3014;
+    background-color: #4a4c61;
     text-align: center;
 }
 
@@ -614,6 +607,7 @@ margin-right: auto;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    border-bottom: 1px solid white;
 }
 
 .footer-section {

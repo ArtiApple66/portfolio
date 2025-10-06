@@ -313,7 +313,6 @@ nav a{
 
 #textab{
   margin-right: 5vw;
-  height: 85vh;
   margin: 5vw;
   padding: 5vw;
   background-color: white;
@@ -333,7 +332,6 @@ nav a{
   display: block; 
   line-height: 1.2;
 }
-
 
 /*------concept--------*/
 #concept, #A1 , #A2, #A3{
@@ -356,25 +354,59 @@ nav a{
 
 .conimgcontainer{
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  margin: 0 auto;
 }
 
 .conimg, .conimg1{
-  width: 100%;
+  width: 100%;  
 }
 
-.LD1{
-  margin-left: 40px;
+#LD1{
+  width: 80%;
+  margin: 0 auto;
 }
 
-.LD2{
-  margin-left: 50px;
+#LD2{
+  width: 70%;
+  margin: 0 auto;
 }
 
-.LD3{
-  margin-left: 60px;
+#LD3{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.conimgcontainermulti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for all three images in the group */
+.conimgcontainermulti .conimg {
+    flex: 1;
+    min-width: 200px; /* Minimum width before wrapping */
+    max-width: calc(33.33% - 10px); /* Approximately 1/3 of container minus gap */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Responsive behavior - stack on small screens */
+@media (max-width: 768px) {
+    .conimgcontainermulti .conimg {
+        min-width: 150px; /* Smaller min-width for mobile */
+        max-width: calc(50% - 10px); /* 2 per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .conimgcontainermulti .conimg {
+        max-width: 100%; /* Stack vertically on very small screens */
+    }
 }
 
 @media (min-width: 1000px) {

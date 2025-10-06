@@ -135,39 +135,36 @@ function aboutadjustfontsize() {
     const text = document.getElementById('text');
 
     const containerHeight = container.clientHeight;
-    const containerWidth = container.clientWidth;
-
     const titleHeight = title.clientHeight;
-
     const availableHeight = containerHeight - titleHeight;
 
-    let fontSize = 16;
-    const minFontSize = 16;
-    const maxFontSize = 20;//change back to 100 later
+    const minFontSize = 18;
+    const maxFontSize = 30;
 
+    let fontSize = minFontSize;
     text.style.fontSize = `${fontSize}px`;
 
+    // Only check height constraint
     while (fontSize < maxFontSize) {
-        text.style.fontSize = `${fontSize}px`;
-
-        if (text.scrollHeight > availableHeight || text.scrollWidth > containerWidth) {
+        text.style.fontSize = `${fontSize + 1}px`;
+        if (text.scrollHeight > availableHeight) {
             break;
         }
-        fontSize += 1;
+        fontSize++;
     }
 
-    fontSize -= 1;
-    if (fontSize < minFontSize) {
-        fontSize = minFontSize;
-    }
     text.style.fontSize = `${fontSize}px`;
+    console.log('Final fontSize:', fontSize);
 
-    if (fontSize === minFontSize) {
+    // Handle container height adjustment
+    if (fontSize === minFontSize && text.scrollHeight > availableHeight) {
         const paddingVW = 5;
         const paddingPx = 2 * calculateVW(paddingVW);
         textab.style.height = `${text.scrollHeight + titleHeight + paddingPx}px`;
+        textab.style.overflowY = 'auto';
     } else {
         textab.style.height = '';
+        textab.style.overflowY = '';
     }
 
     updateNewTextFontSize(fontSize);
@@ -176,10 +173,8 @@ function aboutadjustfontsize() {
 function updateNewTextFontSize(fontSize) {
     const newText = document.getElementById('text2'); // New text section
     const newText2 = document.getElementById('text3');
-    if (newText || newText2) {
-        newText.style.fontSize = `${fontSize}px`;
-        newText2.style.fontSize = `${fontSize}px`;
-    }
+    if (newText) newText.style.fontSize = `${fontSize}px`;
+    if (newText2) newText2.style.fontSize = `${fontSize}px`;
 }
 
 function calculateVW(value) {

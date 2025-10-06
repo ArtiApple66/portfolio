@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo.ico">
+    <link rel="stylesheet" href="ON1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!-------navbar-------->
+        <nav>
+            <div class="navleft">
+            <img class="logo" src="Images/logo.png">
+            <span class="logotext">Het knooppunt</span>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#video">Process</a></li>
+                <li><a href="#projects">Pictures</a></li>
+                <li><a href="#designers">Team</a></li>
+                <li><a href="index.html#gallery">Back</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa fa-bars"></i> 
+            </a>
+        </nav>
+        
+        <!-------header-------->
+        <div id="header" class="header">   
+            <img class="headerimg" src="Images/20200131_174016.jpg">    
+            
+            <div class="headertext">
+                <h2>Het knooppunt</h2>
+                <h3>Ontwerpen 1 | 2019</h3> 
+                <p>The design of a bed and breakfast and campingsite</p>
+            </div>
+    
+            <div class="header-button">
+                <a href="#about" class="scroll-down-button">Learn more</a>
+            </div>
+        </div>
+
+        <!--about-->      
+        <div id="about">
+            <div id="textab">
+            <div id="text-container">
+                <h1 id="title">What was the project about?</h1>
+                <span id="text">
+                    In the future this page will be filled with all the details of this project, but for now it's still a work in progress. In the mean time you can check the documentation <a class="doc" href="ON1_ElisavanKlink_4997360_Milinovic_eindpresentatie.pdf" download="ON1_Het knooppunt" class="download-button"> here, </a> look at the presentation poster <a class="doc" href="NL plus ON1 ontwerp.pdf" download="ON1_Het knooppunt_pres" class="download-button"> here, </a>  or look at the pictures below.
+                </span>
+            </div>
+            </div>
+        </div>
+ 
+        <!---Project drawings---->
+        <div id="projects" class="projects">
+            <div class="projectscontainer">
+                <h1 class="subtitle">Pictures</h1>
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="Images/Axo.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img id="transform" src="Images/Overgang gevel 1.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img id="transform" src="Images/Gevel overgang 2.jpg" alt="Image 3">
+                    </div>
+                    <div class="slide fade">
+                        <img id="transform" src="Images/gevel overgang 3.jpg" alt="Image 4">
+                    </div>
+                    <div class="slide fade">
+                        <img id="transform" src="Images/gevel.jpg" alt="Image 5">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Zuid gevel.jpg" alt="Image 6">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Plattegrond huis.jpg" alt="Image 7">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/Tuin plattegrond.jpg" alt="Image 8">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/20200131_174016.jpg" alt="Image 9">
+                    </div>
+                    <div class="slide fade">
+                        <img src="Images/20200131_173829.jpg" alt="Image 10">
+                    </div>
+                    <!-- Add more slides as needed -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div class="dots">
+                    <br>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <!-- Add more dots as needed -->
+                </div>
+            </div>
+        </div>
+
+        <!-------designers-------->
+        <div id="designers" class="designers">
+            <h1 class="titledesigners">The team</h1>
+            <div class="designer-grid"> 
+     
+                <!--designer 3-->
+                <div class="designer-item">
+                    <img src="Images/IMG_20190531_180253.jpg" alt="Project 1">
+                    <div class="subtitledesigner">Elisa van Klink</div>
+                    <div class="discriptiondesigner">This was my first real design project, and I learned a lot here from how to design to humansize and drawing floorplans and other details by hand. Figuring out the site and how to respond to it by either complementing the site or fully breaking away from it to make it pop.</div>
+                    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:elisavanklink@gmail.com?subject=Your%20Subject&body=Your%20message%20here">elisavanklink@gmail.com</a></p>
+                    <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/elisa-van-klink-4ba785219/">Linked in</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h2>Digital Portfolio</h2>
+                    <p>Elisa van Klink</p>
+                </div>
+                <div class="footer-section social">
+                    <h2>Follow Me</h2>
+                    <a href="https://www.instagram.com/xelisa_6666?igsh=MWpuMGU4eWltb3Q3aQ=="><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.linkedin.com/in/elisa-van-klink-4ba785219/"><i class="fa-brands fa-linkedin"></i> Linked in</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Digital portfolio. All rights reserved.
+            </div>
+        </div>
+        
+    
+        <!-------icons---------->
+        <script src="https://kit.fontawesome.com/1a86ac6ad5.js" crossorigin="anonymous"></script>
+
+        <!---Java script-->
+        <script src="ON1.js"></script>
+        
+    </body>
+</html>

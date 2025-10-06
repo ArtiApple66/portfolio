@@ -141,8 +141,8 @@ function aboutadjustfontsize() {
 
     const availableHeight = containerHeight - titleHeight;
 
-    let fontSize = 16;
-    const minFontSize = 16;
+    let fontSize = 18;
+    const minFontSize = 18;
     const maxFontSize = 100;
 
     text.style.fontSize = `${fontSize}px`;

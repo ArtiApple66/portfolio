@@ -258,20 +258,20 @@ nav a{
 .scroll-down-button {
   padding: 10px 20px; 
   background-color: transparent; 
-  color: white; 
-  border: 2px solid white; 
+  color: black; 
+  border: 2px solid black; 
   font-family: 'roboto', sans-serif; 
   font-weight: bolder;
   font-size: 2.5vh; 
   text-decoration: none; 
   text-transform: uppercase; 
   transition: background-color 0.3s, color 0.3s;
-  background-color: #d9a648;
+  background-color: white;
    
 }
 
 .scroll-down-button:hover {
-  background-color: white; 
+  background-color: #d9a648; 
   color: black;
   cursor: pointer; 
 }
